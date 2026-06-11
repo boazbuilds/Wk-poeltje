@@ -62,6 +62,18 @@ zet op 4-0, 3-0, 2-1; de markt zegt steevast een tandje lager (2-0, 1-0, 1-1).
 Die lagere score is *tegelijk* waarschijnlijker én onpopulair → bijna overal een
 gratis meesterzet. Daar ligt de waarde, vooral bij duidelijke favorieten.
 
+## Openen in de browser
+
+`index.html` is een zelfstandig bestand: downloaden en dubbelklikken is genoeg
+(internet nodig voor de React-CDN; werkt op desktop én telefoon). Het bevat de
+volledige model-UI met de meest recente live-geijkte λ's voor alle 72 duels.
+
+Opnieuw genereren na een herijking:
+
+```bash
+node analysis/build-html.mjs
+```
+
 ## Analysepijplijn (`analysis/`)
 
 Naast de artifact is er een Node-pijplijn die de voorspellingen ververst en de
