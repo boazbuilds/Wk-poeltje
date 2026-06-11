@@ -62,24 +62,69 @@ zet op 4-0, 3-0, 2-1; de markt zegt steevast een tandje lager (2-0, 1-0, 1-1).
 Die lagere score is *tegelijk* waarschijnlijker én onpopulair → bijna overal een
 gratis meesterzet. Daar ligt de waarde, vooral bij duidelijke favorieten.
 
+## Analysepijplijn (`analysis/`)
+
+Naast de artifact is er een Node-pijplijn die de voorspellingen ververst en de
+strategie doorrekent (geen dependencies, Node ≥ 18):
+
+```bash
+node analysis/fetch-polymarket.mjs 1   # live 1X2 van Polymarket → market.json
+node analysis/calibrate.mjs           # fit ρ + λ's terugrekenen → calibrated.json
+node analysis/round-advice.mjs 1      # adviestabel per ronde
+node analysis/pool-sim.mjs 30000      # Monte-Carlo: P(#1 van 18) per strategie
+```
+
+- `engine.mjs` — zelfde wiskunde als de artifact + marktinversie (1X2 → λ) en
+  globale Dixon-Coles ρ-fit.
+- `fetch-polymarket.mjs` — haalt per duel de drie binaire markten op
+  (thuiswinst/uitwinst/gelijkspel) en normaliseert de marge eruit.
+- `calibrate.mjs` — fit ρ op alle live markten en rekent λ's terug. Voor
+  extreme favorieten (>85%) wordt het totaal verankerd op de bookmaker
+  O/U-lijn (Duitsland 4.5 → ±4.4; Spanje 3.5), want daar pint de 1X2 het
+  totaal niet vast. Bronnen: Sports Interaction/BetMGM (Duitsland),
+  Oddspedia/Sportscasting (Spanje), 10–11 juni 2026.
+- `pool-sim.mjs` — simuleert de subleague: 17 tegenstanders trekken picks uit
+  de echte ESPN-populariteitsverdeling, boosters gewogen naar massa-voorkeur.
+  Vergelijkt strategieën (huidig / veilig / vol-EV / spiegel) op P(#1).
+  NB: de absolute winstkansen nemen aan dat de markt-λ's de waarheid zijn —
+  lees vooral de rángorde en de orde van grootte van de kloof.
+
+### Kalibratie-inzichten (11 juni 2026)
+
+- ρ = −0.08 past het best (typische voetbalwaarde; verhoogt 0-0/1-1 licht).
+  Fit is vrijwel perfect: model reproduceert alle 24 markt-1X2's exact.
+- De oude export stond bij vier close calls aan de **verkeerde kant**
+  (Ghana-Panama, Haïti-Schotland, Zuid-Korea-Tsjechië, Ivoorkust-Ecuador);
+  de live markt koos overal de kant van de oorspronkelijk ingevulde picks.
+  Les: vlak voor de deadline altijd vers fetchen, exports verouderen snel.
+- Duitsland-Curaçao bleek veel sterker geprijsd dan de export (λ 2.83 → 3.92):
+  markt-totaallijn 4.5 met negen Duitse zeges op rij en de sterkste elf gepland.
+
 ## Status & openstaande punten
 
 - ✅ **Fixtures geverifieerd** tegen het officiële FIFA-schema: alle 12 groepen
   (A–L) kloppen. Ook de eerder onzekere duels Ecuador–Curaçao (R2, Kansas City)
   en Curaçao–Ivoorkust (R3, Philadelphia) zijn bevestigd, inclusief thuis/uit.
+- ✅ **Ronde 1 live herijkt** (11 juni): alle 24 duels op verse Polymarket-data,
+  ρ gefit, totaal-ankers voor Duitsland en Spanje. Artifact bijgewerkt (v7).
+- ✅ **Monte-Carlo poule-simulator** gebouwd: P(#1 van 18) per strategie.
+- ⚠️ **Ronde 2 herijken vlak voor de eerste R2-deadline** (18 juni): markten
+  zijn nu nog dun en houden geen rekening met de stand. Eén commando.
 - ⚠️ **Ronde 3 opnieuw draaien** zodra de standen bekend zijn: gelijktijdige
   aftrap en al geplaatste ploegen die gas terugnemen zitten niet in het model.
-- ⚠️ **Ronde 2** markten zijn dunner verhandeld en houden nog geen rekening met
-  de stand — herijken zodra de eerste resultaten binnen zijn.
 - ⏳ **Knock-out** toevoegen (met aanvullende vragen) zodra de plaatsing bekend is.
 
 ## Roadmap
 
-- [ ] Booster-keuze en stand optimaliseren op **P(winst van de poule)** i.p.v.
-      pure EV (Monte-Carlo-simulatie van het hele deelnemersveld).
-- [ ] Ronde 2 & 3 herijken met de werkelijke standen.
+- [x] Booster-keuze en stand doorrekenen op **P(winst van de poule)** i.p.v.
+      pure EV (Monte-Carlo-simulatie van het 18-koppige veld).
+- [x] Ronde 1 herijken op live marktdata.
+- [ ] Ronde 2 & 3 herijken met de werkelijke standen (na speelronde 1).
 - [ ] Knock-outrondes + aanvullende vragen modelleren.
+- [ ] Veld-model verfijnen zodra de eerste echte scores van de 17 concurrenten
+      zichtbaar zijn (dan kan de positie-stand Voorsprong/Achterstand erin).
 
 ## Bestanden
 
 - `wk-poule-model.jsx` — React-artifact: het interactieve model per wedstrijd.
+- `analysis/` — Node-pijplijn: fetch → kalibratie → advies → simulatie.

@@ -12,7 +12,7 @@ const C = {
   line: "#E2E5E0", home: "#176B4A", away: "#3F5A6B", draw: "#B8BEB8",
   flag: "#A8521C", hiText: "#F5F6F4",
 };
-const RHO = 0; // zuivere Poisson, matcht het KU Leuven-bronmodel
+const RHO = -0.08; // Dixon-Coles ρ, gefit op 24 live Polymarket-markten (11 jun); verhoogt 0-0/1-1 licht
 const pct = (x) => `${Math.round(x * 100)}%`;
 
 // ---------- math ----------
@@ -95,31 +95,32 @@ const recOf = (a, pos) => (pos === "chase" ? a.chase : pos === "lead" ? a.mirror
 
 // ---------- data: [ronde, groep, thuis, uit, lambda_thuis, lambda_uit, [mijnH,mijnA], [[h,a,%]...]] ----------
 const RAW = [
-  // Ronde 1
-  [1,"A","Mexico","Zuid-Afrika",2.09,0.79,[1,0],[[2,0,44],[2,1,20],[1,0,10],[3,1,10]]],
-  [1,"A","Zuid-Korea","Tsjechië",0.97,1.25,[1,0],[[1,1,40],[1,2,18],[2,1,11]]],
-  [1,"B","Canada","Bosnië-Herz.",1.67,0.97,[1,0],[[1,1,34],[2,1,17],[1,0,10],[1,2,10]]],
-  [1,"B","Qatar","Zwitserland",0.73,1.91,[0,1],[[0,2,45],[0,3,23]]],
-  [1,"C","Brazilië","Marokko",1.55,0.83,[1,0],[[2,1,36],[2,2,14],[3,1,13],[1,1,10]]],
-  [1,"C","Haïti","Schotland",1.27,1.03,[0,1],[[0,2,45],[0,3,21],[0,1,13]]],
-  [1,"D","VS","Paraguay",1.39,1.23,[1,0],[[2,0,34],[2,1,20],[1,0,12]]],
-  [1,"D","Australië","Turkije",0.95,1.61,[0,1],[[1,2,38],[0,2,15],[1,1,14],[1,3,13]]],
-  [1,"E","Duitsland","Curaçao",2.83,0.45,[3,0],[[4,0,39],[3,0,17],[5,0,14]]],
-  [1,"E","Ivoorkust","Ecuador",1.01,0.89,[1,1],[[1,1,41],[1,2,15],[0,1,12]]],
-  [1,"F","Nederland","Japan",1.37,1.09,[1,0],[[2,1,45],[3,1,12],[1,1,11],[2,0,11]]],
-  [1,"F","Zweden","Tunesië",1.51,1.17,[1,0],[[2,0,41],[2,1,18],[1,0,16]]],
-  [1,"G","België","Egypte",1.79,1.09,[1,0],[[2,1,39],[2,0,17],[3,1,13],[1,1,11]]],
-  [1,"G","Iran","Nieuw-Zeeland",1.17,1.03,[1,0],[[1,1,34],[0,0,21],[1,0,15],[0,1,11]]],
-  [1,"H","Spanje","Kaapverdië",3.59,0.57,[3,0],[[4,0,34],[5,0,20],[3,0,18]]],
-  [1,"H","Saoedi-Arabië","Uruguay",0.91,1.99,[0,1],[[0,2,36],[1,2,18],[0,1,16],[1,3,10]]],
-  [1,"I","Frankrijk","Senegal",1.95,0.81,[1,0],[[3,1,37],[2,1,16],[2,0,14],[3,0,14]]],
-  [1,"I","Irak","Noorwegen",0.81,3.01,[0,1],[[0,2,45],[0,3,21],[1,3,10]]],
-  [1,"J","Argentinië","Algerije",2.09,0.79,[1,0],[[2,0,35],[3,1,19],[3,0,18],[2,1,14]]],
-  [1,"J","Oostenrijk","Jordanië",2.69,0.89,[1,0],[[2,0,53],[3,0,16],[1,0,14]]],
-  [1,"K","Portugal","DR Congo",2.69,0.79,[3,0],[[3,0,42],[2,0,17],[4,0,17]]],
-  [1,"K","Oezbekistan","Colombia",0.79,2.09,[0,1],[[0,2,49],[0,1,16],[0,3,15]]],
-  [1,"L","Engeland","Kroatië",1.77,0.79,[1,0],[[2,1,39],[2,2,18],[1,1,16]]],
-  [1,"L","Ghana","Panama",0.97,1.33,[1,0],[[2,0,32],[1,0,20],[1,1,18],[2,1,14]]],
+  // Ronde 1 — λ's live herijkt op Polymarket 11 jun 2026 (alle 24 duels, marge eruit, ρ=-0.08;
+  // Duitsland en Spanje extra verankerd op de bookmaker O/U-totaallijn, zie analysis/calibrate.mjs)
+  [1,"A","Mexico","Zuid-Afrika",2.07,0.69,[1,0],[[2,0,44],[2,1,20],[1,0,10],[3,1,10]]],
+  [1,"A","Zuid-Korea","Tsjechië",1.11,1.07,[1,0],[[1,1,40],[1,2,18],[2,1,11]]],
+  [1,"B","Canada","Bosnië-Herz.",1.63,0.93,[1,0],[[1,1,34],[2,1,17],[1,0,10],[1,2,10]]],
+  [1,"B","Qatar","Zwitserland",0.74,2.85,[0,1],[[0,2,45],[0,3,23]]],
+  [1,"C","Brazilië","Marokko",1.73,0.85,[1,0],[[2,1,36],[2,2,14],[3,1,13],[1,1,10]]],
+  [1,"C","Haïti","Schotland",0.91,2.00,[0,1],[[0,2,45],[0,3,21],[0,1,13]]],
+  [1,"D","VS","Paraguay",1.56,0.96,[1,0],[[2,0,34],[2,1,20],[1,0,12]]],
+  [1,"D","Australië","Turkije",0.85,1.71,[0,1],[[1,2,38],[0,2,15],[1,1,14],[1,3,13]]],
+  [1,"E","Duitsland","Curaçao",3.92,0.48,[3,0],[[4,0,39],[3,0,17],[5,0,14]]],
+  [1,"E","Ivoorkust","Ecuador",0.82,1.07,[1,1],[[1,1,41],[1,2,15],[0,1,12]]],
+  [1,"F","Nederland","Japan",1.60,1.16,[1,0],[[2,1,45],[3,1,12],[1,1,11],[2,0,11]]],
+  [1,"F","Zweden","Tunesië",1.48,0.88,[1,0],[[2,0,41],[2,1,18],[1,0,16]]],
+  [1,"G","België","Egypte",1.81,0.85,[1,0],[[2,1,39],[2,0,17],[3,1,13],[1,1,11]]],
+  [1,"G","Iran","Nieuw-Zeeland",1.56,0.84,[1,0],[[1,1,34],[0,0,21],[1,0,15],[0,1,11]]],
+  [1,"H","Spanje","Kaapverdië",3.13,0.38,[3,0],[[4,0,34],[5,0,20],[3,0,18]]],
+  [1,"H","Saoedi-Arabië","Uruguay",0.71,2.01,[0,1],[[0,2,36],[1,2,18],[0,1,16],[1,3,10]]],
+  [1,"I","Frankrijk","Senegal",2.05,0.78,[1,0],[[3,1,37],[2,1,16],[2,0,14],[3,0,14]]],
+  [1,"I","Irak","Noorwegen",0.61,2.73,[0,1],[[0,2,45],[0,3,21],[1,3,10]]],
+  [1,"J","Argentinië","Algerije",2.08,0.69,[1,0],[[2,0,35],[3,1,19],[3,0,18],[2,1,14]]],
+  [1,"J","Oostenrijk","Jordanië",2.56,0.84,[1,0],[[2,0,53],[3,0,16],[1,0,14]]],
+  [1,"K","Portugal","DR Congo",2.42,0.65,[3,0],[[3,0,42],[2,0,17],[4,0,17]]],
+  [1,"K","Oezbekistan","Colombia",0.62,2.04,[0,1],[[0,2,49],[0,1,16],[0,3,15]]],
+  [1,"L","Engeland","Kroatië",1.76,0.95,[1,0],[[2,1,39],[2,2,18],[1,1,16]]],
+  [1,"L","Ghana","Panama",1.51,1.10,[1,0],[[2,0,32],[1,0,20],[1,1,18],[2,1,14]]],
   // Ronde 2
   [2,"A","Tsjechië","Zuid-Afrika",1.19,1.19,[1,0],[[2,0,37],[2,1,25],[1,0,16],[1,1,12]]],
   [2,"A","Mexico","Zuid-Korea",1.61,1.05,[1,0],[[2,1,43],[1,1,20],[2,2,10]]],
@@ -327,7 +328,7 @@ export default function App() {
   return (
     <div style={{ background: C.paper, minHeight: "100vh", color: C.ink, fontFamily: "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" }}>
       <div style={{ maxWidth: 760, margin: "0 auto", padding: "26px 16px 60px" }}>
-        <div className="font-mono" style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: C.home }}>ESPN WK Pool · model v6 · alle rondes marktgeijkt (Polymarket)</div>
+        <div className="font-mono" style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: C.home }}>ESPN WK Pool · model v7 · ronde 1 live herijkt (Polymarket 11 jun, ρ gefit)</div>
         <h1 style={{ fontSize: 28, fontWeight: 700, letterSpacing: -0.5, margin: "6px 0 12px" }}>Speelronde {round}</h1>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
@@ -358,7 +359,7 @@ export default function App() {
         </div>
 
         <div className="font-mono" style={{ fontSize: 10.5, color: C.muted, lineHeight: 1.6, borderTop: `1px solid ${C.line}`, paddingTop: 14 }}>
-          Alle drie de rondes staan nu op marktkansen: 68 van de 72 duels geijkt op Polymarket (echt ingelegd geld, marge eruit, via Dixon-Coles teruggerekend naar verwachte goals), de 4 zonder markt (Canada-Bosnië, Zwitserland-Bosnië, Bosnië-Qatar, Marokko-Haïti) op het xG-model. Populariteit en je eigen ingevulde voorspelling komen rechtstreeks uit de poule, dus de meesterzet en de massa-keuze zijn exact. Let op bij ronde 2 en 3: die markten zijn dunner verhandeld en houden nog geen rekening met de stand. In ronde 3 trappen duels gelijktijdig af en kan een gelijkspel beide teams genoeg zijn, wat tot voorzichtiger wedstrijden leidt. De schattingen gaan uit van normale wedstrijden; ze worden vanzelf scherper naarmate het toernooi vordert. Bijsturen per duel kan via Totaal en Supremacy. Iedereen staat op nul, dus speel ronde 1 op Neutraal.
+          Ronde 1 staat volledig op live marktkansen: alle 24 duels op 11 juni vers van Polymarket gehaald (echt ingelegd geld, marge eruit), met ρ=-0.08 gefit op diezelfde markten zodat model en markt exact dezelfde 1X2 geven. Bij Duitsland-Curaçao en Spanje-Kaapverdië is het totaal extra verankerd op de bookmaker O/U-lijn (4.5 resp. 3.5), omdat de 1X2 daar het totaal niet vastpint. Ronde 2 en 3 staan nog op de oude export: die zijn dunner verhandeld, houden geen rekening met de stand en worden opnieuw geijkt zodra de eerste resultaten binnen zijn (node analysis/fetch-polymarket.mjs + calibrate.mjs). Populariteit en je eigen ingevulde voorspelling komen rechtstreeks uit de poule, dus de meesterzet en de massa-keuze zijn exact. Bijsturen per duel kan via Totaal en Supremacy. Iedereen staat op nul, dus speel ronde 1 op Neutraal.
         </div>
       </div>
     </div>
