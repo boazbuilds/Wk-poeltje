@@ -99,7 +99,7 @@ export const EN = {
   "Mexico": { q: "Mexico", re: /Mexico/i },
   "Zuid-Afrika": { q: "South Africa", re: /South Africa/i },
   "Zuid-Korea": { q: "Korea", re: /South Korea|Korea Republic/i },
-  "Tsjechië": { q: "Czech", re: /Czech/i },
+  "Tsjechië": { q: "Czechia", re: /Czech/i },
   "Canada": { q: "Canada", re: /Canada/i },
   "Bosnië-Herz.": { q: "Bosnia", re: /Bosnia/i },
   "Qatar": { q: "Qatar", re: /Qatar/i },

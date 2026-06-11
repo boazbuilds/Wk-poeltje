@@ -21,10 +21,10 @@ const ANCHORS = {
   "1|Spanje|Kaapverdië": 3.5,
 };
 
-// Inversie met vastgepind totaal: scan alleen de supremacy.
+// Inversie met vastgepind totaal: scan alleen de supremacy (beide richtingen).
 function invertAnchored(hw, aw, T, rho) {
   let best = { lh: T / 2, la: T / 2, e: Infinity };
-  for (let S = 0; S <= T - 0.02; S += 0.005) {
+  for (let S = -(T - 0.02); S <= T - 0.02; S += 0.005) {
     const lh = (T + S) / 2, la = (T - S) / 2;
     const o = outcome(scoreMatrix(lh, la, rho));
     const e = (o.hw - hw) ** 2 + (o.aw - aw) ** 2;
@@ -32,6 +32,11 @@ function invertAnchored(hw, aw, T, rho) {
   }
   return best;
 }
+
+/*  Veiligheidsklep: bij favorieten >85% zonder expliciet anker is het totaal
+    uit 1X2 alleen niet identificeerbaar (de inversie schiet dan omhoog).
+    Geen enkel WK-duel prijst boven ±4.5 totaal, dus cap op 4.6.  */
+const TOTAL_CAP = 4.6;
 
 console.log(`Markten: ${live.length} live (opgehaald ${market.fetchedAt})\n`);
 
@@ -47,9 +52,12 @@ console.log("duel".padEnd(36) + "λ oud".padEnd(14) + "λ nieuw".padEnd(14) + "f
 for (const m of MATCHES) {
   const mk = market.markets[m.key];
   if (mk) {
-    const { lh, la } = ANCHORS[m.key]
+    let inv = ANCHORS[m.key]
       ? invertAnchored(mk.hw, mk.aw, ANCHORS[m.key], rho)
       : invert1X2(mk.hw, mk.d, mk.aw, rho);
+    if (!ANCHORS[m.key] && Math.max(mk.hw, mk.aw) > 0.85 && inv.lh + inv.la > TOTAL_CAP)
+      inv = invertAnchored(mk.hw, mk.aw, TOTAL_CAP, rho);
+    const { lh, la } = inv;
     const o = outcome(scoreMatrix(lh, la, rho));
     lambdas[m.key] = { lh, la, src: "live", volume: mk.volume };
     const drift = Math.abs(lh - m.lh) + Math.abs(la - m.la);

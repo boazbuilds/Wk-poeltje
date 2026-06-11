@@ -88,6 +88,26 @@ node analysis/pool-sim.mjs 30000      # Monte-Carlo: P(#1 van 18) per strategie
   Vergelijkt strategieën (huidig / veilig / vol-EV / spiegel) op P(#1).
   NB: de absolute winstkansen nemen aan dat de markt-λ's de waarheid zijn —
   lees vooral de rángorde en de orde van grootte van de kloof.
+- `optimize.mjs` — hill-climbt de R1-picks en R1-booster **direct op P(#1 van
+  18)** in plaats van EV. Met λ-ruis (σ=0.10) tegen overfitten, vaste seed,
+  en `--sharps=k` om k tegenstanders de EV-strategie te laten spelen
+  (robuustheidstest tegen marktslimme concurrenten). Winnaar-flips standaard
+  geblokkeerd (`--allow-flips` om toe te staan).
+
+### Optimizer-inzichten (11 juni 2026)
+
+- De P(#1)-optimizer bevestigt de EV-tweaks onafhankelijk en promoveert twee
+  "ruis"-zetten (Canada 2-0★, Mexico 3-0★): meesterzet-differentiatie is voor
+  poulewinst nét meer waard dan voor pure punten.
+- Met 2–4 marktslimme tegenstanders zakt P(#1) van ±62% naar ±29% (nog steeds
+  5× baseline). De kern-zeven tweaks overleven elk veldscenario; extra
+  differentiatie-picks (Iran 2-1★, Oezbekistan 1-2★, Qatar 1-3★) lonen alleen
+  als er echt sharps in de subleague zitten.
+- Meesterzet-drift: elke aanbevolen pick leunt op zijn ★ (<10% populariteit).
+  Marges zijn klein (−0.05 à −0.10 evz zonder ster) en het publiek drijft
+  historisch richting hoge scores, dus risico laag — maar check de
+  percentages in de ESPN-app vlak vóór elke deadline; fallbacks staan in de
+  sessienotities/het advies.
 
 ### Kalibratie-inzichten (11 juni 2026)
 

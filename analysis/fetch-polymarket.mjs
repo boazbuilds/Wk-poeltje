@@ -5,7 +5,7 @@
 
     Gebruik:  node analysis/fetch-polymarket.mjs [ronde]   (default: alle)  */
 
-import { writeFileSync } from "node:fs";
+import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { MATCHES, EN } from "./data.mjs";
 
 const BASE = "https://gamma-api.polymarket.com";
@@ -58,7 +58,10 @@ function extract(m, event) {
 
 const roundArg = process.argv[2] ? parseInt(process.argv[2]) : null;
 const targets = MATCHES.filter((m) => !roundArg || m.round === roundArg);
-const out = { fetchedAt: new Date().toISOString(), source: "polymarket gamma-api", markets: {} };
+const outFile = new URL("./market.json", import.meta.url);
+// merge met bestaande data zodat per-ronde fetches elkaar niet wissen
+const prev = existsSync(outFile) ? JSON.parse(readFileSync(outFile)).markets : {};
+const out = { fetchedAt: new Date().toISOString(), source: "polymarket gamma-api", markets: prev };
 const missing = [];
 
 for (const m of targets) {
@@ -78,6 +81,6 @@ for (const m of targets) {
   await sleep(250);
 }
 
-writeFileSync(new URL("./market.json", import.meta.url), JSON.stringify(out, null, 1));
+writeFileSync(outFile, JSON.stringify(out, null, 1));
 console.log(`\n${Object.keys(out.markets).length} markten opgehaald, ${missing.length} ontbreken.`);
 if (missing.length) console.log("Ontbrekend:", missing.join(", "));
