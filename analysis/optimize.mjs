@@ -25,7 +25,7 @@ const N = parseInt(args.find((a) => /^\d+$/.test(a)) ?? "30000");
 const SHARPS = parseInt((args.find((a) => a.startsWith("--sharps=")) ?? "--sharps=0").split("=")[1]);
 const SIGMA = parseFloat((args.find((a) => a.startsWith("--noise=")) ?? "--noise=0.10").split("=")[1]);
 const ALLOW_FLIPS = args.includes("--allow-flips");
-const OPP = 17, K = 8, NV = 40; // NV = aantal ruisvarianten per duel
+const OPP = 20, K = 8, NV = 40; // 21 deelnemers; NV = aantal ruisvarianten per duel
 
 /* ---------- seeded rng ---------- */
 function mulberry32(seed) {
