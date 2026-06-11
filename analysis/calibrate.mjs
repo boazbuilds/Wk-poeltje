@@ -1,80 +1,68 @@
-/*  Kalibratie: fit één globale Dixon-Coles ρ op alle live markten en reken
-    per duel de markt-1X2 terug naar (λ_thuis, λ_uit) onder die ρ.
-    Duels zonder live markt behouden hun oude λ uit data.mjs (src: "stale").
+/*  Joint-kalibratie: per duel worden (λ_thuis, λ_uit) gefit op ALLE
+    beschikbare marktsignalen tegelijk:
+      - 1X2  : gemiddelde van Polymarket (echt geld) en Bovada (de-vig)
+      - Total: O/U-lijn + prijzen (pint het verwachte aantal goals vast)
+      - Spread: goal handicap (pint de supremacy vast)
+    De globale Dixon-Coles ρ wordt op dezelfde joint-doelfunctie gefit.
 
+    Vereist: market.json (fetch-polymarket) en bovada.json (fetch-bovada).
     Gebruik:  node analysis/calibrate.mjs        → schrijft calibrated.json  */
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { MATCHES } from "./data.mjs";
-import { invert1X2, fitRho, scoreMatrix, outcome } from "./engine.mjs";
+import { invertJoint, fitRhoJoint, scoreMatrix, marketError, outcome } from "./engine.mjs";
 
-const market = JSON.parse(readFileSync(new URL("./market.json", import.meta.url)));
-const live = Object.entries(market.markets).map(([key, v]) => ({ key, ...v }));
+const pm = JSON.parse(readFileSync(new URL("./market.json", import.meta.url)));
+const bvPath = new URL("./bovada.json", import.meta.url);
+const bv = existsSync(bvPath) ? JSON.parse(readFileSync(bvPath)) : { markets: {} };
 
-/*  Totaal-ankers voor extreme favorieten (>85% winstkans): daar is de
-    1X2-inversie slecht bepaald (de gelijkspel-prijs is een longshot en
-    pint het totaal niet vast). Het verwachte totaal komt dan uit de
-    bookmaker O/U-lijn:  Duitsland-Curaçao O/U 4.5, Under favoriet → ±4.4;
-    Spanje-Kaapverdië O/U 3.5, Under -125 → ±3.5  (bronnen: zie README).  */
-const ANCHORS = {
-  "1|Duitsland|Curaçao": 4.4,
-  "1|Spanje|Kaapverdië": 3.5,
-};
-
-// Inversie met vastgepind totaal: scan alleen de supremacy (beide richtingen).
-function invertAnchored(hw, aw, T, rho) {
-  let best = { lh: T / 2, la: T / 2, e: Infinity };
-  for (let S = -(T - 0.02); S <= T - 0.02; S += 0.005) {
-    const lh = (T + S) / 2, la = (T - S) / 2;
-    const o = outcome(scoreMatrix(lh, la, rho));
-    const e = (o.hw - hw) ** 2 + (o.aw - aw) ** 2;
-    if (e < best.e) best = { lh: +lh.toFixed(3), la: +la.toFixed(3), e };
-  }
-  return best;
+// targets per duel samenstellen
+const targets = {};
+for (const m of MATCHES) {
+  const p = pm.markets[m.key], b = bv.markets[m.key];
+  const t = {};
+  if (p && b?.ml) t.ml = { hw: (p.hw + b.ml.hw) / 2, d: (p.d + b.ml.d) / 2, aw: (p.aw + b.ml.aw) / 2 };
+  else if (p) t.ml = { hw: p.hw, d: p.d, aw: p.aw };
+  else if (b?.ml) t.ml = b.ml;
+  if (b?.total) t.total = b.total;
+  if (b?.spread) t.spread = b.spread;
+  if (t.ml || t.total) targets[m.key] = t;
 }
+const tl = Object.values(targets);
+console.log(`Joint-kalibratie over ${tl.length} duels ` +
+  `(1X2 ${tl.filter((t) => t.ml).length}, totals ${tl.filter((t) => t.total).length}, spreads ${tl.filter((t) => t.spread).length})\n`);
 
-/*  Veiligheidsklep: bij favorieten >85% zonder expliciet anker is het totaal
-    uit 1X2 alleen niet identificeerbaar (de inversie schiet dan omhoog).
-    Geen enkel WK-duel prijst boven ±4.5 totaal, dus cap op 4.6.  */
-const TOTAL_CAP = 4.6;
-
-console.log(`Markten: ${live.length} live (opgehaald ${market.fetchedAt})\n`);
-
-// 1) Globale ρ fitten
-const { rho, table } = fitRho(live);
-console.log("ρ-fit (lager = beter):");
+// 1) ρ fitten op de joint-doelfunctie
+const { rho, table } = fitRhoJoint(tl);
+console.log("ρ-fit (joint, lager = beter):");
 for (const r of table.slice(0, 5)) console.log(`  ρ=${r.rho.toFixed(2).padStart(5)}  err=${(r.err * 1e4).toFixed(2)}e-4`);
 console.log(`→ gekozen ρ = ${rho}\n`);
 
-// 2) λ's terugrekenen per duel
+// 2) λ's per duel
 const lambdas = {};
-console.log("duel".padEnd(36) + "λ oud".padEnd(14) + "λ nieuw".padEnd(14) + "fit-1X2 (model vs markt)");
+console.log("duel".padEnd(34) + "λ oud".padEnd(13) + "λ nieuw".padEnd(13) + "totaal(lijn)  1X2-fit model|markt");
 for (const m of MATCHES) {
-  const mk = market.markets[m.key];
-  if (mk) {
-    let inv = ANCHORS[m.key]
-      ? invertAnchored(mk.hw, mk.aw, ANCHORS[m.key], rho)
-      : invert1X2(mk.hw, mk.d, mk.aw, rho);
-    if (!ANCHORS[m.key] && Math.max(mk.hw, mk.aw) > 0.85 && inv.lh + inv.la > TOTAL_CAP)
-      inv = invertAnchored(mk.hw, mk.aw, TOTAL_CAP, rho);
-    const { lh, la } = inv;
+  const t = targets[m.key];
+  if (t) {
+    const { lh, la } = invertJoint(t, rho);
     const o = outcome(scoreMatrix(lh, la, rho));
-    lambdas[m.key] = { lh, la, src: "live", volume: mk.volume };
+    lambdas[m.key] = { lh, la, src: t.total ? (t.ml ? "joint" : "bovada") : "1x2", totalLine: t.total?.line ?? null };
     const drift = Math.abs(lh - m.lh) + Math.abs(la - m.la);
+    const mlTxt = t.ml ? `1 ${(o.hw * 100).toFixed(0)}|${(t.ml.hw * 100).toFixed(0)} X ${(o.d * 100).toFixed(0)}|${(t.ml.d * 100).toFixed(0)} 2 ${(o.aw * 100).toFixed(0)}|${(t.ml.aw * 100).toFixed(0)}` : "—";
     console.log(
-      m.key.padEnd(36) +
-      `${m.lh.toFixed(2)}/${m.la.toFixed(2)}`.padEnd(14) +
-      `${lh.toFixed(2)}/${la.toFixed(2)}`.padEnd(14) +
-      `1 ${(o.hw * 100).toFixed(0)}|${(mk.hw * 100).toFixed(0)}  X ${(o.d * 100).toFixed(0)}|${(mk.d * 100).toFixed(0)}  2 ${(o.aw * 100).toFixed(0)}|${(mk.aw * 100).toFixed(0)}` +
-      (drift > 0.5 ? "   ← grote shift" : "")
+      m.key.padEnd(34) +
+      `${m.lh.toFixed(2)}/${m.la.toFixed(2)}`.padEnd(13) +
+      `${lh.toFixed(2)}/${la.toFixed(2)}`.padEnd(13) +
+      `${(lh + la).toFixed(2)} (${t.total ? t.total.line : "—"})`.padEnd(14) + mlTxt +
+      (drift > 0.5 ? "  ← grote shift" : "")
     );
-  } else if (!process.argv.includes("--live-only")) {
-    lambdas[m.key] = { lh: m.lh, la: m.la, src: "stale" };
   } else {
-    lambdas[m.key] = { lh: m.lh, la: m.la, src: "stale" };
+    lambdas[m.key] = { lh: m.lh, la: m.la, src: "stale", totalLine: null };
   }
 }
 
 writeFileSync(new URL("./calibrated.json", import.meta.url),
   JSON.stringify({ calibratedAt: new Date().toISOString(), rho, lambdas }, null, 1));
-console.log(`\ncalibrated.json geschreven (ρ=${rho}, ${live.length} live, ${MATCHES.length - live.length} stale).`);
+const counts = {};
+for (const l of Object.values(lambdas)) counts[l.src] = (counts[l.src] ?? 0) + 1;
+console.log(`\ncalibrated.json geschreven (ρ=${rho}, bronnen: ${JSON.stringify(counts)}).`);

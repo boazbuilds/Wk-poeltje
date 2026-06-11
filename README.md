@@ -86,15 +86,24 @@ node analysis/round-advice.mjs 1      # adviestabel per ronde
 node analysis/pool-sim.mjs 30000      # Monte-Carlo: P(#1 van 18) per strategie
 ```
 
-- `engine.mjs` — zelfde wiskunde als de artifact + marktinversie (1X2 → λ) en
-  globale Dixon-Coles ρ-fit.
+- `engine.mjs` — zelfde wiskunde als de artifact + marktinversie (joint:
+  1X2 + totals + spreads → λ), globale ρ-fit en `blendMatrix`: een
+  Gauss-Hermite-mengsel van scorematrices over de λ-onzekerheid (σ=0.10).
+  `round-advice` adviseert op dit mengsel — de robuuste EV-keuze, zodat
+  knife-edge duels een eenduidig datagedreven antwoord krijgen.
 - `fetch-polymarket.mjs` — haalt per duel de drie binaire markten op
   (thuiswinst/uitwinst/gelijkspel) en normaliseert de marge eruit.
-- `calibrate.mjs` — fit ρ op alle live markten en rekent λ's terug. Voor
-  extreme favorieten (>85%) wordt het totaal verankerd op de bookmaker
-  O/U-lijn (Duitsland 4.5 → ±4.4; Spanje 3.5), want daar pint de 1X2 het
-  totaal niet vast. Bronnen: Sports Interaction/BetMGM (Duitsland),
-  Oddspedia/Sportscasting (Spanje), 10–11 juni 2026.
+- `fetch-bovada.mjs` — haalt per duel drie marktsignalen op in één
+  coupon-call: 1X2, O/U-totaallijn en goal spread (alles ge-de-vigd).
+- `calibrate.mjs` — **joint-kalibratie**: per duel worden (λh, λa) gefit op
+  alle signalen tegelijk (1X2 = gemiddelde Polymarket+Bovada; totals pinnen
+  het verwachte aantal goals; spreads de supremacy). ρ wordt op dezelfde
+  joint-doelfunctie gefit — uitkomst: **ρ=0** (zuivere Poisson); de eerdere
+  −0.08 was een artefact van de 1X2-only fit, die in ρ vrijwel vlak was.
+  Kerninzicht: 1X2-only inversie overschat de totalen systematisch (de
+  gelijkspel-prijs bevat longshot-bias); de echte O/U-lijnen corrigeren dat
+  over de hele linie omlaag → lage scores (1-0, 2-0, 0-0) worden nóg
+  waarschijnlijker en de meesterzet-edge dus groter.
 - `pool-sim.mjs` — simuleert de subleague: 17 tegenstanders trekken picks uit
   de echte ESPN-populariteitsverdeling, boosters gewogen naar massa-voorkeur.
   Vergelijkt strategieën (huidig / veilig / vol-EV / spiegel) op P(#1).

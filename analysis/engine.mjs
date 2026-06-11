@@ -49,9 +49,30 @@ export const popOf = (h, a, crowd) => {
   return null; // niet in de populaire lijst => onder 10%
 };
 
+/*  Mengsel van scorematrices over de λ-onzekerheid (multiplicatieve
+    lognormale ruis, Gauss-Hermite 5-punts per as). EV en exacte-score-
+    kansen zijn lineair in de matrix, dus analyse op het mengsel geeft
+    exact de verwachte evz over de onzekerheid — de "robuuste" keuze.  */
+const GH5 = [
+  { z: -2.8570, w: 0.011257 }, { z: -1.3556, w: 0.222076 }, { z: 0, w: 0.533333 },
+  { z: 1.3556, w: 0.222076 }, { z: 2.8570, w: 0.011257 },
+];
+export function blendMatrix(lh, la, rho, sigma, k = 8) {
+  const B = Array.from({ length: k + 1 }, () => new Array(k + 1).fill(0));
+  for (const i of GH5) for (const j of GH5) {
+    const M = scoreMatrix(lh * Math.exp(sigma * i.z), la * Math.exp(sigma * j.z), rho, k);
+    const w = i.w * j.w;
+    for (let h = 0; h <= k; h++) for (let a = 0; a <= k; a++) B[h][a] += w * M[h][a];
+  }
+  return B;
+}
+
 export function analyse(lh, la, crowd, rho) {
+  return analyseM(scoreMatrix(lh, la, rho, 8), crowd);
+}
+
+export function analyseM(M, crowd) {
   const K = 8, P = 6;
-  const M = scoreMatrix(lh, la, rho, K);
   const probs = outcome(M);
   let mode = { h: 0, a: 0, p: 0 };
   for (let h = 0; h <= 5; h++) for (let a = 0; a <= 5; a++) if (M[h][a] > mode.p) mode = { h, a, p: M[h][a] };
@@ -82,6 +103,53 @@ export function analyse(lh, la, crowd, rho) {
 function err1X2(lh, la, rho, hw, d, aw) {
   const o = outcome(scoreMatrix(lh, la, rho));
   return (o.hw - hw) ** 2 + (o.d - d) ** 2 + (o.aw - aw) ** 2;
+}
+
+/*  Joint-afwijking: 1X2 + O/U-totaallijn + goal spread tegelijk.
+    Push-afhandeling bij gehele lijnen: P = P(>L) / (P(>L) + P(<L)).
+    targets: { ml?: {hw,d,aw}, total?: {line,pOver}, spread?: {hcpHome,pHomeCover} }  */
+export function marketError(M, t) {
+  let hw = 0, d = 0, aw = 0, tGt = 0, tEq = 0, sGt = 0, sEq = 0;
+  const L = t.total?.line ?? null;
+  const H = t.spread ? -t.spread.hcpHome : null; // thuis covert als marge > H
+  for (let h = 0; h < M.length; h++) for (let a = 0; a < M.length; a++) {
+    const p = M[h][a];
+    h > a ? (hw += p) : h === a ? (d += p) : (aw += p);
+    if (L !== null) { const tot = h + a; if (tot > L) tGt += p; else if (tot === L) tEq += p; }
+    if (H !== null) { const mar = h - a; if (mar > H) sGt += p; else if (mar === H) sEq += p; }
+  }
+  let e = 0;
+  if (t.ml) e += (hw - t.ml.hw) ** 2 + (d - t.ml.d) ** 2 + (aw - t.ml.aw) ** 2;
+  if (t.total) e += (tGt / Math.max(1e-9, 1 - tEq) - t.total.pOver) ** 2;
+  if (t.spread) e += 0.5 * (sGt / Math.max(1e-9, 1 - sEq) - t.spread.pHomeCover) ** 2;
+  return e;
+}
+
+// Joint-inversie: vind (λh, λa) die alle marktsignalen samen het best past.
+export function invertJoint(t, rho) {
+  let best = { lh: 1, la: 1, e: Infinity };
+  const scan = (lo1, hi1, lo2, hi2, step) => {
+    for (let lh = lo1; lh <= hi1 + 1e-9; lh += step)
+      for (let la = lo2; la <= hi2 + 1e-9; la += step) {
+        const e = marketError(scoreMatrix(lh, la, rho), t);
+        if (e < best.e) best = { lh, la, e };
+      }
+  };
+  scan(0.05, 5.0, 0.05, 5.0, 0.1);
+  scan(Math.max(0.02, best.lh - 0.1), best.lh + 0.1, Math.max(0.02, best.la - 0.1), best.la + 0.1, 0.02);
+  scan(Math.max(0.01, best.lh - 0.02), best.lh + 0.02, Math.max(0.01, best.la - 0.02), best.la + 0.02, 0.005);
+  return { lh: +best.lh.toFixed(3), la: +best.la.toFixed(3), err: best.e };
+}
+
+export function fitRhoJoint(targetsList, rhoGrid) {
+  const grid = rhoGrid ?? Array.from({ length: 13 }, (_, i) => -0.16 + i * 0.02);
+  const rows = grid.map((rho) => {
+    let tot = 0;
+    for (const t of targetsList) tot += invertJoint(t, rho).err;
+    return { rho: +rho.toFixed(2), err: tot };
+  });
+  rows.sort((x, y) => x.err - y.err);
+  return { rho: rows[0].rho, table: rows };
 }
 
 // Vind (λh, λa) die de markt-1X2 het best reproduceert onder gegeven ρ.

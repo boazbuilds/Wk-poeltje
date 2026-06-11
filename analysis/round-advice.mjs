@@ -6,15 +6,16 @@
 
 import { readFileSync } from "node:fs";
 import { MATCHES, MY_BOOSTERS } from "./data.mjs";
-import { analyse } from "./engine.mjs";
+import { analyseM, blendMatrix } from "./engine.mjs";
 
 const cal = JSON.parse(readFileSync(new URL("./calibrated.json", import.meta.url)));
 const round = process.argv[2] ? parseInt(process.argv[2]) : 1;
 const rho = cal.rho;
+const SIGMA = 0.10; // λ-onzekerheid: advies = verwachte evz over het mengsel (robuust, geen puntschatting)
 
 const rows = MATCHES.filter((m) => m.round === round).map((m) => {
   const L = cal.lambdas[m.key];
-  const a = analyse(L.lh, L.la, m.crowd, rho);
+  const a = analyseM(blendMatrix(L.lh, L.la, rho, SIGMA), m.crowd);
   const mine = a.stat(m.mine[0], m.mine[1]);
   const ev = a.evpick;
   return { m, L, a, mine, ev,

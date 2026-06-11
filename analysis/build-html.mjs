@@ -29,9 +29,9 @@ src = src.replace(/const RHO = [^;]+;.*/,
 
 // 3) kop- en voetteksten actualiseren
 const stamp = new Date(cal.calibratedAt).toLocaleString("nl-NL", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Amsterdam" });
-src = src.replace(/ESPN WK Pool · model v\d+[^<]*/, `ESPN WK Pool · model v8 · alle 72 duels live geijkt · ${stamp} `);
+src = src.replace(/ESPN WK Pool · model v\d+[^<]*/, `ESPN WK Pool · model v9 · joint-kalibratie 1X2+totals+spreads · ${stamp} `);
 src = src.replace(/Ronde 1 staat volledig op live marktkansen[\s\S]*?op Neutraal\./,
-  `Alle 72 groepsduels staan op live Polymarket-kansen (gekalibreerd ${stamp}, marge eruit, ρ=${cal.rho} gefit op diezelfde markten; extreme favorieten verankerd op de bookmaker O/U-totaallijn). Populariteit en je eigen voorspelling komen rechtstreeks uit de poule, dus meesterzet en massa-keuze zijn exact. Ronde 2 en 3 worden vlak voor hun deadlines opnieuw geijkt — markten zijn daar nog dun en kennen de tussenstand niet. Bijsturen per duel kan via Totaal en Supremacy. Iedereen staat op nul, dus speel ronde 1 op Neutraal.`);
+  `Alle 72 groepsduels staan op een joint-kalibratie van drie live marktsignalen (gekalibreerd ${stamp}): de 1X2 van Polymarket én Bovada (marge eruit, gemiddeld), de O/U-totaallijn (pint het verwachte aantal goals vast) en de goal spread (pint de supremacy vast). ρ=${cal.rho} is op dezelfde joint-doelfunctie gefit. Populariteit en je eigen voorspelling komen rechtstreeks uit de poule, dus meesterzet en massa-keuze zijn exact. Ronde 2 en 3 worden vlak voor hun deadlines opnieuw geijkt. Bijsturen per duel kan via Totaal en Supremacy. Iedereen staat op nul, dus speel ronde 1 op Neutraal.`);
 
 // 4) JSX → browser-script (React via CDN-globals, geen imports/exports)
 src = src.replace(/import React[^\n]*\n/, "const { useMemo, useState } = React;\n");

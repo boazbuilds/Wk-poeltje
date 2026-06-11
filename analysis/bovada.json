@@ -1,0 +1,1296 @@
+{
+ "fetchedAt": "2026-06-11T10:33:19.619Z",
+ "source": "bovada coupon",
+ "markets": {
+  "1|Mexico|Zuid-Afrika": {
+   "title": "Mexico vs South Africa",
+   "start": 1781204400000,
+   "ml": {
+    "hw": 0.6642598669745642,
+    "d": 0.21660653743576502,
+    "aw": 0.11913359558967077,
+    "overround": 0.0492
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.43804309075268966
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.4675324675324676
+   }
+  },
+  "1|Zuid-Korea|Tsjechië": {
+   "title": "South Korea vs Czech Republic",
+   "start": 1781229600000,
+   "ml": {
+    "hw": 0.357311684307882,
+    "d": 0.3104511355461926,
+    "aw": 0.33223718014592535,
+    "overround": 0.0561
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.43444730077120824
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "1|Canada|Bosnië-Herz.": {
+   "title": "Canada vs Bosnia & Herzegovina",
+   "start": 1781290800000,
+   "ml": {
+    "hw": 0.5197939716306017,
+    "d": 0.26843815250463265,
+    "aw": 0.21176787586476573,
+    "overround": 0.0494
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.43444730077120824
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5324675324675325
+   }
+  },
+  "1|Qatar|Zwitserland": {
+   "title": "Qatar vs Switzerland",
+   "start": 1781377200000,
+   "ml": {
+    "hw": 0.0789618883728215,
+    "d": 0.1457757939190551,
+    "aw": 0.7752623177081235,
+    "overround": 0.0554
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5107761366540907
+   },
+   "spread": {
+    "hcpHome": 1.5,
+    "pHomeCover": 0.48263493577870437
+   }
+  },
+  "1|Brazilië|Marokko": {
+   "title": "Brazil vs Morocco",
+   "start": 1781388000000,
+   "ml": {
+    "hw": 0.5702942060092788,
+    "d": 0.256889333364018,
+    "aw": 0.17281646062670306,
+    "overround": 0.0521
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5324675324675325
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "1|Haïti|Schotland": {
+   "title": "Haiti vs Scotland",
+   "start": 1781398800000,
+   "ml": {
+    "hw": 0.1583816275170093,
+    "d": 0.223597591788719,
+    "aw": 0.6180207806942717,
+    "overround": 0.0523
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5107761366540907
+   },
+   "spread": {
+    "hcpHome": 1,
+    "pHomeCover": 0.5043264077813802
+   }
+  },
+  "1|VS|Paraguay": {
+   "title": "USA vs Paraguay",
+   "start": 1781312400000,
+   "ml": {
+    "hw": 0.48746295892168406,
+    "d": 0.27862751897546034,
+    "aw": 0.2339095221028556,
+    "overround": 0.0556
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5
+   }
+  },
+  "1|Australië|Turkije": {
+   "title": "Australia vs Turkey",
+   "start": 1781409600000,
+   "ml": {
+    "hw": 0.1862567254540237,
+    "d": 0.2499761315304002,
+    "aw": 0.5637671430155761,
+    "overround": 0.0527
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.4675324675324676
+   }
+  },
+  "1|Duitsland|Curaçao": {
+   "title": "Germany vs Curacao",
+   "start": 1781456400000,
+   "ml": {
+    "hw": 0.9137973960179714,
+    "d": 0.055672515071726894,
+    "aw": 0.030530088910301845,
+    "overround": 0.0566
+   },
+   "total": {
+    "line": 4,
+    "pOver": 0.49567359221861984
+   },
+   "spread": {
+    "hcpHome": -3,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "1|Ivoorkust|Ecuador": {
+   "title": "Ivory Coast vs Ecuador",
+   "start": 1781478000000,
+   "ml": {
+    "hw": 0.2639399932240247,
+    "d": 0.3417927969807515,
+    "aw": 0.3942672097952236,
+    "overround": 0.0524
+   },
+   "total": {
+    "line": 1.5,
+    "pOver": 0.5324675324675325
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5217391758034066
+   }
+  },
+  "1|Nederland|Japan": {
+   "title": "Netherlands vs Japan",
+   "start": 1781467200000,
+   "ml": {
+    "hw": 0.4693585127489161,
+    "d": 0.27088691307223156,
+    "aw": 0.25975457417885217,
+    "overround": 0.0547
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4892238633459093
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.4739133967693073
+   }
+  },
+  "1|Zweden|Tunesië": {
+   "title": "Sweden vs Tunisia",
+   "start": 1781488800000,
+   "ml": {
+    "hw": 0.498031484158415,
+    "d": 0.2755905577169486,
+    "aw": 0.22637795812463635,
+    "overround": 0.0518
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5655526992287918
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5043264077813802
+   }
+  },
+  "1|België|Egypte": {
+   "title": "Belgium vs Egypt",
+   "start": 1781550000000,
+   "ml": {
+    "hw": 0.5825601177065801,
+    "d": 0.24332057310151214,
+    "aw": 0.17411930919190774,
+    "overround": 0.0538
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "1|Iran|Nieuw-Zeeland": {
+   "title": "Iran vs New Zealand",
+   "start": 1781571600000,
+   "ml": {
+    "hw": 0.5250409227057239,
+    "d": 0.27098892140102865,
+    "aw": 0.20397015589324735,
+    "overround": 0.0543
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4675324675324676
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5324675324675325
+   }
+  },
+  "1|Spanje|Kaapverdië": {
+   "title": "Spain vs Cape Verde",
+   "start": 1781539200000,
+   "ml": {
+    "hw": 0.8782627341578576,
+    "d": 0.08554510572691083,
+    "aw": 0.036192160115231506,
+    "overround": 0.0627
+   },
+   "total": {
+    "line": 3.5,
+    "pOver": 0.5043264077813802
+   },
+   "spread": {
+    "hcpHome": -2.5,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "1|Saoedi-Arabië|Uruguay": {
+   "title": "Saudi Arabia vs Uruguay",
+   "start": 1781560800000,
+   "ml": {
+    "hw": 0.12663269521300927,
+    "d": 0.21585118502217487,
+    "aw": 0.6575161197648157,
+    "overround": 0.0529
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": 1,
+    "pHomeCover": 0.5324675324675325
+   }
+  },
+  "1|Frankrijk|Senegal": {
+   "title": "France vs Senegal",
+   "start": 1781636400000,
+   "ml": {
+    "hw": 0.6394932884760758,
+    "d": 0.2202190319263791,
+    "aw": 0.1402876795975452,
+    "overround": 0.056
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.48263493577870437
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "1|Irak|Noorwegen": {
+   "title": "Iraq vs Norway",
+   "start": 1781647200000,
+   "ml": {
+    "hw": 0.07285444088994268,
+    "d": 0.13530110450989355,
+    "aw": 0.7918444546001638,
+    "overround": 0.0558
+   },
+   "total": {
+    "line": 3,
+    "pOver": 0.48263493577870437
+   },
+   "spread": {
+    "hcpHome": 1.5,
+    "pHomeCover": 0.4675324675324676
+   }
+  },
+  "1|Argentinië|Algerije": {
+   "title": "Argentina vs Algeria",
+   "start": 1781658000000,
+   "ml": {
+    "hw": 0.6781469064309662,
+    "d": 0.21334958854007924,
+    "aw": 0.10850350502895457,
+    "overround": 0.0533
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.49567359221861984
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.5
+   }
+  },
+  "1|Oostenrijk|Jordanië": {
+   "title": "Austria vs Jordan",
+   "start": 1781668800000,
+   "ml": {
+    "hw": 0.7162941407935923,
+    "d": 0.17543648537498704,
+    "aw": 0.10826937383142059,
+    "overround": 0.0556
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5217391758034066
+   },
+   "spread": {
+    "hcpHome": -1.5,
+    "pHomeCover": 0.49567359221861984
+   }
+  },
+  "1|Portugal|DR Congo": {
+   "title": "Portugal vs DR Congo",
+   "start": 1781715600000,
+   "ml": {
+    "hw": 0.7488160515285365,
+    "d": 0.16495662287678203,
+    "aw": 0.08622732559468152,
+    "overround": 0.0543
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5107761366540907
+   },
+   "spread": {
+    "hcpHome": -1.5,
+    "pHomeCover": 0.5324675324675325
+   }
+  },
+  "1|Oezbekistan|Colombia": {
+   "title": "Uzbekistan vs Colombia",
+   "start": 1781748000000,
+   "ml": {
+    "hw": 0.1082900070034377,
+    "d": 0.20377151855485587,
+    "aw": 0.6879384744417064,
+    "overround": 0.0554
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.49567359221861984
+   },
+   "spread": {
+    "hcpHome": 1,
+    "pHomeCover": 0.49567359221861984
+   }
+  },
+  "1|Engeland|Kroatië": {
+   "title": "England vs Croatia",
+   "start": 1781726400000,
+   "ml": {
+    "hw": 0.5530145118163132,
+    "d": 0.24948027247461588,
+    "aw": 0.19750521570907092,
+    "overround": 0.0548
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5107761366540907
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.4892238633459093
+   }
+  },
+  "1|Ghana|Panama": {
+   "title": "Ghana vs Panama",
+   "start": 1781737200000,
+   "ml": {
+    "hw": 0.4509803921568627,
+    "d": 0.27450980392156865,
+    "aw": 0.27450980392156865,
+    "overround": 0.0559
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "2|Tsjechië|Zuid-Afrika": {
+   "title": "Czech Republic vs South Africa",
+   "start": 1781798400000,
+   "ml": {
+    "hw": 0.48703191053046024,
+    "d": 0.2838423428398121,
+    "aw": 0.2291257466297278,
+    "overround": 0.0517
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.4892238633459093
+   }
+  },
+  "2|Mexico|Zuid-Korea": {
+   "title": "Mexico vs South Korea",
+   "start": 1781830800000,
+   "ml": {
+    "hw": 0.5348411244724058,
+    "d": 0.25936131241538585,
+    "aw": 0.20579756311220837,
+    "overround": 0.0563
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4892238633459093
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.4675324675324676
+   }
+  },
+  "2|Zwitserland|Bosnië-Herz.": {
+   "title": "Switzerland vs Bosnia & Herzegovina",
+   "start": 1781809200000,
+   "ml": {
+    "hw": 0.5889950723321343,
+    "d": 0.2370345879142718,
+    "aw": 0.17397033975359397,
+    "overround": 0.0547
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5324675324675325
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.4675324675324676
+   }
+  },
+  "2|Canada|Qatar": {
+   "title": "Canada vs Qatar",
+   "start": 1781820000000,
+   "ml": {
+    "hw": 0.7234589511839729,
+    "d": 0.18193490053685993,
+    "aw": 0.09460614827916718,
+    "overround": 0.057
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4892238633459093
+   },
+   "spread": {
+    "hcpHome": -1.5,
+    "pHomeCover": 0.48263493577870437
+   }
+  },
+  "2|Brazilië|Haïti": {
+   "title": "Brazil vs Haiti",
+   "start": 1781915400000,
+   "total": {
+    "line": 3.5,
+    "pOver": 0.4892238633459093
+   },
+   "spread": {
+    "hcpHome": -2.5,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "2|Schotland|Marokko": {
+   "title": "Scotland vs Morocco",
+   "start": 1781906400000,
+   "ml": {
+    "hw": 0.22870424262839845,
+    "d": 0.29203772520241655,
+    "aw": 0.4792580321691849,
+    "overround": 0.0536
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4739133967693073
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "2|VS|Australië": {
+   "title": "USA vs Australia",
+   "start": 1781895600000,
+   "ml": {
+    "hw": 0.5469835634174111,
+    "d": 0.23729432392421324,
+    "aw": 0.21572211265837565,
+    "overround": 0.0535
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4739133967693073
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.4892238633459093
+   }
+  },
+  "2|Turkije|Paraguay": {
+   "title": "Turkey vs Paraguay",
+   "start": 1781924400000,
+   "ml": {
+    "hw": 0.4247523011080495,
+    "d": 0.30069766078442867,
+    "aw": 0.2745500381075219,
+    "overround": 0.0557
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4739133967693073
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5043264077813802
+   }
+  },
+  "2|Duitsland|Ivoorkust": {
+   "title": "Germany vs Ivory Coast",
+   "start": 1781985600000,
+   "ml": {
+    "hw": 0.6091905416751328,
+    "d": 0.2162346749107134,
+    "aw": 0.17457478341415392,
+    "overround": 0.051
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.48263493577870437
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.4892238633459093
+   }
+  },
+  "2|Ecuador|Curaçao": {
+   "title": "Ecuador vs Curacao",
+   "start": 1782000000000,
+   "ml": {
+    "hw": 0.7950178879024778,
+    "d": 0.1261428382138598,
+    "aw": 0.07883927388366238,
+    "overround": 0.057
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5173650642212955
+   },
+   "spread": {
+    "hcpHome": -1.5,
+    "pHomeCover": 0.5324675324675325
+   }
+  },
+  "2|Nederland|Zweden": {
+   "title": "Netherlands vs Sweden",
+   "start": 1781974800000,
+   "ml": {
+    "hw": 0.5819198876818363,
+    "d": 0.23176180139376468,
+    "aw": 0.18631831092439907,
+    "overround": 0.0524
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.4675324675324676
+   }
+  },
+  "2|Tunesië|Japan": {
+   "title": "Tunisia vs Japan",
+   "start": 1782014400000,
+   "ml": {
+    "hw": 0.17592225412602355,
+    "d": 0.26026854035082936,
+    "aw": 0.5638092055231471,
+    "overround": 0.0527
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.49567359221861984
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.49567359221861984
+   }
+  },
+  "2|België|Iran": {
+   "title": "Belgium vs Iran",
+   "start": 1782068400000,
+   "ml": {
+    "hw": 0.682792043577046,
+    "d": 0.19903244324577504,
+    "aw": 0.11817551317717893,
+    "overround": 0.0577
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5173650642212955
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.5043264077813802
+   }
+  },
+  "2|Nieuw-Zeeland|Egypte": {
+   "title": "New Zealand vs Egypt",
+   "start": 1782090000000,
+   "ml": {
+    "hw": 0.21590563613304228,
+    "d": 0.24358584589368878,
+    "aw": 0.5405085179732689,
+    "overround": 0.0526
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.48263493577870437
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "2|Spanje|Saoedi-Arabië": {
+   "title": "Spain vs Saudi Arabia",
+   "start": 1782057600000,
+   "ml": {
+    "hw": 0.8700565065966571,
+    "d": 0.09039547367189071,
+    "aw": 0.03954801973145219,
+    "overround": 0.0536
+   },
+   "total": {
+    "line": 3,
+    "pOver": 0.48263493577870437
+   },
+   "spread": {
+    "hcpHome": -2.5,
+    "pHomeCover": 0.4739133967693073
+   }
+  },
+  "2|Uruguay|Kaapverdië": {
+   "title": "Uruguay vs Cape Verde",
+   "start": 1782079200000,
+   "ml": {
+    "hw": 0.6680651406578137,
+    "d": 0.2057447475261485,
+    "aw": 0.12619011181603773,
+    "overround": 0.0566
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5043264077813802
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.46131434121074777
+   }
+  },
+  "2|Frankrijk|Irak": {
+   "title": "France vs Iraq",
+   "start": 1782162000000,
+   "ml": {
+    "hw": 0.8525190663194437,
+    "d": 0.11481737118754709,
+    "aw": 0.032663562493009085,
+    "overround": 0.0557
+   },
+   "total": {
+    "line": 3,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": -2,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "2|Noorwegen|Senegal": {
+   "title": "Norway vs Senegal",
+   "start": 1782172800000,
+   "ml": {
+    "hw": 0.4465068414834013,
+    "d": 0.26664633913938335,
+    "aw": 0.2868468193772154,
+    "overround": 0.0564
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4892238633459093
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5217391758034066
+   }
+  },
+  "2|Argentinië|Oostenrijk": {
+   "title": "Argentina vs Austria",
+   "start": 1782147600000,
+   "ml": {
+    "hw": 0.580954677470589,
+    "d": 0.24964402193241503,
+    "aw": 0.16940130059699593,
+    "overround": 0.0541
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4892238633459093
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5324675324675325
+   }
+  },
+  "2|Jordanië|Algerije": {
+   "title": "Jordan vs Algeria",
+   "start": 1782183600000,
+   "ml": {
+    "hw": 0.15153554328664012,
+    "d": 0.22025515012593042,
+    "aw": 0.6282093065874295,
+    "overround": 0.0559
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5
+   },
+   "spread": {
+    "hcpHome": 1,
+    "pHomeCover": 0.48263493577870437
+   }
+  },
+  "2|Portugal|Oezbekistan": {
+   "title": "Portugal vs Uzbekistan",
+   "start": 1782234000000,
+   "ml": {
+    "hw": 0.7697368743310893,
+    "d": 0.14473682184902964,
+    "aw": 0.08552630381988115,
+    "overround": 0.0629
+   },
+   "total": {
+    "line": 3,
+    "pOver": 0.5107761366540907
+   },
+   "spread": {
+    "hcpHome": -1.5,
+    "pHomeCover": 0.4892238633459093
+   }
+  },
+  "2|Colombia|DR Congo": {
+   "title": "Colombia vs DR Congo",
+   "start": 1782266400000,
+   "ml": {
+    "hw": 0.6558888280317875,
+    "d": 0.2177918809925396,
+    "aw": 0.12631929097567296,
+    "overround": 0.0555
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.542743646668717
+   }
+  },
+  "2|Engeland|Ghana": {
+   "title": "England vs Ghana",
+   "start": 1782244800000,
+   "ml": {
+    "hw": 0.7277619960596389,
+    "d": 0.17241740249556203,
+    "aw": 0.09982060144479907,
+    "overround": 0.0545
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5107761366540907
+   },
+   "spread": {
+    "hcpHome": -1.5,
+    "pHomeCover": 0.5107761366540907
+   }
+  },
+  "2|Panama|Kroatië": {
+   "title": "Panama vs Croatia",
+   "start": 1782255600000,
+   "ml": {
+    "hw": 0.1457498691267007,
+    "d": 0.2526331064862812,
+    "aw": 0.6016170243870181,
+    "overround": 0.0555
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5260866032306926
+   },
+   "spread": {
+    "hcpHome": 1,
+    "pHomeCover": 0.5107761366540907
+   }
+  },
+  "3|Tsjechië|Mexico": {
+   "title": "Czech Republic vs Mexico",
+   "start": 1782349200000,
+   "ml": {
+    "hw": 0.20330222541277815,
+    "d": 0.26259870782483846,
+    "aw": 0.5340990667623833,
+    "overround": 0.0578
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5173650642212955
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "3|Zuid-Afrika|Zuid-Korea": {
+   "title": "South Africa vs South Korea",
+   "start": 1782349200000,
+   "ml": {
+    "hw": 0.23171795520115923,
+    "d": 0.27942459303669204,
+    "aw": 0.48885745176214873,
+    "overround": 0.0526
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5043264077813802
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.5043264077813802
+   }
+  },
+  "3|Zwitserland|Canada": {
+   "title": "Switzerland vs Canada",
+   "start": 1782327600000,
+   "ml": {
+    "hw": 0.44555490110391216,
+    "d": 0.28329311622427844,
+    "aw": 0.2711519826718094,
+    "overround": 0.0537
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5173650642212955
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5217391758034066
+   }
+  },
+  "3|Bosnië-Herz.|Qatar": {
+   "title": "Bosnia & Herzegovina vs Qatar",
+   "start": 1782327600000,
+   "ml": {
+    "hw": 0.5752360231298519,
+    "d": 0.2557718570400892,
+    "aw": 0.16899211983005896,
+    "overround": 0.0567
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5260866032306926
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5217391758034066
+   }
+  },
+  "3|Marokko|Haïti": {
+   "title": "Morocco vs Haiti",
+   "start": 1782338400000,
+   "ml": {
+    "hw": 0.7214648749672302,
+    "d": 0.1810478312713004,
+    "aw": 0.09748729376146945,
+    "overround": 0.0521
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5
+   },
+   "spread": {
+    "hcpHome": -1.5,
+    "pHomeCover": 0.4892238633459093
+   }
+  },
+  "3|Schotland|Brazilië": {
+   "title": "Scotland vs Brazil",
+   "start": 1782338400000,
+   "ml": {
+    "hw": 0.17235730807588645,
+    "d": 0.19150812008431828,
+    "aw": 0.6361345718397953,
+    "overround": 0.0549
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5173650642212955
+   },
+   "spread": {
+    "hcpHome": 1,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "3|Turkije|VS": {
+   "title": "Turkey vs USA",
+   "start": 1782439200000,
+   "ml": {
+    "hw": 0.3663570691434469,
+    "d": 0.26728586171310637,
+    "aw": 0.3663570691434469,
+    "overround": 0.0539
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5043264077813802
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5
+   }
+  },
+  "3|Paraguay|Australië": {
+   "title": "Paraguay vs Australia",
+   "start": 1782439200000,
+   "ml": {
+    "hw": 0.4407039020657996,
+    "d": 0.2960979342004591,
+    "aw": 0.26319816373374144,
+    "overround": 0.0554
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4739133967693073
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5217391758034066
+   }
+  },
+  "3|Ecuador|Duitsland": {
+   "title": "Ecuador vs Germany",
+   "start": 1782417600000,
+   "ml": {
+    "hw": 0.20608285324032433,
+    "d": 0.2527949666414645,
+    "aw": 0.5411221801182112,
+    "overround": 0.0549
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.5107761366540907
+   }
+  },
+  "3|Curaçao|Ivoorkust": {
+   "title": "Curacao vs Ivory Coast",
+   "start": 1782417600000,
+   "ml": {
+    "hw": 0.07868554227829619,
+    "d": 0.13988540849474876,
+    "aw": 0.781429049226955,
+    "overround": 0.0591
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5260866032306926
+   },
+   "spread": {
+    "hcpHome": 1.5,
+    "pHomeCover": 0.4782608241965934
+   }
+  },
+  "3|Tunesië|Nederland": {
+   "title": "Tunisia vs Netherlands",
+   "start": 1782428400000,
+   "ml": {
+    "hw": 0.14615751413446412,
+    "d": 0.21839628548827975,
+    "aw": 0.6354462003772561,
+    "overround": 0.0526
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5173650642212955
+   },
+   "spread": {
+    "hcpHome": 1,
+    "pHomeCover": 0.4739133967693073
+   }
+  },
+  "3|Japan|Zweden": {
+   "title": "Japan vs Sweden",
+   "start": 1782428400000,
+   "ml": {
+    "hw": 0.4509283819628648,
+    "d": 0.2785145888594165,
+    "aw": 0.27055702917771884,
+    "overround": 0.056
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5260866032306926
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "3|Egypte|Iran": {
+   "title": "Egypt vs Iran",
+   "start": 1782529200000,
+   "ml": {
+    "hw": 0.4210526315789474,
+    "d": 0.31578947368421056,
+    "aw": 0.26315789473684215,
+    "overround": 0.0556
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.49567359221861984
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5043264077813802
+   }
+  },
+  "3|Nieuw-Zeeland|België": {
+   "title": "New Zealand vs Belgium",
+   "start": 1782529200000,
+   "ml": {
+    "hw": 0.09468440400768081,
+    "d": 0.15780734001280133,
+    "aw": 0.7475082559795179,
+    "overround": 0.0561
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5260866032306926
+   },
+   "spread": {
+    "hcpHome": 1.5,
+    "pHomeCover": 0.4782608241965934
+   }
+  },
+  "3|Uruguay|Spanje": {
+   "title": "Uruguay vs Spain",
+   "start": 1782518400000,
+   "ml": {
+    "hw": 0.17922705714725712,
+    "d": 0.24048187414695252,
+    "aw": 0.5802910687057904,
+    "overround": 0.0527
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5043264077813802
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.4739133967693073
+   }
+  },
+  "3|Kaapverdië|Saoedi-Arabië": {
+   "title": "Cape Verde vs Saudi Arabia",
+   "start": 1782518400000,
+   "ml": {
+    "hw": 0.3717481157306103,
+    "d": 0.287259907610017,
+    "aw": 0.34099197665937275,
+    "overround": 0.0549
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5217391758034066
+   }
+  },
+  "3|Noorwegen|Frankrijk": {
+   "title": "Norway vs France",
+   "start": 1782500400000,
+   "ml": {
+    "hw": 0.2236120941045544,
+    "d": 0.26398649998454343,
+    "aw": 0.5124014059109022,
+    "overround": 0.0522
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.48263493577870437
+   }
+  },
+  "3|Senegal|Irak": {
+   "title": "Senegal vs Iraq",
+   "start": 1782500400000,
+   "ml": {
+    "hw": 0.678945467677862,
+    "d": 0.2022390754785121,
+    "aw": 0.11881545684362586,
+    "overround": 0.0521
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5043264077813802
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.4892238633459093
+   }
+  },
+  "3|Algerije|Oostenrijk": {
+   "title": "Algeria vs Austria",
+   "start": 1782612000000,
+   "ml": {
+    "hw": 0.24967785947093152,
+    "d": 0.31107405442279995,
+    "aw": 0.43924808610626837,
+    "overround": 0.054
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5217391758034066
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.4739133967693073
+   }
+  },
+  "3|Jordanië|Argentinië": {
+   "title": "Jordan vs Argentina",
+   "start": 1782612000000,
+   "ml": {
+    "hw": 0.06306307767226606,
+    "d": 0.12612615534453211,
+    "aw": 0.8108107669832018,
+    "overround": 0.0571
+   },
+   "total": {
+    "line": 3,
+    "pOver": 0.49567359221861984
+   },
+   "spread": {
+    "hcpHome": 2,
+    "pHomeCover": 0.5173650642212955
+   }
+  },
+  "3|Colombia|Portugal": {
+   "title": "Colombia vs Portugal",
+   "start": 1782603000000,
+   "ml": {
+    "hw": 0.2711119602598395,
+    "d": 0.28754298815437523,
+    "aw": 0.44134505158578524,
+    "overround": 0.0539
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5173650642212955
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.4782608241965934
+   }
+  },
+  "3|DR Congo|Oezbekistan": {
+   "title": "DR Congo vs Uzbekistan",
+   "start": 1782603000000,
+   "ml": {
+    "hw": 0.40763200414912926,
+    "d": 0.2823003730226805,
+    "aw": 0.3100676228281901,
+    "overround": 0.0574
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.48263493577870437
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.4782608241965934
+   }
+  },
+  "3|Panama|Engeland": {
+   "title": "Panama vs England",
+   "start": 1782594000000,
+   "ml": {
+    "hw": 0.11830129510765935,
+    "d": 0.14560159397865768,
+    "aw": 0.7360971109136829,
+    "overround": 0.0566
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5324675324675325
+   },
+   "spread": {
+    "hcpHome": 1.5,
+    "pHomeCover": 0.4782608241965934
+   }
+  },
+  "3|Kroatië|Ghana": {
+   "title": "Croatia vs Ghana",
+   "start": 1782594000000,
+   "ml": {
+    "hw": 0.5851804865714948,
+    "d": 0.24581897092059565,
+    "aw": 0.16900054250790952,
+    "overround": 0.0566
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5324675324675325
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5386856587892521
+   }
+  }
+ }
+}
