@@ -1,0 +1,18 @@
+{
+  "_uitleg": [
+    "Handmatige correcties per duel, toegepast NA de marktinversie.",
+    "Zet ze onder 'overrides', sleutel = 'ronde|Thuis|Uit' exact zoals in data.mjs.",
+    "Gebruik dit voor ronde-3 'dode' duels (geplaatste ploeg roteert/neemt gas terug,",
+    "markt is daar traag) of voor laat opstellings-/blessurenieuws.",
+    "Drie vormen per duel (kies er één):",
+    "  lambdaMult: [thuis, uit]  -> vermenigvuldigt de markt-lambda's, bv [0.75,1.0]",
+    "  total + supremacy         -> lh=(T+S)/2, la=(T-S)/2",
+    "  lambda: [thuis, uit]      -> zet de lambda's direct"
+  ],
+  "_voorbeeld": {
+    "3|Ecuador|Duitsland": { "note": "Duitsland al geplaatst, rust spelers", "lambdaMult": [1.15, 0.7] },
+    "3|Some|Match": { "note": "knife-edge, eigen read", "total": 2.0, "supremacy": 0.4 }
+  },
+  "overrides": {
+  }
+}

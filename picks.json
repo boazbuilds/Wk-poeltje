@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-11T10:44:23.955Z",
+ "generatedAt": "2026-06-11T11:13:53.357Z",
  "ronde": 1,
  "booster": {
   "wedstrijd": "Duitsland vs Curaçao",
@@ -205,7 +205,7 @@
    "wijzigen": false,
    "huidige_invulling": "2-1",
    "meesterzet": true,
-   "fallback_bij_10pct": "1-0"
+   "fallback_bij_10pct": "2-0"
   },
   {
    "wedstrijd": "Portugal vs DR Congo",

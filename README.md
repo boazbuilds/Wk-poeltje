@@ -80,11 +80,18 @@ Naast de artifact is er een Node-pijplijn die de voorspellingen ververst en de
 strategie doorrekent (geen dependencies, Node ≥ 18):
 
 ```bash
-node analysis/fetch-polymarket.mjs 1   # live 1X2 van Polymarket → market.json
-node analysis/calibrate.mjs           # fit ρ + λ's terugrekenen → calibrated.json
-node analysis/round-advice.mjs 1      # adviestabel per ronde
-node analysis/pool-sim.mjs 30000      # Monte-Carlo: P(#1 van 18) per strategie
+node analysis/fetch-pinnacle.mjs       # scherpste book: 1X2 + totals/spread-ladders
+node analysis/fetch-bovada.mjs         # 1X2 + totals + spread
+node analysis/fetch-polymarket.mjs 1   # echt geld (1X2) → market.json
+node analysis/calibrate.mjs            # joint-fit 3 bronnen + overrides → calibrated.json
+node analysis/round-advice.mjs 1       # adviestabel per ronde (robuuste EV)
+node analysis/optimize.mjs 30000       # hill-climb op P(#1)
+node analysis/build-picks.mjs          # VOORSPELLINGEN.md + picks.json
+node analysis/build-html.mjs           # index.html
 ```
+
+Eén regel om alles te verversen voor een ronde:
+`node analysis/fetch-pinnacle.mjs && node analysis/fetch-bovada.mjs && node analysis/fetch-polymarket.mjs && node analysis/calibrate.mjs && node analysis/build-picks.mjs && node analysis/build-html.mjs`
 
 - `engine.mjs` — zelfde wiskunde als de artifact + marktinversie (joint:
   1X2 + totals + spreads → λ), globale ρ-fit en `blendMatrix`: een
@@ -93,16 +100,20 @@ node analysis/pool-sim.mjs 30000      # Monte-Carlo: P(#1 van 18) per strategie
   knife-edge duels een eenduidig datagedreven antwoord krijgen.
 - `fetch-polymarket.mjs` — haalt per duel de drie binaire markten op
   (thuiswinst/uitwinst/gelijkspel) en normaliseert de marge eruit.
-- `fetch-bovada.mjs` — haalt per duel drie marktsignalen op in één
-  coupon-call: 1X2, O/U-totaallijn en goal spread (alles ge-de-vigd).
-- `calibrate.mjs` — **joint-kalibratie**: per duel worden (λh, λa) gefit op
-  alle signalen tegelijk (1X2 = gemiddelde Polymarket+Bovada; totals pinnen
-  het verwachte aantal goals; spreads de supremacy). ρ wordt op dezelfde
-  joint-doelfunctie gefit — uitkomst: **ρ=0** (zuivere Poisson); de eerdere
-  −0.08 was een artefact van de 1X2-only fit, die in ρ vrijwel vlak was.
-  Kerninzicht: 1X2-only inversie overschat de totalen systematisch (de
-  gelijkspel-prijs bevat longshot-bias); de echte O/U-lijnen corrigeren dat
-  over de hele linie omlaag → lage scores (1-0, 2-0, 0-0) worden nóg
+- `fetch-pinnacle.mjs` — **scherpste bron**: Pinnacle-sluitingslijnen via de
+  publieke guest-API. Per duel de moneyline, de volledige totals-ladder (9
+  lijnen) en de spread-ladder — de hele ladder pint de scoreverdeling strak.
+- `fetch-bovada.mjs` — 1X2 + O/U-hoofdlijn + goal spread (één coupon-call).
+- `fetch-polymarket.mjs` — echt ingelegd geld (1X2).
+- `overrides.json` — handmatige correcties per duel (lambdaMult / total+
+  supremacy / directe λ), toegepast ná de marktinversie. Bedoeld voor
+  ronde-3 'dode' duels waar een geplaatste ploeg roteert en de markt traag is.
+- `calibrate.mjs` — **joint-kalibratie over drie bronnen**: per duel worden
+  (λh, λa) gefit op 1X2 (Pinnacle dubbel gewicht + Polymarket + Bovada),
+  de totals-ladders én de spreads tegelijk; daarna worden overrides toegepast.
+  ρ op dezelfde doelfunctie. Kerninzicht: 1X2-only inversie overschat de
+  totalen (longshot-bias in de gelijkspel-prijs); de echte O/U-ladders
+  corrigeren dat omlaag → lage scores (1-0, 2-0, 0-0) worden nóg
   waarschijnlijker en de meesterzet-edge dus groter.
 - `pool-sim.mjs` — simuleert de subleague: 17 tegenstanders trekken picks uit
   de echte ESPN-populariteitsverdeling, boosters gewogen naar massa-voorkeur.

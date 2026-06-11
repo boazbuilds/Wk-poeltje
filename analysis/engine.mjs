@@ -105,23 +105,49 @@ function err1X2(lh, la, rho, hw, d, aw) {
   return (o.hw - hw) ** 2 + (o.d - d) ** 2 + (o.aw - aw) ** 2;
 }
 
-/*  Joint-afwijking: 1X2 + O/U-totaallijn + goal spread tegelijk.
+/*  Joint-afwijking: 1X2 + O/U-totaallijn(en) + goal spread(s) tegelijk.
     Push-afhandeling bij gehele lijnen: P = P(>L) / (P(>L) + P(<L)).
-    targets: { ml?: {hw,d,aw}, total?: {line,pOver}, spread?: {hcpHome,pHomeCover} }  */
+    targets: {
+      ml?:     {hw,d,aw},
+      total?:  {line,pOver},          totals?:  [{line,pOver}, ...]   (hele ladder),
+      spread?: {hcpHome,pHomeCover},  spreads?: [{hcpHome,pHomeCover}, ...]
+    }  Een ladder weegt als gemiddelde over zijn punten (niet zwaarder dan 1 lijn).  */
 export function marketError(M, t) {
-  let hw = 0, d = 0, aw = 0, tGt = 0, tEq = 0, sGt = 0, sEq = 0;
-  const L = t.total?.line ?? null;
-  const H = t.spread ? -t.spread.hcpHome : null; // thuis covert als marge > H
-  for (let h = 0; h < M.length; h++) for (let a = 0; a < M.length; a++) {
-    const p = M[h][a];
-    h > a ? (hw += p) : h === a ? (d += p) : (aw += p);
-    if (L !== null) { const tot = h + a; if (tot > L) tGt += p; else if (tot === L) tEq += p; }
-    if (H !== null) { const mar = h - a; if (mar > H) sGt += p; else if (mar === H) sEq += p; }
-  }
+  // cumulatieve hulpfuncties over de scorematrix
+  const totalP = (L) => { // {gt, eq}
+    let gt = 0, eq = 0;
+    for (let h = 0; h < M.length; h++) for (let a = 0; a < M.length; a++) {
+      const s = h + a; if (s > L) gt += M[h][a]; else if (s === L) eq += M[h][a];
+    }
+    return { gt, eq };
+  };
+  const spreadP = (H) => { // thuis covert als (h-a) > H
+    let gt = 0, eq = 0;
+    for (let h = 0; h < M.length; h++) for (let a = 0; a < M.length; a++) {
+      const s = h - a; if (s > H) gt += M[h][a]; else if (s === H) eq += M[h][a];
+    }
+    return { gt, eq };
+  };
+
   let e = 0;
-  if (t.ml) e += (hw - t.ml.hw) ** 2 + (d - t.ml.d) ** 2 + (aw - t.ml.aw) ** 2;
-  if (t.total) e += (tGt / Math.max(1e-9, 1 - tEq) - t.total.pOver) ** 2;
-  if (t.spread) e += 0.5 * (sGt / Math.max(1e-9, 1 - sEq) - t.spread.pHomeCover) ** 2;
+  if (t.ml) {
+    let hw = 0, d = 0, aw = 0;
+    for (let h = 0; h < M.length; h++) for (let a = 0; a < M.length; a++)
+      h > a ? (hw += M[h][a]) : h === a ? (d += M[h][a]) : (aw += M[h][a]);
+    e += (hw - t.ml.hw) ** 2 + (d - t.ml.d) ** 2 + (aw - t.ml.aw) ** 2;
+  }
+  const totals = t.totals ?? (t.total ? [t.total] : []);
+  if (totals.length) {
+    let se = 0;
+    for (const x of totals) { const { gt, eq } = totalP(x.line); se += (gt / Math.max(1e-9, 1 - eq) - x.pOver) ** 2; }
+    e += se / totals.length;
+  }
+  const spreads = t.spreads ?? (t.spread ? [t.spread] : []);
+  if (spreads.length) {
+    let se = 0;
+    for (const x of spreads) { const { gt, eq } = spreadP(-x.hcpHome); se += (gt / Math.max(1e-9, 1 - eq) - x.pHomeCover) ** 2; }
+    e += 0.5 * se / spreads.length;
+  }
   return e;
 }
 
