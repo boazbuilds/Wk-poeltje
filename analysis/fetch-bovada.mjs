@@ -6,7 +6,7 @@
 
     Gebruik:  node analysis/fetch-bovada.mjs  */
 
-import { writeFileSync } from "node:fs";
+import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { MATCHES, EN } from "./data.mjs";
 
 const COUPON = "https://www.bovada.lv/services/sports/event/coupon/events/A/description/soccer/fifa-world-cup?marketFilterId=def&preMatchOnly=true&lang=en";
@@ -18,7 +18,11 @@ console.log(`Bovada: ${events.length} events in de coupon.`);
 
 const devig2 = (a, b) => { const x = 1 / a, y = 1 / b; return x / (x + y); };
 
-const out = { fetchedAt: new Date().toISOString(), source: "bovada coupon", markets: {} };
+const outFile = new URL("./bovada.json", import.meta.url);
+// merge met vorige run: gespeelde duels verdwijnen uit de coupon maar we
+// bewaren hun starttijd (voor vergrendel-detectie); verse lijnen overschrijven
+const prev = existsSync(outFile) ? JSON.parse(readFileSync(outFile)).markets : {};
+const out = { fetchedAt: new Date().toISOString(), source: "bovada coupon", markets: prev };
 const missing = [];
 
 for (const m of MATCHES) {
@@ -64,5 +68,5 @@ for (const m of MATCHES) {
   console.log(`✓ ${m.key.padEnd(34)} 1X2 ${rec.ml ? "✓" : "—"}  totaal ${rec.total ? rec.total.line : "—"} (P> ${rec.total ? (rec.total.pOver * 100).toFixed(0) + "%" : "—"})  spread ${rec.spread ? rec.spread.hcpHome : "—"}`);
 }
 
-writeFileSync(new URL("./bovada.json", import.meta.url), JSON.stringify(out, null, 1));
+writeFileSync(outFile, JSON.stringify(out, null, 1));
 console.log(`\n${Object.keys(out.markets).length} duels, ${missing.length} ontbreken.${missing.length ? " Ontbrekend: " + missing.join(", ") : ""}`);

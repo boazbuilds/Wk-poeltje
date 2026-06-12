@@ -10,17 +10,19 @@
 
     Gebruik:  node analysis/build-picks.mjs        (na fetch + calibrate)  */
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { MATCHES, MY_BOOSTERS } from "./data.mjs";
 import { analyseM, blendMatrix, popOf } from "./engine.mjs";
 
 const cal = JSON.parse(readFileSync(new URL("./calibrated.json", import.meta.url)));
 const bv = JSON.parse(readFileSync(new URL("./bovada.json", import.meta.url)));
+const resFile = new URL("./results.json", import.meta.url);
+const RESULTS = existsSync(resFile) ? JSON.parse(readFileSync(resFile)).results : {};
 const SIGMA = 0.10, THRESH = 0.05, ROUND = 1;
 
 // P(#1)-optimizer-voorkeuren waar de EV binnen de ruis gelijk is (±0.01).
 const OVERRIDES = {
-  "1|Iran|Nieuw-Zeeland": { pick: [1, 0], reden: "optimizer-voorkeur op P(#1); EV-verschil met 2-0 is 0.01 (ruis)" },
+  "1|Iran|Nieuw-Zeeland": { pick: [2, 0], reden: "EV én P(#1)-optimizer kiezen beide 2-0★ (herijking 12 jun)" },
 };
 
 // Teamnamen exact zoals de ESPN-pagina ze toont.
@@ -61,12 +63,14 @@ const rows = MATCHES.filter((m) => m.round === ROUND).map((m) => {
     if (alt && alt.evz > st.evz - 2 * st.mp) fallback = [alt.h, alt.a, alt.mz];
   }
 
-  const start = bv.markets[m.key]?.start ?? null;
+  const startRaw = bv.markets[m.key]?.start ?? null;
+  const start = typeof startRaw === "string" ? Date.parse(startRaw) : startRaw;
+  const locked = !!RESULTS[m.key] || (start && start < Date.now());
   return {
-    key: m.key, group: m.group, start,
+    key: m.key, group: m.group, start, locked, uitslag: RESULTS[m.key] ?? null,
     espnHome: espn(m.home), espnAway: espn(m.away),
     huidig: m.mine, pick, ster: st.mz, reden,
-    wijzigen: pick[0] !== m.mine[0] || pick[1] !== m.mine[1],
+    wijzigen: !locked && (pick[0] !== m.mine[0] || pick[1] !== m.mine[1]),
     fallback, evz: +st.evz.toFixed(2), modelPct: +(st.mp * 100).toFixed(0),
   };
 }).sort((x, y) => (x.start ?? 0) - (y.start ?? 0));
@@ -84,6 +88,8 @@ writeFileSync(new URL("../picks.json", import.meta.url), JSON.stringify({
   wedstrijden: rows.map((r) => ({
     wedstrijd: `${r.espnHome} vs ${r.espnAway}`,
     deadline_nl: r.start ? fmtDl(r.start) : null,
+    vergrendeld: r.locked,
+    uitslag: r.uitslag ? `${r.uitslag[0]}-${r.uitslag[1]}` : null,
     thuis: r.pick[0], uit: r.pick[1],
     wijzigen: r.wijzigen, huidige_invulling: `${r.huidig[0]}-${r.huidig[1]}`,
     meesterzet: r.ster,
@@ -119,7 +125,7 @@ ${changes.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${
 
 | Deadline (NL) | Wedstrijd | Voorspelling | ★ | Actie |
 |---|---|---|---|---|
-${rows.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${r.espnAway} | **${r.pick[0]}-${r.pick[1]}** | ${r.ster ? "★" : ""} | ${r.wijzigen ? "WIJZIGEN (staat nu " + r.huidig[0] + "-" + r.huidig[1] + ")" : "laten staan"} |`).join("\n")}
+${rows.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${r.espnAway} | **${r.pick[0]}-${r.pick[1]}** | ${r.ster ? "★" : ""} | ${r.locked ? "VERGRENDELD" + (r.uitslag ? ` (uitslag ${r.uitslag[0]}-${r.uitslag[1]})` : "") : r.wijzigen ? "WIJZIGEN (staat nu " + r.huidig[0] + "-" + r.huidig[1] + ")" : "laten staan"} |`).join("\n")}
 
 *Booster ronde ${ROUND}: **${espn(bm.home)} – ${espn(bm.away)}** — niet verplaatsen.*
 `;

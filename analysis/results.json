@@ -1,0 +1,7 @@
+{
+  "_uitleg": "Bekende einduitslagen (na 90/120 min; penalty's tellen als gelijkspel). Sleutel = 'ronde|Thuis|Uit' zoals in data.mjs. Gebruikt om gespeelde duels te vergrendelen en de simulatie op echte uitslagen te conditioneren.",
+  "results": {
+    "1|Mexico|Zuid-Afrika": [2, 0],
+    "1|Zuid-Korea|Tsjechië": [2, 1]
+  }
+}

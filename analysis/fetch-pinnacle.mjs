@@ -5,7 +5,7 @@
 
     Gebruik:  node analysis/fetch-pinnacle.mjs  */
 
-import { writeFileSync } from "node:fs";
+import { writeFileSync, readFileSync, existsSync } from "node:fs";
 import { MATCHES, EN } from "./data.mjs";
 
 const KEY = "CmX2KcMrXuFmNg6YFbmTxE0y9CIrOi0R"; // publieke guest-key
@@ -31,7 +31,9 @@ for (const mk of markets) {
   byMatch.get(mk.matchupId).push(mk);
 }
 
-const out = { fetchedAt: new Date().toISOString(), source: "pinnacle guest-api", markets: {} };
+const outFile = new URL("./pinnacle.json", import.meta.url);
+const prev = existsSync(outFile) ? JSON.parse(readFileSync(outFile)).markets : {};
+const out = { fetchedAt: new Date().toISOString(), source: "pinnacle guest-api", markets: prev };
 const missing = [];
 
 for (const m of MATCHES) {
@@ -74,5 +76,5 @@ for (const m of MATCHES) {
   console.log(`✓ ${m.key.padEnd(34)} 1X2 ${rec.ml ? "✓" : "—"}  totaal ${rec.total ? rec.total.line : "—"} (P> ${rec.total ? (rec.total.pOver * 100).toFixed(0) + "%" : "—"})  spread ${rec.spread ? rec.spread.hcpHome : "—"}  [${totals.length} totals]`);
 }
 
-writeFileSync(new URL("./pinnacle.json", import.meta.url), JSON.stringify(out, null, 1));
+writeFileSync(outFile, JSON.stringify(out, null, 1));
 console.log(`\n${Object.keys(out.markets).length} duels op Pinnacle, ${missing.length} ontbreken.${missing.length ? " " + missing.join(", ") : ""}`);

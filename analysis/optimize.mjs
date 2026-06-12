@@ -14,11 +14,15 @@
 
     Gebruik:  node analysis/optimize.mjs [N] [--sharps=k] [--noise=s] [--allow-flips]  */
 
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { MATCHES, MY_BOOSTERS } from "./data.mjs";
 import { scoreMatrix, pts, analyse, popOf } from "./engine.mjs";
 
 const cal = JSON.parse(readFileSync(new URL("./calibrated.json", import.meta.url)));
+const resFile = new URL("./results.json", import.meta.url);
+// gespeelde duels: uitslag staat vast (simulatie conditioneert erop) en
+// picks/booster zijn er vergrendeld
+const RESULTS = existsSync(resFile) ? JSON.parse(readFileSync(resFile)).results : {};
 const rho = cal.rho;
 const args = process.argv.slice(2);
 const N = parseInt(args.find((a) => /^\d+$/.test(a)) ?? "30000");
@@ -107,7 +111,12 @@ const prep = MATCHES.map((m) => {
   };
 });
 
-const r1 = prep.map((p, i) => ({ p, i })).filter((x) => x.p.round === 1).map((x) => x.i);
+const lockedAt = prep.map((p) => {
+  const r = RESULTS[p.m.key];
+  return r ? idxOf(r[0], r[1]) : -1;
+});
+const r1 = prep.map((p, i) => ({ p, i })).filter((x) => x.p.round === 1 && lockedAt[x.i] < 0).map((x) => x.i);
+const r1locked = prep.map((p, i) => i).filter((i) => prep[i].round === 1 && lockedAt[i] >= 0);
 
 // tegenstander-boostergewichten per ronde (cum-array + index-array, vooraf)
 const oppBoostCum = {}, oppBoostIdx = {};
@@ -141,7 +150,8 @@ const oppMaxCnt = new Int8Array(N);
 
 for (let s = 0; s < N; s++) {
   const v = s % NV;
-  for (let i = 0; i < 72; i++) actuals[s * 72 + i] = bsearch(prep[i].variants[v], rng());
+  for (let i = 0; i < 72; i++)
+    actuals[s * 72 + i] = lockedAt[i] >= 0 ? lockedAt[i] : bsearch(prep[i].variants[v], rng());
 
   let mx = -1, cnt = 0;
   for (let o = 0; o < OPP; o++) {
@@ -196,6 +206,7 @@ function evaluate() {
   for (let s = 0; s < N; s++) {
     let tot = fixed[s];
     for (const i of r1) tot += i === state.boost1 ? 2 * basePts[s * 72 + i] : basePts[s * 72 + i];
+    for (const i of r1locked) tot += i === state.boost1 ? 2 * basePts[s * 72 + i] : basePts[s * 72 + i];
     ptsSum += tot;
     if (tot > oppMax[s]) win++;
     if (tot >= oppMax[s]) winSh++;
@@ -219,6 +230,7 @@ for (let pass = 0; pass < 12; pass++) {
     for (let s = 0; s < N; s++) {
       let tot = fixed[s];
       for (const j of r1) if (j !== i) tot += j === state.boost1 ? 2 * basePts[s * 72 + j] : basePts[s * 72 + j];
+      for (const j of r1locked) tot += j === state.boost1 ? 2 * basePts[s * 72 + j] : basePts[s * 72 + j];
       rest[s] = tot;
     }
     for (let c = 0; c < prep[i].cands.length; c++) {
@@ -235,6 +247,7 @@ for (let pass = 0; pass < 12; pass++) {
   for (let s = 0; s < N; s++) {
     let tot = fixed[s];
     for (const j of r1) tot += basePts[s * 72 + j];
+    for (const j of r1locked) tot += basePts[s * 72 + j];
     rest[s] = tot;
   }
   for (const i of r1) {

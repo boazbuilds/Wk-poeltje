@@ -37,8 +37,12 @@ async function findEvent(m) {
 }
 
 function extract(m, event) {
+  // gespeelde/afgewikkelde duels overslaan: afgewikkelde prijzen (0/1) zouden
+  // als "zekerheid" de kalibratie vervuilen
+  if (event.closed || (event.endDate && new Date(event.endDate) < new Date())) return null;
   let ph = null, pa = null, pd = null, vol = 0;
   for (const mk of event.markets ?? []) {
+    if (mk.closed) return null;
     const q = mk.question ?? "";
     const yes = parseFloat(JSON.parse(mk.outcomePrices ?? '["0"]')[0]);
     vol += parseFloat(mk.volume ?? 0);
