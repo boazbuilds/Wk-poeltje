@@ -1,0 +1,32 @@
+{
+  "_uitleg": "Echte tussenstand van de subleague WQConcepts. De simulatie conditioneert hierop: tegenstanders krijgen hun gerealiseerde punten als startwaarde en alleen hun TOEKOMSTIGE duels worden gesimuleerd. 'inactief' = heeft nog niet voorspeld (scoort niet verder). 'boosterKans' = kans dat een tegenstander zijn R1-booster al heeft verbruikt op een gespeeld duel.",
+  "updatedAt": "2026-06-12T11:00:00Z",
+  "user": { "naam": "Boaz 🔮", "punten": 8, "positie": 7 },
+  "boosterKans": 0.5,
+  "tegenstanders": [
+    { "naam": "Barry", "p": 14 },
+    { "naam": "el-cholo420", "p": 14 },
+    { "naam": "MartijnLomme", "p": 12 },
+    { "naam": "Bondscoach18559", "p": 12 },
+    { "naam": "Penaltykiller1", "p": 12 },
+    { "naam": "Don", "p": 12 },
+    { "naam": "Laura", "p": 7 },
+    { "naam": "Gowiththeflow", "p": 7 },
+    { "naam": "Meestervoorspeller", "p": 7 },
+    { "naam": "Bondscoach13828", "p": 7 },
+    { "naam": "Msav", "p": 7 },
+    { "naam": "Bondscoach27300", "p": 7 },
+    { "naam": "Bondscoach95526", "p": 6 },
+    { "naam": "Zutfert #7", "p": 5 },
+    { "naam": "De Kegel", "p": 5 },
+    { "naam": "Evanman", "p": 4 },
+    { "naam": "Ricovdm", "p": 4 },
+    { "naam": "Marly", "p": 4 },
+    { "naam": "Stefanie", "p": 4 },
+    { "naam": "Bondscoach12310", "p": 4 },
+    { "naam": "Kaat&theboys", "p": 1 },
+    { "naam": "Bondscoach86679", "p": 0, "inactief": true },
+    { "naam": "WutruW", "p": 0 },
+    { "naam": "K.Boateng Newman", "p": 0 }
+  ]
+}

@@ -23,13 +23,17 @@ const resFile = new URL("./results.json", import.meta.url);
 // gespeelde duels: uitslag staat vast (simulatie conditioneert erop) en
 // picks/booster zijn er vergrendeld
 const RESULTS = existsSync(resFile) ? JSON.parse(readFileSync(resFile)).results : {};
+// echte tussenstand: tegenstanders starten op hun gerealiseerde punten en
+// alleen hun toekomstige duels worden gesimuleerd
+const stFile = new URL("./standings.json", import.meta.url);
+const STAND = existsSync(stFile) ? JSON.parse(readFileSync(stFile)) : null;
 const rho = cal.rho;
 const args = process.argv.slice(2);
 const N = parseInt(args.find((a) => /^\d+$/.test(a)) ?? "30000");
 const SHARPS = parseInt((args.find((a) => a.startsWith("--sharps=")) ?? "--sharps=0").split("=")[1]);
 const SIGMA = parseFloat((args.find((a) => a.startsWith("--noise=")) ?? "--noise=0.10").split("=")[1]);
 const ALLOW_FLIPS = args.includes("--allow-flips");
-const OPP = 20, K = 8, NV = 40; // 21 deelnemers; NV = aantal ruisvarianten per duel
+const K = 8, NV = 40; // NV = aantal ruisvarianten per duel
 
 /* ---------- seeded rng ---------- */
 function mulberry32(seed) {
@@ -118,10 +122,10 @@ const lockedAt = prep.map((p) => {
 const r1 = prep.map((p, i) => ({ p, i })).filter((x) => x.p.round === 1 && lockedAt[x.i] < 0).map((x) => x.i);
 const r1locked = prep.map((p, i) => i).filter((i) => prep[i].round === 1 && lockedAt[i] >= 0);
 
-// tegenstander-boostergewichten per ronde (cum-array + index-array, vooraf)
+// tegenstander-boostergewichten per ronde (alleen nog te spelen duels)
 const oppBoostCum = {}, oppBoostIdx = {};
 for (const r of [1, 2, 3]) {
-  const ids = prep.map((p, i) => ({ i, w: p.round === r ? p.boostW : 0 })).filter((e) => e.w > 0);
+  const ids = prep.map((p, i) => ({ i, w: p.round === r && lockedAt[i] < 0 ? p.boostW : 0 })).filter((e) => e.w > 0);
   const tot = ids.reduce((s, e) => s + e.w, 0);
   oppBoostCum[r] = new Float64Array(ids.length);
   oppBoostIdx[r] = new Int8Array(ids.length);
@@ -135,6 +139,12 @@ for (const r of [1, 2, 3]) {
   prep.forEach((p, i) => { if (p.round === r && p.cands[p.evIdx].evz > bv) { bv = p.cands[p.evIdx].evz; best = i; } });
   evBoost[r] = best;
 }
+
+// tegenstandersveld: uit standings (gerealiseerde punten + inactieven),
+// anders generiek 24 man op nul
+const OPPS = STAND ? STAND.tegenstanders : Array.from({ length: 24 }, () => ({ p: 0 }));
+const OPP = OPPS.length;
+const BOOSTER_USED_P = STAND?.boosterKans ?? 0; // kans dat R1-booster al verbruikt is
 
 const bsearch = (cum, u) => {
   let lo = 0, hi = cum.length - 1;
@@ -155,24 +165,29 @@ for (let s = 0; s < N; s++) {
 
   let mx = -1, cnt = 0;
   for (let o = 0; o < OPP; o++) {
-    let tot = 0;
-    if (o < SHARPS) {
-      for (let i = 0; i < 72; i++) {
-        const p = prep[i];
-        let q = p.cands[p.evIdx].t[actuals[s * 72 + i]];
-        if (evBoost[p.round] === i) q *= 2;
-        tot += q;
-      }
-    } else {
-      const b1 = oppBoostIdx[1][bsearch(oppBoostCum[1], rng())];
-      const b2 = oppBoostIdx[2][bsearch(oppBoostCum[2], rng())];
-      const b3 = oppBoostIdx[3][bsearch(oppBoostCum[3], rng())];
-      for (let i = 0; i < 72; i++) {
-        const p = prep[i];
-        const e = bsearch(p.fCum, rng() * p.fCum[p.fCum.length - 1]);
-        let q = p.fPts[e][actuals[s * 72 + i]];
-        if (i === b1 || i === b2 || i === b3) q *= 2;
-        tot += q;
+    let tot = OPPS[o].p ?? 0; // gerealiseerde punten t/m de gespeelde duels
+    if (!OPPS[o].inactief) {
+      if (o < SHARPS) {
+        for (let i = 0; i < 72; i++) {
+          if (lockedAt[i] >= 0) continue; // realisatie zit al in startpunten
+          const p = prep[i];
+          let q = p.cands[p.evIdx].t[actuals[s * 72 + i]];
+          if (evBoost[p.round] === i) q *= 2;
+          tot += q;
+        }
+      } else {
+        // R1-booster: met kans BOOSTER_USED_P al verbruikt op een gespeeld duel
+        const b1 = rng() < BOOSTER_USED_P ? -1 : oppBoostIdx[1][bsearch(oppBoostCum[1], rng())];
+        const b2 = oppBoostIdx[2][bsearch(oppBoostCum[2], rng())];
+        const b3 = oppBoostIdx[3][bsearch(oppBoostCum[3], rng())];
+        for (let i = 0; i < 72; i++) {
+          if (lockedAt[i] >= 0) continue;
+          const p = prep[i];
+          const e = bsearch(p.fCum, rng() * p.fCum[p.fCum.length - 1]);
+          let q = p.fPts[e][actuals[s * 72 + i]];
+          if (i === b1 || i === b2 || i === b3) q *= 2;
+          tot += q;
+        }
       }
     }
     if (tot > mx) { mx = tot; cnt = 1; } else if (tot === mx) cnt++;

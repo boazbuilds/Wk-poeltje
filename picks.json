@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-12T10:50:55.803Z",
+ "generatedAt": "2026-06-12T11:04:08.453Z",
  "ronde": 1,
  "booster": {
   "wedstrijd": "Duitsland vs Curaçao",
@@ -27,7 +27,7 @@
    "thuis": 1,
    "uit": 0,
    "wijzigen": false,
-   "huidige_invulling": "0-1",
+   "huidige_invulling": "1-0",
    "meesterzet": true,
    "fallback_bij_10pct": "0-1"
   },
@@ -86,8 +86,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 2,
-   "wijzigen": true,
-   "huidige_invulling": "1-1",
+   "wijzigen": false,
+   "huidige_invulling": "1-2",
    "meesterzet": true,
    "fallback_bij_10pct": "0-1"
   },
@@ -110,8 +110,8 @@
    "uitslag": null,
    "thuis": 2,
    "uit": 0,
-   "wijzigen": false,
-   "huidige_invulling": "2-0",
+   "wijzigen": true,
+   "huidige_invulling": "3-0",
    "meesterzet": true,
    "fallback_bij_10pct": "3-0"
   },
@@ -134,8 +134,8 @@
    "uitslag": null,
    "thuis": 0,
    "uit": 0,
-   "wijzigen": true,
-   "huidige_invulling": "1-0",
+   "wijzigen": false,
+   "huidige_invulling": "0-0",
    "meesterzet": true,
    "fallback_bij_10pct": "0-1"
   },
@@ -194,8 +194,8 @@
    "uitslag": null,
    "thuis": 2,
    "uit": 0,
-   "wijzigen": true,
-   "huidige_invulling": "2-1",
+   "wijzigen": false,
+   "huidige_invulling": "2-0",
    "meesterzet": true,
    "fallback_bij_10pct": "1-0"
   },
@@ -218,8 +218,8 @@
    "uitslag": null,
    "thuis": 0,
    "uit": 1,
-   "wijzigen": true,
-   "huidige_invulling": "1-2",
+   "wijzigen": false,
+   "huidige_invulling": "0-1",
    "meesterzet": true,
    "fallback_bij_10pct": "0-2"
   },
@@ -278,8 +278,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": true,
-   "huidige_invulling": "0-1",
+   "wijzigen": false,
+   "huidige_invulling": "1-0",
    "meesterzet": false,
    "fallback_bij_10pct": null
   },

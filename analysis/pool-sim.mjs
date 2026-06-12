@@ -23,7 +23,7 @@ import { scoreMatrix, pts, analyse } from "./engine.mjs";
 const cal = JSON.parse(readFileSync(new URL("./calibrated.json", import.meta.url)));
 const rho = cal.rho;
 const N = process.argv[2] ? parseInt(process.argv[2]) : 20000;
-const OPP = 20; // subleague gegroeid naar 21 deelnemers (11 jun)
+const OPP = 24; // subleague gegroeid naar 25 deelnemers (12 jun); NB: optimize.mjs conditioneert ook op de echte tussenstand, dit script niet
 
 /* ---------- voorbereiding per duel ---------- */
 const prep = MATCHES.map((m) => {
