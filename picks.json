@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-12T11:04:08.453Z",
+ "generatedAt": "2026-06-13T08:54:27.108Z",
  "ronde": 1,
  "booster": {
   "wedstrijd": "Duitsland vs Curaçao",
@@ -34,8 +34,8 @@
   {
    "wedstrijd": "Canada vs Bosnië-Herzeg.",
    "deadline_nl": "vr 12 jun, 21:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "1-1",
    "thuis": 2,
    "uit": 0,
    "wijzigen": false,
@@ -46,8 +46,8 @@
   {
    "wedstrijd": "Veren. Staten vs Paraguay",
    "deadline_nl": "za 13 jun, 03:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "4-1",
    "thuis": 1,
    "uit": 0,
    "wijzigen": false,
@@ -110,8 +110,8 @@
    "uitslag": null,
    "thuis": 2,
    "uit": 0,
-   "wijzigen": true,
-   "huidige_invulling": "3-0",
+   "wijzigen": false,
+   "huidige_invulling": "2-0",
    "meesterzet": true,
    "fallback_bij_10pct": "3-0"
   },

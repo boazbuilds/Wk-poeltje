@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 1 (definitief)
 
-Gegenereerd: 12 jun 2026, 13:04 ·
+Gegenereerd: 13 jun 2026, 10:54 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -15,11 +15,11 @@ Machine-leesbaar: [`picks.json`](./picks.json)
    op **10% of meer**, gebruik dan de fallback-kolom.
 6. Na het invullen verifiëren dat alle 24 wedstrijden de juiste waarde tonen.
 
-## Te wijzigen (1 wedstrijden)
+## Te wijzigen (0 wedstrijden)
 
 | Deadline (NL) | Wedstrijd | Van | **Naar** | ★ | Fallback bij ≥10% |
 |---|---|---|---|---|---|
-| zo 14 jun, 19:00 | Duitsland – Curaçao | 3-0 | **2-0** | ★ | 3-0 |
+
 
 ## Volledige lijst (controle, op deadline-volgorde)
 
@@ -27,13 +27,13 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 |---|---|---|---|---|
 | do 11 jun, 21:00 | Mexico – Zuid-Afrika | **1-0** |  | VERGRENDELD (uitslag 2-0) |
 | vr 12 jun, 04:00 | Zuid-Korea – Tsjechië | **1-0** | ★ | VERGRENDELD (uitslag 2-1) |
-| vr 12 jun, 21:00 | Canada – Bosnië-Herzeg. | **2-0** | ★ | laten staan |
-| za 13 jun, 03:00 | Veren. Staten – Paraguay | **1-0** |  | laten staan |
+| vr 12 jun, 21:00 | Canada – Bosnië-Herzeg. | **2-0** | ★ | VERGRENDELD (uitslag 1-1) |
+| za 13 jun, 03:00 | Veren. Staten – Paraguay | **1-0** |  | VERGRENDELD (uitslag 4-1) |
 | za 13 jun, 21:00 | Qatar – Zwitserland | **0-1** | ★ | laten staan |
 | zo 14 jun, 00:00 | Brazilië – Marokko | **1-0** | ★ | laten staan |
 | zo 14 jun, 03:00 | Haïti – Schotland | **1-2** | ★ | laten staan |
 | zo 14 jun, 06:00 | Australië – Turkije | **0-1** | ★ | laten staan |
-| zo 14 jun, 19:00 | Duitsland – Curaçao | **2-0** | ★ | WIJZIGEN (staat nu 3-0) |
+| zo 14 jun, 19:00 | Duitsland – Curaçao | **2-0** | ★ | laten staan |
 | zo 14 jun, 22:00 | Nederland – Japan | **1-0** | ★ | laten staan |
 | ma 15 jun, 01:00 | Ivoorkust – Ecuador | **0-0** | ★ | laten staan |
 | ma 15 jun, 04:00 | Zweden – Tunesië | **1-0** |  | laten staan |
