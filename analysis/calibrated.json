@@ -1,5 +1,5 @@
 {
- "calibratedAt": "2026-06-14T19:46:27.331Z",
+ "calibratedAt": "2026-06-14T19:49:53.970Z",
  "rho": -0.02,
  "lambdas": {
   "1|Mexico|Zuid-Afrika": {
@@ -63,8 +63,8 @@
    "totalLine": 0.75
   },
   "1|Nederland|Japan": {
-   "lh": 1.495,
-   "la": 1.04,
+   "lh": 1.51,
+   "la": 1.035,
    "src": "joint·3br",
    "totalLine": 1.5
   },
@@ -75,7 +75,7 @@
    "totalLine": 1.25
   },
   "1|België|Egypte": {
-   "lh": 1.74,
+   "lh": 1.735,
    "la": 0.85,
    "src": "joint·3br",
    "totalLine": 1.5
@@ -87,14 +87,14 @@
    "totalLine": 1
   },
   "1|Spanje|Kaapverdië": {
-   "lh": 3.165,
+   "lh": 3.17,
    "la": 0.475,
    "src": "joint·3br",
    "totalLine": 3
   },
   "1|Saoedi-Arabië|Uruguay": {
-   "lh": 0.655,
-   "la": 1.86,
+   "lh": 0.665,
+   "la": 1.815,
    "src": "joint·3br",
    "totalLine": 1.25
   },
@@ -201,7 +201,7 @@
    "totalLine": 1.75
   },
   "2|Ecuador|Curaçao": {
-   "lh": 2.74,
+   "lh": 2.755,
    "la": 0.48,
    "src": "joint·3br",
    "totalLine": 2
@@ -345,8 +345,8 @@
    "totalLine": 1.5
   },
   "3|Curaçao|Ivoorkust": {
-   "lh": 0.545,
-   "la": 2.74,
+   "lh": 0.55,
+   "la": 2.735,
    "src": "joint·3br",
    "totalLine": 2.25
   },
