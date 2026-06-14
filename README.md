@@ -90,6 +90,7 @@ strategie doorrekent (geen dependencies, Node ≥ 18):
 node analysis/fetch-pinnacle.mjs       # scherpste book: 1X2 + totals/spread-ladders
 node analysis/fetch-bovada.mjs         # 1X2 + totals + spread
 node analysis/fetch-polymarket.mjs 1   # echt geld (1X2) → market.json
+node analysis/fetch-polymarket-scores.mjs 1  # exacte-score-kruischeck (echt geld, geen Poisson)
 node analysis/calibrate.mjs            # joint-fit 3 bronnen + overrides → calibrated.json
 node analysis/round-advice.mjs 1       # adviestabel per ronde (robuuste EV)
 node analysis/field-check.mjs          # veld-scherpte: naief vs kunde → kies --sharps
@@ -114,6 +115,15 @@ Eén regel om alles te verversen voor een ronde:
   keuze tussen EV en hoge variantie objectief i.p.v. een gok.
 - `fetch-polymarket.mjs` — haalt per duel de drie binaire markten op
   (thuiswinst/uitwinst/gelijkspel) en normaliseert de marge eruit.
+- `fetch-polymarket-scores.mjs` — **onafhankelijke exacte-score-kruischeck**:
+  Polymarket heeft per duel een `<slug>-exact-score`-event met een markt per
+  scoreregel — de enige bron die de markt-kans op elke EXACTE uitslag direct
+  geeft, zonder Poisson-aanname. De-vigt de grid en vergelijkt met ons model;
+  vlagt duels waar de markt-modus afwijkt bij voldoende volume. Toetsing 14 jun:
+  markt bevestigt het model (11/15 zelfde modus, rest marginaal) en zit gemiddeld
+  iets *lager* (2,36 vs 2,64 goals) — dus niet te laag. Markten zijn dun (kruis-
+  check, geen kalibratie-input); bij de knock-out (meer volume) wordt dit
+  signaal betrouwbaarder en kan het meegewogen worden.
 - `fetch-pinnacle.mjs` — **scherpste bron**: Pinnacle-sluitingslijnen via de
   publieke guest-API. Per duel de moneyline, de volledige totals-ladder (9
   lijnen), de spread-ladder én de **team-totals** (per-team over/under) — die
