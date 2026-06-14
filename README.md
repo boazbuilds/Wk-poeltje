@@ -52,6 +52,13 @@ de meesterzet erbij.
 | **Voorsprong** | Spiegel de massa; lage variantie houdt je voorsprong vast. |
 | **Achterstand** | Hoge variantie; onpopulaire maar kansrijke scores die de massa mist. |
 
+**Wanneer schakelen naar hoge variantie?** Niet op gevoel — op data. `field-check.mjs`
+toetst of een vooruitliggende koploper te verklaren is door geluk bij een naief veld
+(dan: blijf EV, variantie kost winkans) of dat er kunde in het veld zit (dan: escaleer
+variantie via `optimize --sharps=k`). De toets simuleert een puur naief veld over de
+echte uitslagen en vergelijkt de koploper-verdeling met de werkelijke stand. Zo wordt
+de 'sharps'-aanname een uitkomst van de data i.p.v. een handmatige gok.
+
 Een oranje ★ = meesterzet (< 10% in de poule). De booster-badge staat op de
 wedstrijd met de hoogste verwachte punten van de ronde.
 
@@ -85,6 +92,7 @@ node analysis/fetch-bovada.mjs         # 1X2 + totals + spread
 node analysis/fetch-polymarket.mjs 1   # echt geld (1X2) → market.json
 node analysis/calibrate.mjs            # joint-fit 3 bronnen + overrides → calibrated.json
 node analysis/round-advice.mjs 1       # adviestabel per ronde (robuuste EV)
+node analysis/field-check.mjs          # veld-scherpte: naief vs kunde → kies --sharps
 node analysis/optimize.mjs 30000       # hill-climb op P(#1)
 node analysis/build-picks.mjs          # VOORSPELLINGEN.md + picks.json
 node analysis/build-html.mjs           # index.html
@@ -98,6 +106,12 @@ Eén regel om alles te verversen voor een ronde:
   Gauss-Hermite-mengsel van scorematrices over de λ-onzekerheid (σ=0.10).
   `round-advice` adviseert op dit mengsel — de robuuste EV-keuze, zodat
   knife-edge duels een eenduidig datagedreven antwoord krijgen.
+- `field-check.mjs` — **veld-scherpte-toets**: simuleert een puur naief veld
+  (populariteit + meesterzet + booster) over de al gespeelde duels met hun echte
+  uitslagen en vergelijkt de koploper-verdeling met `standings.json`. Geeft een
+  datagedreven `--sharps`-advies: zit de echte koploper binnen de naieve verdeling →
+  speel EV; zit hij ver in de staart → escaleer variantie. Maakt de strategie-
+  keuze tussen EV en hoge variantie objectief i.p.v. een gok.
 - `fetch-polymarket.mjs` — haalt per duel de drie binaire markten op
   (thuiswinst/uitwinst/gelijkspel) en normaliseert de marge eruit.
 - `fetch-pinnacle.mjs` — **scherpste bron**: Pinnacle-sluitingslijnen via de
