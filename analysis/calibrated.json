@@ -1,5 +1,5 @@
 {
- "calibratedAt": "2026-06-14T19:17:50.854Z",
+ "calibratedAt": "2026-06-14T19:46:27.331Z",
  "rho": -0.02,
  "lambdas": {
   "1|Mexico|Zuid-Afrika": {
@@ -63,13 +63,13 @@
    "totalLine": 0.75
   },
   "1|Nederland|Japan": {
-   "lh": 1.49,
-   "la": 1.06,
+   "lh": 1.495,
+   "la": 1.04,
    "src": "joint·3br",
-   "totalLine": 1.25
+   "totalLine": 1.5
   },
   "1|Zweden|Tunesië": {
-   "lh": 1.49,
+   "lh": 1.495,
    "la": 0.93,
    "src": "joint·3br",
    "totalLine": 1.25
@@ -81,26 +81,26 @@
    "totalLine": 1.5
   },
   "1|Iran|Nieuw-Zeeland": {
-   "lh": 1.455,
-   "la": 0.795,
+   "lh": 1.41,
+   "la": 0.82,
    "src": "joint·3br",
    "totalLine": 1
   },
   "1|Spanje|Kaapverdië": {
-   "lh": 3.16,
+   "lh": 3.165,
    "la": 0.475,
    "src": "joint·3br",
    "totalLine": 3
   },
   "1|Saoedi-Arabië|Uruguay": {
-   "lh": 0.65,
-   "la": 1.865,
+   "lh": 0.655,
+   "la": 1.86,
    "src": "joint·3br",
    "totalLine": 1.25
   },
   "1|Frankrijk|Senegal": {
-   "lh": 1.905,
-   "la": 0.75,
+   "lh": 1.92,
+   "la": 0.735,
    "src": "joint·3br",
    "totalLine": 1.5
   },
@@ -141,7 +141,7 @@
    "totalLine": 1.25
   },
   "1|Ghana|Panama": {
-   "lh": 1.32,
+   "lh": 1.315,
    "la": 1.02,
    "src": "joint·3br",
    "totalLine": 1.25
@@ -159,8 +159,8 @@
    "totalLine": 1
   },
   "2|Zwitserland|Bosnië-Herz.": {
-   "lh": 1.745,
-   "la": 0.755,
+   "lh": 1.74,
+   "la": 0.76,
    "src": "joint·3br",
    "totalLine": 1.25
   },
@@ -171,7 +171,7 @@
    "totalLine": 1.75
   },
   "2|Brazilië|Haïti": {
-   "lh": 3.15,
+   "lh": 3.155,
    "la": 0.52,
    "src": "joint·3br",
    "totalLine": 2.5
@@ -183,8 +183,8 @@
    "totalLine": 1.25
   },
   "2|VS|Australië": {
-   "lh": 1.785,
-   "la": 0.845,
+   "lh": 1.765,
+   "la": 0.86,
    "src": "joint·3br",
    "totalLine": 1.5
   },
@@ -195,14 +195,14 @@
    "totalLine": 1.25
   },
   "2|Duitsland|Ivoorkust": {
-   "lh": 1.92,
+   "lh": 1.915,
    "la": 0.89,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "2|Ecuador|Curaçao": {
-   "lh": 2.685,
-   "la": 0.5,
+   "lh": 2.74,
+   "la": 0.48,
    "src": "joint·3br",
    "totalLine": 2
   },
@@ -231,7 +231,7 @@
    "totalLine": 1.25
   },
   "2|Spanje|Saoedi-Arabië": {
-   "lh": 2.925,
+   "lh": 2.92,
    "la": 0.41,
    "src": "joint·3br",
    "totalLine": 2.25
@@ -261,7 +261,7 @@
    "totalLine": 1.5
   },
   "2|Jordanië|Algerije": {
-   "lh": 0.76,
+   "lh": 0.755,
    "la": 1.925,
    "src": "joint·3br",
    "totalLine": 1.5
@@ -309,20 +309,20 @@
    "totalLine": 1.25
   },
   "3|Bosnië-Herz.|Qatar": {
-   "lh": 1.725,
-   "la": 0.78,
+   "lh": 1.7,
+   "la": 0.8,
    "src": "joint·3br",
    "totalLine": 1.25
   },
   "3|Marokko|Haïti": {
-   "lh": 2.29,
-   "la": 0.7,
+   "lh": 2.285,
+   "la": 0.705,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "3|Schotland|Brazilië": {
-   "lh": 0.765,
-   "la": 2.005,
+   "lh": 0.77,
+   "la": 2,
    "src": "joint·3br",
    "totalLine": 1.5
   },
@@ -333,7 +333,7 @@
    "totalLine": 1.5
   },
   "3|Paraguay|Australië": {
-   "lh": 1.34,
+   "lh": 1.35,
    "la": 0.995,
    "src": "joint·3br",
    "totalLine": 1.25
@@ -345,8 +345,8 @@
    "totalLine": 1.5
   },
   "3|Curaçao|Ivoorkust": {
-   "lh": 0.6,
-   "la": 2.695,
+   "lh": 0.545,
+   "la": 2.74,
    "src": "joint·3br",
    "totalLine": 2.25
   },
@@ -357,8 +357,8 @@
    "totalLine": 1.5
   },
   "3|Japan|Zweden": {
-   "lh": 1.43,
-   "la": 1.065,
+   "lh": 1.45,
+   "la": 1.04,
    "src": "joint·3br",
    "totalLine": 1.25
   },
@@ -370,7 +370,7 @@
   },
   "3|Nieuw-Zeeland|België": {
    "lh": 0.64,
-   "la": 2.295,
+   "la": 2.29,
    "src": "joint·3br",
    "totalLine": 1.75
   },
@@ -411,7 +411,7 @@
    "totalLine": 2
   },
   "3|Colombia|Portugal": {
-   "lh": 1.055,
+   "lh": 1.05,
    "la": 1.41,
    "src": "joint·3br",
    "totalLine": 1.25
@@ -423,14 +423,14 @@
    "totalLine": 1.25
   },
   "3|Panama|Engeland": {
-   "lh": 0.685,
+   "lh": 0.69,
    "la": 2.36,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "3|Kroatië|Ghana": {
-   "lh": 1.695,
-   "la": 0.82,
+   "lh": 1.69,
+   "la": 0.815,
    "src": "joint·3br",
    "totalLine": 1.25
   }

@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 1 (definitief)
 
-Gegenereerd: 14 jun 2026, 21:18 ·
+Gegenereerd: 14 jun 2026, 21:46 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
