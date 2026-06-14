@@ -4,7 +4,7 @@
     + calibrate. Populariteit (%) en "mijn" picks komen rechtstreeks uit de poule. */
 
 export const RAW = [
-  // Ronde 1 — mine + populariteit bijgewerkt naar de poule-stand van 13 jun (ochtend)
+  // Ronde 1 — mine + populariteit bijgewerkt naar de poule-stand van 14 jun (ochtend)
   [1,"A","Mexico","Zuid-Afrika",2.09,0.79,[1,0],[[2,0,43],[2,1,21],[1,0,10],[3,1,10]]],
   [1,"A","Zuid-Korea","Tsjechië",0.97,1.25,[1,0],[[1,1,41],[1,2,18],[2,1,11]]],
   [1,"B","Canada","Bosnië-Herz.",1.67,0.97,[2,0],[[1,1,32],[2,1,18],[1,0,11],[1,2,10]]],
@@ -27,7 +27,7 @@ export const RAW = [
   [1,"J","Oostenrijk","Jordanië",2.69,0.89,[2,1],[[2,0,53],[3,0,15],[1,0,14]]],
   [1,"K","Portugal","DR Congo",2.69,0.79,[1,0],[[3,0,43],[2,0,18],[4,0,16]]],
   [1,"K","Oezbekistan","Colombia",0.79,2.09,[1,2],[[0,2,48],[0,1,17],[0,3,14]]],
-  [1,"L","Engeland","Kroatië",1.77,0.79,[1,0],[[2,1,39],[2,2,18],[1,1,17]]],
+  [1,"L","Engeland","Kroatië",1.77,0.79,[1,0],[[2,1,40],[2,2,18],[1,1,17]]],
   [1,"L","Ghana","Panama",0.97,1.33,[1,0],[[2,0,33],[1,0,20],[1,1,18],[2,1,14]]],
   // Ronde 2
   [2,"A","Tsjechië","Zuid-Afrika",1.19,1.19,[1,0],[[2,0,37],[2,1,25],[1,0,16],[1,1,12]]],

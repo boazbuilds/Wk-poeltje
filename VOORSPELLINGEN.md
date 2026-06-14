@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 1 (definitief)
 
-Gegenereerd: 13 jun 2026, 10:54 ·
+Gegenereerd: 14 jun 2026, 10:59 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -29,10 +29,10 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | vr 12 jun, 04:00 | Zuid-Korea – Tsjechië | **1-0** | ★ | VERGRENDELD (uitslag 2-1) |
 | vr 12 jun, 21:00 | Canada – Bosnië-Herzeg. | **2-0** | ★ | VERGRENDELD (uitslag 1-1) |
 | za 13 jun, 03:00 | Veren. Staten – Paraguay | **1-0** |  | VERGRENDELD (uitslag 4-1) |
-| za 13 jun, 21:00 | Qatar – Zwitserland | **0-1** | ★ | laten staan |
-| zo 14 jun, 00:00 | Brazilië – Marokko | **1-0** | ★ | laten staan |
-| zo 14 jun, 03:00 | Haïti – Schotland | **1-2** | ★ | laten staan |
-| zo 14 jun, 06:00 | Australië – Turkije | **0-1** | ★ | laten staan |
+| za 13 jun, 21:00 | Qatar – Zwitserland | **0-1** | ★ | VERGRENDELD (uitslag 1-1) |
+| zo 14 jun, 00:00 | Brazilië – Marokko | **1-0** | ★ | VERGRENDELD (uitslag 1-1) |
+| zo 14 jun, 03:00 | Haïti – Schotland | **1-2** | ★ | VERGRENDELD (uitslag 0-1) |
+| zo 14 jun, 06:00 | Australië – Turkije | **0-1** | ★ | VERGRENDELD (uitslag 2-0) |
 | zo 14 jun, 19:00 | Duitsland – Curaçao | **2-0** | ★ | laten staan |
 | zo 14 jun, 22:00 | Nederland – Japan | **1-0** | ★ | laten staan |
 | ma 15 jun, 01:00 | Ivoorkust – Ecuador | **0-0** | ★ | laten staan |

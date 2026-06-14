@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-13T08:54:27.108Z",
+ "generatedAt": "2026-06-14T08:59:37.396Z",
  "ronde": 1,
  "booster": {
   "wedstrijd": "Duitsland vs Curaçao",
@@ -58,8 +58,8 @@
   {
    "wedstrijd": "Qatar vs Zwitserland",
    "deadline_nl": "za 13 jun, 21:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "1-1",
    "thuis": 0,
    "uit": 1,
    "wijzigen": false,
@@ -70,8 +70,8 @@
   {
    "wedstrijd": "Brazilië vs Marokko",
    "deadline_nl": "zo 14 jun, 00:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "1-1",
    "thuis": 1,
    "uit": 0,
    "wijzigen": false,
@@ -82,8 +82,8 @@
   {
    "wedstrijd": "Haïti vs Schotland",
    "deadline_nl": "zo 14 jun, 03:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "0-1",
    "thuis": 1,
    "uit": 2,
    "wijzigen": false,
@@ -94,8 +94,8 @@
   {
    "wedstrijd": "Australië vs Turkije",
    "deadline_nl": "zo 14 jun, 06:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "2-0",
    "thuis": 0,
    "uit": 1,
    "wijzigen": false,
