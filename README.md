@@ -116,7 +116,11 @@ Eén regel om alles te verversen voor een ronde:
   (thuiswinst/uitwinst/gelijkspel) en normaliseert de marge eruit.
 - `fetch-pinnacle.mjs` — **scherpste bron**: Pinnacle-sluitingslijnen via de
   publieke guest-API. Per duel de moneyline, de volledige totals-ladder (9
-  lijnen) en de spread-ladder — de hele ladder pint de scoreverdeling strak.
+  lijnen), de spread-ladder én de **team-totals** (per-team over/under) — die
+  laatste pinnen λ_thuis en λ_uit apart vast, scherper dan combined total +
+  spread, vooral bij mismatches. (Pinnacle biedt géén correct-score-markt; een
+  directe exacte-score-bron zoals Betfair is in deze omgeving geblokkeerd, dus
+  de exacte-score-kansen blijven Poisson/Dixon-Coles uit de gefitte λ's.)
 - `fetch-bovada.mjs` — 1X2 + O/U-hoofdlijn + goal spread (één coupon-call).
 - `fetch-polymarket.mjs` — echt ingelegd geld (1X2).
 - `overrides.json` — handmatige correcties per duel (lambdaMult / total+

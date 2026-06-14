@@ -128,6 +128,13 @@ export function marketError(M, t) {
     }
     return { gt, eq };
   };
+  const teamTotalP = (L, side) => { // P(team 'side' scoort > L doelpunten)
+    let gt = 0, eq = 0;
+    for (let h = 0; h < M.length; h++) for (let a = 0; a < M.length; a++) {
+      const s = side === "home" ? h : a; if (s > L) gt += M[h][a]; else if (s === L) eq += M[h][a];
+    }
+    return { gt, eq };
+  };
 
   let e = 0;
   if (t.ml) {
@@ -147,6 +154,17 @@ export function marketError(M, t) {
     let se = 0;
     for (const x of spreads) { const { gt, eq } = spreadP(-x.hcpHome); se += (gt / Math.max(1e-9, 1 - eq) - x.pHomeCover) ** 2; }
     e += 0.5 * se / spreads.length;
+  }
+  // team-totals: P(thuis>L) en P(uit>L) — pint de λ-splitsing direct vast
+  if (t.teamTotals) {
+    let se = 0, n = 0;
+    for (const side of ["home", "away"]) {
+      for (const x of (t.teamTotals[side] ?? [])) {
+        const { gt, eq } = teamTotalP(x.line, side);
+        se += (gt / Math.max(1e-9, 1 - eq) - x.pOver) ** 2; n++;
+      }
+    }
+    if (n) e += se / n;
   }
   return e;
 }

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-14T08:59:37.396Z",
+ "generatedAt": "2026-06-14T19:18:36.108Z",
  "ronde": 1,
  "booster": {
   "wedstrijd": "Duitsland vs Curaçao",
@@ -106,7 +106,7 @@
   {
    "wedstrijd": "Duitsland vs Curaçao",
    "deadline_nl": "zo 14 jun, 19:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 2,
    "uit": 0,
@@ -137,7 +137,7 @@
    "wijzigen": false,
    "huidige_invulling": "0-0",
    "meesterzet": true,
-   "fallback_bij_10pct": "0-1"
+   "fallback_bij_10pct": "1-0"
   },
   {
    "wedstrijd": "Zweden vs Tunesië",

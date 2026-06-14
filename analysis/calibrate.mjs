@@ -40,12 +40,14 @@ for (const m of MATCHES) {
   if (k?.spread) spreads.push(k.spread);
   if (b?.spread) spreads.push(b.spread);
   if (spreads.length) t.spreads = spreads;
+  // team-totals: Pinnacle per-team ladders (pinnen λ_thuis/λ_uit apart)
+  if (k?.teamTotals && (k.teamTotals.home?.length || k.teamTotals.away?.length)) t.teamTotals = k.teamTotals;
   if (t.ml || t.totals) targets[m.key] = t;
 }
 const tl = Object.values(targets);
 const nSrc = (key) => ["pm", "bv", "pin"].filter((s) => ({ pm, bv, pin }[s].markets[key])).length;
 console.log(`Joint-kalibratie over ${tl.length} duels · bronnen: Polymarket ${Object.keys(pm.markets).length}, Bovada ${Object.keys(bv.markets).length}, Pinnacle ${Object.keys(pin.markets).length}` +
-  `\n(1X2 ${tl.filter((t) => t.ml).length}, totals ${tl.filter((t) => t.totals).length}, spreads ${tl.filter((t) => t.spreads).length}, overrides ${Object.keys(OVR).length})\n`);
+  `\n(1X2 ${tl.filter((t) => t.ml).length}, totals ${tl.filter((t) => t.totals).length}, spreads ${tl.filter((t) => t.spreads).length}, team-totals ${tl.filter((t) => t.teamTotals).length}, overrides ${Object.keys(OVR).length})\n`);
 
 // 1) ρ fitten op de joint-doelfunctie
 const { rho, table } = fitRhoJoint(tl);

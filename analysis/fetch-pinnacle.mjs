@@ -72,8 +72,19 @@ for (const m of MATCHES) {
     });
   if (spreads.length) rec.spread = spreads.reduce((best, s) => Math.abs(s.pHomeCover - 0.5) < Math.abs(best.pHomeCover - 0.5) ? s : best);
 
+  // team-totals → per team de over/under-ladder: pint λ_thuis en λ_uit APART vast
+  // (scherper dan combined total + spread, vooral bij mismatches)
+  const teamTotal = (side) => mks
+    .filter((x) => x.type === "team_total" && x.side === side && x.prices?.length === 2)
+    .map((x) => {
+      const o = x.prices.find((p) => p.designation === "over"), u = x.prices.find((p) => p.designation === "under");
+      return { line: o.points, pOver: devig2(o.price, u.price) };
+    }).sort((a, b) => a.line - b.line);
+  const ttHome = teamTotal("home"), ttAway = teamTotal("away");
+  if (ttHome.length || ttAway.length) rec.teamTotals = { home: ttHome, away: ttAway };
+
   out.markets[m.key] = rec;
-  console.log(`✓ ${m.key.padEnd(34)} 1X2 ${rec.ml ? "✓" : "—"}  totaal ${rec.total ? rec.total.line : "—"} (P> ${rec.total ? (rec.total.pOver * 100).toFixed(0) + "%" : "—"})  spread ${rec.spread ? rec.spread.hcpHome : "—"}  [${totals.length} totals]`);
+  console.log(`✓ ${m.key.padEnd(34)} 1X2 ${rec.ml ? "✓" : "—"}  totaal ${rec.total ? rec.total.line : "—"} (P> ${rec.total ? (rec.total.pOver * 100).toFixed(0) + "%" : "—"})  spread ${rec.spread ? rec.spread.hcpHome : "—"}  [${totals.length} totals, ${ttHome.length + ttAway.length} tt]`);
 }
 
 writeFileSync(outFile, JSON.stringify(out, null, 1));
