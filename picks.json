@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-14T19:49:54.135Z",
+ "generatedAt": "2026-06-15T16:19:57.445Z",
  "ronde": 1,
  "booster": {
   "wedstrijd": "Duitsland vs Curaçao",
@@ -118,7 +118,7 @@
   {
    "wedstrijd": "Nederland vs Japan",
    "deadline_nl": "zo 14 jun, 22:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -130,7 +130,7 @@
   {
    "wedstrijd": "Ivoorkust vs Ecuador",
    "deadline_nl": "ma 15 jun, 01:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 0,
    "uit": 0,
@@ -142,7 +142,7 @@
   {
    "wedstrijd": "Zweden vs Tunesië",
    "deadline_nl": "ma 15 jun, 04:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -154,7 +154,7 @@
   {
    "wedstrijd": "Spanje vs Kaapverdië",
    "deadline_nl": "ma 15 jun, 18:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 2,
    "uit": 0,
