@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 1 (definitief)
 
-Gegenereerd: 15 jun 2026, 18:27 ·
+Gegenereerd: 15 jun 2026, 18:36 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -33,10 +33,10 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | zo 14 jun, 00:00 | Brazilië – Marokko | **1-0** | ★ | VERGRENDELD (uitslag 1-1) |
 | zo 14 jun, 03:00 | Haïti – Schotland | **1-2** | ★ | VERGRENDELD (uitslag 0-1) |
 | zo 14 jun, 06:00 | Australië – Turkije | **0-1** | ★ | VERGRENDELD (uitslag 2-0) |
-| zo 14 jun, 19:00 | Duitsland – Curaçao | **2-0** | ★ | VERGRENDELD |
-| zo 14 jun, 22:00 | Nederland – Japan | **1-0** | ★ | VERGRENDELD |
-| ma 15 jun, 01:00 | Ivoorkust – Ecuador | **0-0** | ★ | VERGRENDELD |
-| ma 15 jun, 04:00 | Zweden – Tunesië | **1-0** |  | VERGRENDELD |
+| zo 14 jun, 19:00 | Duitsland – Curaçao | **2-0** | ★ | VERGRENDELD (uitslag 7-1) |
+| zo 14 jun, 22:00 | Nederland – Japan | **1-0** | ★ | VERGRENDELD (uitslag 2-2) |
+| ma 15 jun, 01:00 | Ivoorkust – Ecuador | **0-0** | ★ | VERGRENDELD (uitslag 1-0) |
+| ma 15 jun, 04:00 | Zweden – Tunesië | **1-0** |  | VERGRENDELD (uitslag 5-1) |
 | ma 15 jun, 18:00 | Spanje – Kaapverdië | **2-0** | ★ | VERGRENDELD |
 | ma 15 jun, 21:00 | België – Egypte | **1-0** | ★ | laten staan |
 | di 16 jun, 00:00 | Saoedi-Arabië – Uruguay | **0-1** |  | laten staan |
