@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-15T16:36:12.930Z",
+ "generatedAt": "2026-06-17T20:31:30.481Z",
  "ronde": 1,
  "booster": {
   "wedstrijd": "Duitsland vs Curaçao",
@@ -166,7 +166,7 @@
   {
    "wedstrijd": "België vs Egypte",
    "deadline_nl": "ma 15 jun, 21:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -178,7 +178,7 @@
   {
    "wedstrijd": "Saoedi-Arabië vs Uruguay",
    "deadline_nl": "di 16 jun, 00:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 0,
    "uit": 1,
@@ -190,7 +190,7 @@
   {
    "wedstrijd": "Iran vs Nieuw-Zeeland",
    "deadline_nl": "di 16 jun, 03:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 2,
    "uit": 0,
@@ -202,7 +202,7 @@
   {
    "wedstrijd": "Frankrijk vs Senegal",
    "deadline_nl": "di 16 jun, 21:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -214,7 +214,7 @@
   {
    "wedstrijd": "Irak vs Noorwegen",
    "deadline_nl": "wo 17 jun, 00:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 0,
    "uit": 1,
@@ -226,7 +226,7 @@
   {
    "wedstrijd": "Argentinië vs Algerije",
    "deadline_nl": "wo 17 jun, 03:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -238,7 +238,7 @@
   {
    "wedstrijd": "Oostenrijk vs Jordanië",
    "deadline_nl": "wo 17 jun, 06:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 2,
    "uit": 1,
@@ -250,7 +250,7 @@
   {
    "wedstrijd": "Portugal vs DR Congo",
    "deadline_nl": "wo 17 jun, 19:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -262,7 +262,7 @@
   {
    "wedstrijd": "Engeland vs Kroatië",
    "deadline_nl": "wo 17 jun, 22:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,

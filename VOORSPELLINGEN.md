@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 1 (definitief)
 
-Gegenereerd: 15 jun 2026, 18:36 ·
+Gegenereerd: 17 jun 2026, 22:31 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -38,15 +38,15 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | ma 15 jun, 01:00 | Ivoorkust – Ecuador | **0-0** | ★ | VERGRENDELD (uitslag 1-0) |
 | ma 15 jun, 04:00 | Zweden – Tunesië | **1-0** |  | VERGRENDELD (uitslag 5-1) |
 | ma 15 jun, 18:00 | Spanje – Kaapverdië | **2-0** | ★ | VERGRENDELD |
-| ma 15 jun, 21:00 | België – Egypte | **1-0** | ★ | laten staan |
-| di 16 jun, 00:00 | Saoedi-Arabië – Uruguay | **0-1** |  | laten staan |
-| di 16 jun, 03:00 | Iran – Nieuw-Zeeland | **2-0** | ★ | laten staan |
-| di 16 jun, 21:00 | Frankrijk – Senegal | **1-0** | ★ | laten staan |
-| wo 17 jun, 00:00 | Irak – Noorwegen | **0-1** | ★ | laten staan |
-| wo 17 jun, 03:00 | Argentinië – Algerije | **1-0** | ★ | laten staan |
-| wo 17 jun, 06:00 | Oostenrijk – Jordanië | **2-1** | ★ | laten staan |
-| wo 17 jun, 19:00 | Portugal – DR Congo | **1-0** | ★ | laten staan |
-| wo 17 jun, 22:00 | Engeland – Kroatië | **1-0** | ★ | laten staan |
+| ma 15 jun, 21:00 | België – Egypte | **1-0** | ★ | VERGRENDELD |
+| di 16 jun, 00:00 | Saoedi-Arabië – Uruguay | **0-1** |  | VERGRENDELD |
+| di 16 jun, 03:00 | Iran – Nieuw-Zeeland | **2-0** | ★ | VERGRENDELD |
+| di 16 jun, 21:00 | Frankrijk – Senegal | **1-0** | ★ | VERGRENDELD |
+| wo 17 jun, 00:00 | Irak – Noorwegen | **0-1** | ★ | VERGRENDELD |
+| wo 17 jun, 03:00 | Argentinië – Algerije | **1-0** | ★ | VERGRENDELD |
+| wo 17 jun, 06:00 | Oostenrijk – Jordanië | **2-1** | ★ | VERGRENDELD |
+| wo 17 jun, 19:00 | Portugal – DR Congo | **1-0** | ★ | VERGRENDELD |
+| wo 17 jun, 22:00 | Engeland – Kroatië | **1-0** | ★ | VERGRENDELD |
 | do 18 jun, 01:00 | Ghana – Panama | **1-0** |  | laten staan |
 | do 18 jun, 04:00 | Oezbekistan – Colombia | **1-2** | ★ | laten staan |
 
