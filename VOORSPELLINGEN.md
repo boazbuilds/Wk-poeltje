@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 1 (definitief)
 
-Gegenereerd: 17 jun 2026, 22:31 ·
+Gegenereerd: 18 jun 2026, 07:55 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -47,7 +47,7 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | wo 17 jun, 06:00 | Oostenrijk – Jordanië | **2-1** | ★ | VERGRENDELD |
 | wo 17 jun, 19:00 | Portugal – DR Congo | **1-0** | ★ | VERGRENDELD |
 | wo 17 jun, 22:00 | Engeland – Kroatië | **1-0** | ★ | VERGRENDELD |
-| do 18 jun, 01:00 | Ghana – Panama | **1-0** |  | laten staan |
-| do 18 jun, 04:00 | Oezbekistan – Colombia | **1-2** | ★ | laten staan |
+| do 18 jun, 01:00 | Ghana – Panama | **1-0** |  | VERGRENDELD |
+| do 18 jun, 04:00 | Oezbekistan – Colombia | **0-1** |  | VERGRENDELD |
 
 *Booster ronde 1: **Duitsland – Curaçao** — niet verplaatsen.*

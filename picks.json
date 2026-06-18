@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-17T20:31:30.481Z",
+ "generatedAt": "2026-06-18T05:55:17.251Z",
  "ronde": 1,
  "booster": {
   "wedstrijd": "Duitsland vs Curaçao",
@@ -274,7 +274,7 @@
   {
    "wedstrijd": "Ghana vs Panama",
    "deadline_nl": "do 18 jun, 01:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -286,14 +286,14 @@
   {
    "wedstrijd": "Oezbekistan vs Colombia",
    "deadline_nl": "do 18 jun, 04:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
-   "thuis": 1,
-   "uit": 2,
+   "thuis": 0,
+   "uit": 1,
    "wijzigen": false,
-   "huidige_invulling": "1-2",
-   "meesterzet": true,
-   "fallback_bij_10pct": "0-1"
+   "huidige_invulling": "0-1",
+   "meesterzet": false,
+   "fallback_bij_10pct": null
   }
  ]
 }
