@@ -18,7 +18,8 @@ const cal = JSON.parse(readFileSync(new URL("./calibrated.json", import.meta.url
 const bv = JSON.parse(readFileSync(new URL("./bovada.json", import.meta.url)));
 const resFile = new URL("./results.json", import.meta.url);
 const RESULTS = existsSync(resFile) ? JSON.parse(readFileSync(resFile)).results : {};
-const SIGMA = 0.10, THRESH = 0.05, ROUND = 1;
+const SIGMA = 0.10, THRESH = 0.05;
+const ROUND = process.argv[2] ? parseInt(process.argv[2]) : 1;
 
 // P(#1)-optimizer-voorkeuren waar de EV binnen de ruis gelijk is (±0.01).
 const OVERRIDES = {
@@ -77,13 +78,21 @@ const rows = MATCHES.filter((m) => m.round === ROUND).map((m) => {
 
 const boosterKey = MY_BOOSTERS[ROUND];
 const bm = MATCHES.find((m) => m.key === boosterKey);
+const bmRow = rows.find((r) => r.key === boosterKey);
+const boosterLocked = !!bmRow?.locked;
+const boosterUitslag = bmRow?.uitslag ? `${bmRow.uitslag[0]}-${bmRow.uitslag[1]}` : null;
+// beste nog-open booster-alternatief (hoogste evz × 2) als de boosterplek al vergrendeld is
+const openBest = rows.filter((r) => !r.locked).sort((x, y) => y.evz - x.evz)[0];
+const boosterNote = boosterLocked
+  ? `Booster ronde ${ROUND} stond op **${espn(bm.home)}–${espn(bm.away)}** — die is al gespeeld${boosterUitslag ? ` (uitslag ${boosterUitslag})` : ""}, dus vergrendeld; niets meer te doen.`
+  : `Booster ronde ${ROUND}: **laten staan op ${espn(bm.home)}–${espn(bm.away)}** (staat al goed; niets wijzigen).`;
 const changes = rows.filter((r) => r.wijzigen);
 
 /* ---------- picks.json ---------- */
 writeFileSync(new URL("../picks.json", import.meta.url), JSON.stringify({
   generatedAt: new Date().toISOString(),
   ronde: ROUND,
-  booster: { wedstrijd: `${espn(bm.home)} vs ${espn(bm.away)}`, actie: "laten staan (staat al goed)" },
+  booster: { wedstrijd: `${espn(bm.home)} vs ${espn(bm.away)}`, vergrendeld: boosterLocked, actie: boosterLocked ? `al gespeeld${boosterUitslag ? ` (${boosterUitslag})` : ""} — vergrendeld, niets te doen` : "laten staan (staat al goed)" },
   instructie: "Vul per wedstrijd thuis- en uitscore in. Sla wedstrijden die al begonnen zijn over. Controleer bij sterren (meesterzet) de populariteit; bij ≥10% de fallback gebruiken.",
   wedstrijden: rows.map((r) => ({
     wedstrijd: `${r.espnHome} vs ${r.espnAway}`,
@@ -106,10 +115,10 @@ Machine-leesbaar: [\`picks.json\`](./picks.json)
 
 ## Instructies voor het invullen (ESPN WK Pool)
 
-1. Alleen **speelronde 1** invullen — ronde 2/3 worden later opnieuw geijkt.
+1. Alleen **speelronde ${ROUND}** invullen${ROUND < 3 ? " — latere rondes worden vlak voor hun deadlines opnieuw geijkt" : ""}.
 2. Vul per wedstrijd exact de score uit de tabel in (thuis–uit).
 3. **Wedstrijden die al begonnen zijn, zijn vergrendeld — overslaan.**
-4. **Booster: laten staan op ${espn(bm.home)}–${espn(bm.away)}** (staat al goed; niets wijzigen).
+4. ${boosterNote}
 5. ★ = meesterzet (score < 10% populariteit). Check vlak voor de deadline de
    "Populaire voorspellingen" op de ESPN-pagina: staat de aanbevolen score daar
    op **10% of meer**, gebruik dan de fallback-kolom.
@@ -127,7 +136,7 @@ ${changes.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${
 |---|---|---|---|---|
 ${rows.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${r.espnAway} | **${r.pick[0]}-${r.pick[1]}** | ${r.ster ? "★" : ""} | ${r.locked ? "VERGRENDELD" + (r.uitslag ? ` (uitslag ${r.uitslag[0]}-${r.uitslag[1]})` : "") : r.wijzigen ? "WIJZIGEN (staat nu " + r.huidig[0] + "-" + r.huidig[1] + ")" : "laten staan"} |`).join("\n")}
 
-*Booster ronde ${ROUND}: **${espn(bm.home)} – ${espn(bm.away)}** — niet verplaatsen.*
+*${boosterNote}*${boosterLocked && openBest ? `\n\n> Mocht je tóch nog een ongebruikte ronde-${ROUND}-booster hebben: het hoogste open duel is **${openBest.espnHome}–${openBest.espnAway} ${openBest.pick[0]}-${openBest.pick[1]}${openBest.ster ? "★" : ""}** (evz ${openBest.evz} → ×2 ≈ ${(openBest.evz * 2).toFixed(1)}).` : ""}
 `;
 writeFileSync(new URL("../VOORSPELLINGEN.md", import.meta.url), md);
 console.log(`VOORSPELLINGEN.md + picks.json geschreven: ${rows.length} duels, ${changes.length} wijzigingen, booster ${bm.home}-${bm.away}.`);

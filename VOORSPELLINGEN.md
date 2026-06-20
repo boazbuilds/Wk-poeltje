@@ -1,15 +1,15 @@
-# Voorspellingen — Speelronde 1 (definitief)
+# Voorspellingen — Speelronde 2 (definitief)
 
-Gegenereerd: 18 jun 2026, 07:55 ·
+Gegenereerd: 20 jun 2026, 09:14 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
 ## Instructies voor het invullen (ESPN WK Pool)
 
-1. Alleen **speelronde 1** invullen — ronde 2/3 worden later opnieuw geijkt.
+1. Alleen **speelronde 2** invullen — latere rondes worden vlak voor hun deadlines opnieuw geijkt.
 2. Vul per wedstrijd exact de score uit de tabel in (thuis–uit).
 3. **Wedstrijden die al begonnen zijn, zijn vergrendeld — overslaan.**
-4. **Booster: laten staan op Duitsland–Curaçao** (staat al goed; niets wijzigen).
+4. Booster ronde 2 stond op **Brazilië–Haïti** — die is al gespeeld (uitslag 3-0), dus vergrendeld; niets meer te doen.
 5. ★ = meesterzet (score < 10% populariteit). Check vlak voor de deadline de
    "Populaire voorspellingen" op de ESPN-pagina: staat de aanbevolen score daar
    op **10% of meer**, gebruik dan de fallback-kolom.
@@ -25,29 +25,31 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 
 | Deadline (NL) | Wedstrijd | Voorspelling | ★ | Actie |
 |---|---|---|---|---|
-| do 11 jun, 21:00 | Mexico – Zuid-Afrika | **1-0** |  | VERGRENDELD (uitslag 2-0) |
-| vr 12 jun, 04:00 | Zuid-Korea – Tsjechië | **1-0** | ★ | VERGRENDELD (uitslag 2-1) |
-| vr 12 jun, 21:00 | Canada – Bosnië-Herzeg. | **2-0** | ★ | VERGRENDELD (uitslag 1-1) |
-| za 13 jun, 03:00 | Veren. Staten – Paraguay | **1-0** |  | VERGRENDELD (uitslag 4-1) |
-| za 13 jun, 21:00 | Qatar – Zwitserland | **0-1** | ★ | VERGRENDELD (uitslag 1-1) |
-| zo 14 jun, 00:00 | Brazilië – Marokko | **1-0** | ★ | VERGRENDELD (uitslag 1-1) |
-| zo 14 jun, 03:00 | Haïti – Schotland | **1-2** | ★ | VERGRENDELD (uitslag 0-1) |
-| zo 14 jun, 06:00 | Australië – Turkije | **0-1** | ★ | VERGRENDELD (uitslag 2-0) |
-| zo 14 jun, 19:00 | Duitsland – Curaçao | **2-0** | ★ | VERGRENDELD (uitslag 7-1) |
-| zo 14 jun, 22:00 | Nederland – Japan | **1-0** | ★ | VERGRENDELD (uitslag 2-2) |
-| ma 15 jun, 01:00 | Ivoorkust – Ecuador | **0-0** | ★ | VERGRENDELD (uitslag 1-0) |
-| ma 15 jun, 04:00 | Zweden – Tunesië | **1-0** |  | VERGRENDELD (uitslag 5-1) |
-| ma 15 jun, 18:00 | Spanje – Kaapverdië | **2-0** | ★ | VERGRENDELD |
-| ma 15 jun, 21:00 | België – Egypte | **1-0** | ★ | VERGRENDELD |
-| di 16 jun, 00:00 | Saoedi-Arabië – Uruguay | **0-1** |  | VERGRENDELD |
-| di 16 jun, 03:00 | Iran – Nieuw-Zeeland | **2-0** | ★ | VERGRENDELD |
-| di 16 jun, 21:00 | Frankrijk – Senegal | **1-0** | ★ | VERGRENDELD |
-| wo 17 jun, 00:00 | Irak – Noorwegen | **0-1** | ★ | VERGRENDELD |
-| wo 17 jun, 03:00 | Argentinië – Algerije | **1-0** | ★ | VERGRENDELD |
-| wo 17 jun, 06:00 | Oostenrijk – Jordanië | **2-1** | ★ | VERGRENDELD |
-| wo 17 jun, 19:00 | Portugal – DR Congo | **1-0** | ★ | VERGRENDELD |
-| wo 17 jun, 22:00 | Engeland – Kroatië | **1-0** | ★ | VERGRENDELD |
-| do 18 jun, 01:00 | Ghana – Panama | **1-0** |  | VERGRENDELD |
-| do 18 jun, 04:00 | Oezbekistan – Colombia | **0-1** |  | VERGRENDELD |
+| do 18 jun, 18:00 | Tsjechië – Zuid-Afrika | **1-0** |  | VERGRENDELD (uitslag 1-1) |
+| do 18 jun, 21:00 | Zwitserland – Bosnië-Herzeg. | **1-0** |  | VERGRENDELD (uitslag 4-1) |
+| vr 19 jun, 00:00 | Canada – Qatar | **3-0** | ★ | VERGRENDELD (uitslag 6-0) |
+| vr 19 jun, 03:00 | Mexico – Zuid-Korea | **1-0** | ★ | VERGRENDELD (uitslag 1-0) |
+| vr 19 jun, 21:00 | Veren. Staten – Australië | **1-0** |  | VERGRENDELD (uitslag 2-0) |
+| za 20 jun, 00:00 | Schotland – Marokko | **0-1** | ★ | VERGRENDELD (uitslag 0-1) |
+| za 20 jun, 02:30 | Brazilië – Haïti | **2-0** | ★ | VERGRENDELD (uitslag 3-0) |
+| za 20 jun, 05:00 | Turkije – Paraguay | **1-0** | ★ | VERGRENDELD (uitslag 0-1) |
+| za 20 jun, 19:00 | Nederland – Zweden | **1-0** | ★ | laten staan |
+| za 20 jun, 22:00 | Duitsland – Ivoorkust | **1-0** | ★ | laten staan |
+| zo 21 jun, 02:00 | Ecuador – Curaçao | **1-0** | ★ | laten staan |
+| zo 21 jun, 06:00 | Tunesië – Japan | **0-1** |  | laten staan |
+| zo 21 jun, 18:00 | Spanje – Saoedi-Arabië | **1-0** | ★ | laten staan |
+| zo 21 jun, 21:00 | België – Iran | **1-0** | ★ | laten staan |
+| ma 22 jun, 00:00 | Uruguay – Kaapverdië | **1-0** | ★ | laten staan |
+| ma 22 jun, 03:00 | Nieuw-Zeeland – Egypte | **0-1** |  | laten staan |
+| ma 22 jun, 19:00 | Argentinië – Oostenrijk | **1-0** | ★ | laten staan |
+| ma 22 jun, 23:00 | Frankrijk – Irak | **1-0** | ★ | laten staan |
+| di 23 jun, 02:00 | Noorwegen – Senegal | **1-0** | ★ | laten staan |
+| di 23 jun, 05:00 | Jordanië – Algerije | **0-1** |  | laten staan |
+| di 23 jun, 19:00 | Portugal – Oezbekistan | **1-0** | ★ | laten staan |
+| di 23 jun, 22:00 | Engeland – Ghana | **1-0** | ★ | laten staan |
+| wo 24 jun, 01:00 | Panama – Kroatië | **0-1** | ★ | laten staan |
+| wo 24 jun, 04:00 | Colombia – DR Congo | **1-0** |  | laten staan |
 
-*Booster ronde 1: **Duitsland – Curaçao** — niet verplaatsen.*
+*Booster ronde 2 stond op **Brazilië–Haïti** — die is al gespeeld (uitslag 3-0), dus vergrendeld; niets meer te doen.*
+
+> Mocht je tóch nog een ongebruikte ronde-2-booster hebben: het hoogste open duel is **Ecuador–Curaçao 1-0★** (evz 3.81 → ×2 ≈ 7.6).

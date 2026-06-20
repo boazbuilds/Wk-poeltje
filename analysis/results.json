@@ -12,6 +12,14 @@
     "1|Duitsland|Curaçao": [7, 1],
     "1|Nederland|Japan": [2, 2],
     "1|Ivoorkust|Ecuador": [1, 0],
-    "1|Zweden|Tunesië": [5, 1]
+    "1|Zweden|Tunesië": [5, 1],
+    "2|Tsjechië|Zuid-Afrika": [1, 1],
+    "2|Mexico|Zuid-Korea": [1, 0],
+    "2|Zwitserland|Bosnië-Herz.": [4, 1],
+    "2|Canada|Qatar": [6, 0],
+    "2|Brazilië|Haïti": [3, 0],
+    "2|Schotland|Marokko": [0, 1],
+    "2|VS|Australië": [2, 0],
+    "2|Turkije|Paraguay": [0, 1]
   }
 }
