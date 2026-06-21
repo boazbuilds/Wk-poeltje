@@ -67,6 +67,44 @@ export function blendMatrix(lh, la, rho, sigma, k = 8) {
   return B;
 }
 
+/* ---------- markt-exacte-score-mengsel (#4) ----------
+   Polymarket heeft per duel een markt per EXACTE score (echt geld, géén
+   Poisson-aanname). Waar dat genoeg volume heeft mengen we die direct in de
+   scorematrix; bij te dun volume → puur het (Pinnacle-gekalibreerde) model. */
+
+// Vertrouwensgewicht naar marktvolume: 0 onder $8k, lineair op naar max 0.5.
+export const marketWeight = (vol) =>
+  !vol || vol < 8000 ? 0 : Math.min(0.5, 0.5 * (vol - 8000) / 52000);
+
+// Scorematrix uit een de-vigde markt-grid [[h,a,p],...]; de ontbrekende massa
+// ("Any Other Score") wordt over de niet-gelijste cellen verdeeld naar rato
+// van het model, zodat de matrix netjes op 1 sommeert.
+export function marketScoreMatrix(grid, modelM, K = 8) {
+  const M = Array.from({ length: K + 1 }, () => new Array(K + 1).fill(0));
+  const listed = new Set();
+  let listedMass = 0;
+  for (const [h, a, p] of grid) if (h <= K && a <= K) { M[h][a] = p; listed.add(h * 100 + a); listedMass += p; }
+  const rest = Math.max(0, 1 - listedMass);
+  let modelRest = 0;
+  for (let h = 0; h <= K; h++) for (let a = 0; a <= K; a++) if (!listed.has(h * 100 + a)) modelRest += modelM[h][a];
+  for (let h = 0; h <= K; h++) for (let a = 0; a <= K; a++) if (!listed.has(h * 100 + a) && modelRest > 0) M[h][a] = rest * modelM[h][a] / modelRest;
+  let s = 0; for (let h = 0; h <= K; h++) for (let a = 0; a <= K; a++) s += M[h][a];
+  if (s > 0) for (let h = 0; h <= K; h++) for (let a = 0; a <= K; a++) M[h][a] /= s;
+  return M;
+}
+
+// Meng model-matrix met de markt-exacte-score-matrix, gewogen naar volume.
+// Retourneert { M, w } zodat de aanroeper kan tonen hoeveel markt meewoog.
+export function blendWithMarket(modelM, mkt, K = 8) {
+  if (!mkt?.scores || mkt.scores.length < 4) return { M: modelM, w: 0 };
+  const w = marketWeight(mkt.volume);
+  if (w <= 0) return { M: modelM, w: 0 };
+  const mm = marketScoreMatrix(mkt.scores, modelM, K);
+  const M = Array.from({ length: K + 1 }, () => new Array(K + 1).fill(0));
+  for (let h = 0; h <= K; h++) for (let a = 0; a <= K; a++) M[h][a] = w * mm[h][a] + (1 - w) * modelM[h][a];
+  return { M, w };
+}
+
 export function analyse(lh, la, crowd, rho) {
   return analyseM(scoreMatrix(lh, la, rho, 8), crowd);
 }

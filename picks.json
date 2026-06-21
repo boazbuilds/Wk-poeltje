@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-21T17:30:16.575Z",
+ "generatedAt": "2026-06-21T17:39:21.605Z",
  "ronde": 2,
  "booster": {
   "wedstrijd": "Brazilië vs Haïti",
@@ -207,8 +207,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": true,
-   "huidige_invulling": "2-1",
+   "wijzigen": false,
+   "huidige_invulling": "1-0",
    "meesterzet": true,
    "fallback_bij_10pct": null
   },
@@ -222,7 +222,7 @@
    "wijzigen": false,
    "huidige_invulling": "2-0",
    "meesterzet": true,
-   "fallback_bij_10pct": "1-0"
+   "fallback_bij_10pct": "3-0"
   },
   {
    "wedstrijd": "Noorwegen vs Senegal",
@@ -231,8 +231,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": true,
-   "huidige_invulling": "2-1",
+   "wijzigen": false,
+   "huidige_invulling": "1-0",
    "meesterzet": true,
    "fallback_bij_10pct": "2-1"
   },
@@ -255,8 +255,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": true,
-   "huidige_invulling": "2-0",
+   "wijzigen": false,
+   "huidige_invulling": "1-0",
    "meesterzet": true,
    "fallback_bij_10pct": "2-0"
   },
@@ -267,8 +267,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": true,
-   "huidige_invulling": "2-0",
+   "wijzigen": false,
+   "huidige_invulling": "1-0",
    "meesterzet": true,
    "fallback_bij_10pct": "2-0"
   },

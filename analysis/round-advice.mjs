@@ -4,18 +4,20 @@
 
     Gebruik:  node analysis/round-advice.mjs [ronde]   (default 1)  */
 
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { MATCHES, MY_BOOSTERS } from "./data.mjs";
-import { analyseM, blendMatrix } from "./engine.mjs";
+import { analyseM, blendMatrix, blendWithMarket } from "./engine.mjs";
 
 const cal = JSON.parse(readFileSync(new URL("./calibrated.json", import.meta.url)));
+const scoresFile = new URL("./polymarket-scores.json", import.meta.url);
+const SCORES = existsSync(scoresFile) ? JSON.parse(readFileSync(scoresFile)).markets : {};
 const round = process.argv[2] ? parseInt(process.argv[2]) : 1;
 const rho = cal.rho;
 const SIGMA = 0.10; // λ-onzekerheid: advies = verwachte evz over het mengsel (robuust, geen puntschatting)
 
 const rows = MATCHES.filter((m) => m.round === round).map((m) => {
   const L = cal.lambdas[m.key];
-  const a = analyseM(blendMatrix(L.lh, L.la, rho, SIGMA), m.crowd);
+  const a = analyseM(blendWithMarket(blendMatrix(L.lh, L.la, rho, SIGMA), SCORES[m.key]).M, m.crowd);
   const mine = a.stat(m.mine[0], m.mine[1]);
   const ev = a.evpick;
   return { m, L, a, mine, ev,

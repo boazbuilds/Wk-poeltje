@@ -12,12 +12,14 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { MATCHES, MY_BOOSTERS } from "./data.mjs";
-import { analyseM, blendMatrix, popOf } from "./engine.mjs";
+import { analyseM, blendMatrix, blendWithMarket, popOf } from "./engine.mjs";
 
 const cal = JSON.parse(readFileSync(new URL("./calibrated.json", import.meta.url)));
 const bv = JSON.parse(readFileSync(new URL("./bovada.json", import.meta.url)));
 const resFile = new URL("./results.json", import.meta.url);
 const RESULTS = existsSync(resFile) ? JSON.parse(readFileSync(resFile)).results : {};
+const scoresFile = new URL("./polymarket-scores.json", import.meta.url);
+const SCORES = existsSync(scoresFile) ? JSON.parse(readFileSync(scoresFile)).markets : {};
 const SIGMA = 0.10, THRESH = 0.05;
 // Ronde is verplicht: dit script overschrijft VOORSPELLINGEN.md + picks.json,
 // dus geen default (een bare run zou anders ronde 1 over een latere ronde schrijven).
@@ -40,9 +42,16 @@ const fmtDl = (ms) => new Date(ms).toLocaleString("nl-NL", {
   weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Amsterdam",
 });
 
+const marketUsed = [];
 const rows = MATCHES.filter((m) => m.round === ROUND).map((m) => {
   const L = cal.lambdas[m.key];
-  const M = blendMatrix(L.lh, L.la, cal.rho, SIGMA);
+  const startRaw = bv.markets[m.key]?.start ?? null;
+  const start = typeof startRaw === "string" ? Date.parse(startRaw) : startRaw;
+  const locked = !!RESULTS[m.key] || (start && start < Date.now());
+  // markt-exacte-score alleen voor nog-open duels meewegen (live/gesloten markten degenereren)
+  const modelM = blendMatrix(L.lh, L.la, cal.rho, SIGMA);
+  const { M, w } = locked ? { M: modelM, w: 0 } : blendWithMarket(modelM, SCORES[m.key]);
+  if (w > 0) marketUsed.push(`${m.home}-${m.away} ${(w * 100).toFixed(0)}%`);
   const a = analyseM(M, m.crowd);
   const mine = a.stat(m.mine[0], m.mine[1]);
   const ev = a.evpick;
@@ -70,9 +79,6 @@ const rows = MATCHES.filter((m) => m.round === ROUND).map((m) => {
     if (alt && alt.evz > st.evz - 2 * st.mp) fallback = [alt.h, alt.a, alt.mz];
   }
 
-  const startRaw = bv.markets[m.key]?.start ?? null;
-  const start = typeof startRaw === "string" ? Date.parse(startRaw) : startRaw;
-  const locked = !!RESULTS[m.key] || (start && start < Date.now());
   return {
     key: m.key, group: m.group, start, locked, uitslag: RESULTS[m.key] ?? null,
     espnHome: espn(m.home), espnAway: espn(m.away),
@@ -155,3 +161,4 @@ ${rows.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${r.e
 writeFileSync(new URL("../VOORSPELLINGEN.md", import.meta.url), md);
 console.log(`VOORSPELLINGEN.md + picks.json geschreven: ${rows.length} duels, ${changes.length} wijzigingen, booster ${bm.home}-${bm.away}.`);
 for (const r of changes) console.log(`  ${r.espnHome}-${r.espnAway}: ${r.huidig[0]}-${r.huidig[1]} → ${r.pick[0]}-${r.pick[1]}${r.ster ? "★" : ""} (${r.reden})`);
+if (marketUsed.length) console.log(`Markt-exacte-score meegewogen (#4): ${marketUsed.join(", ")}`);
