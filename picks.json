@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-20T07:38:29.035Z",
+ "generatedAt": "2026-06-21T10:19:38.414Z",
  "ronde": 2,
  "booster": {
   "wedstrijd": "Brazilië vs Haïti",
@@ -107,7 +107,7 @@
   {
    "wedstrijd": "Nederland vs Zweden",
    "deadline_nl": "za 20 jun, 19:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -119,7 +119,7 @@
   {
    "wedstrijd": "Duitsland vs Ivoorkust",
    "deadline_nl": "za 20 jun, 22:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -131,7 +131,7 @@
   {
    "wedstrijd": "Ecuador vs Curaçao",
    "deadline_nl": "zo 21 jun, 02:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
@@ -143,7 +143,7 @@
   {
    "wedstrijd": "Tunesië vs Japan",
    "deadline_nl": "zo 21 jun, 06:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 0,
    "uit": 1,
@@ -159,8 +159,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
+   "wijzigen": true,
+   "huidige_invulling": "2-0",
    "meesterzet": true,
    "fallback_bij_10pct": "2-0"
   },
@@ -185,7 +185,7 @@
    "uit": 0,
    "wijzigen": false,
    "huidige_invulling": "1-0",
-   "meesterzet": true,
+   "meesterzet": false,
    "fallback_bij_10pct": null
   },
   {
