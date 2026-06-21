@@ -10,7 +10,7 @@
 
     Gebruik:  node analysis/build-picks.mjs        (na fetch + calibrate)  */
 
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { MATCHES, MY_BOOSTERS } from "./data.mjs";
 import { analyseM, blendMatrix, popOf } from "./engine.mjs";
 
@@ -110,6 +110,14 @@ writeFileSync(new URL("../picks.json", import.meta.url), JSON.stringify({
     meesterzet: r.ster,
     fallback_bij_10pct: r.fallback ? `${r.fallback[0]}-${r.fallback[1]}` : null,
   })),
+}, null, 1));
+
+/* ---------- archief (momentopname vóór aftrap, voor zuivere backtest later) ---------- */
+mkdirSync(new URL("./archive/", import.meta.url), { recursive: true });
+const stamp = new Date().toISOString().slice(0, 16).replace(/[:T]/g, "").replace(/(\d{8})(\d{4})/, "$1-$2");
+writeFileSync(new URL(`./archive/r${ROUND}-${stamp}.json`, import.meta.url), JSON.stringify({
+  generatedAt: new Date().toISOString(), ronde: ROUND, rho: cal.rho,
+  picks: rows.map((r) => ({ key: r.key, pick: r.pick, ster: r.ster, evz: r.evz, locked: r.locked, lambda: cal.lambdas[r.key] })),
 }, null, 1));
 
 /* ---------- VOORSPELLINGEN.md ---------- */
