@@ -100,8 +100,8 @@ const boosterNote = boosterLocked
   : `Booster ronde ${ROUND}: **laten staan op ${espn(bm.home)}–${espn(bm.away)}** (staat al goed; niets wijzigen).`;
 const changes = rows.filter((r) => r.wijzigen);
 
-/* ---------- picks.json ---------- */
-writeFileSync(new URL("../picks.json", import.meta.url), JSON.stringify({
+/* ---------- picks.json (+ ronde-specifieke kopie) ---------- */
+const picksStr = JSON.stringify({
   generatedAt: new Date().toISOString(),
   ronde: ROUND,
   booster: { wedstrijd: `${espn(bm.home)} vs ${espn(bm.away)}`, vergrendeld: boosterLocked, actie: boosterLocked ? `al gespeeld${boosterUitslag ? ` (${boosterUitslag})` : ""} — vergrendeld, niets te doen` : "laten staan (staat al goed)" },
@@ -116,7 +116,9 @@ writeFileSync(new URL("../picks.json", import.meta.url), JSON.stringify({
     meesterzet: r.ster,
     fallback_bij_10pct: r.fallback ? `${r.fallback[0]}-${r.fallback[1]}` : null,
   })),
-}, null, 1));
+}, null, 1);
+writeFileSync(new URL("../picks.json", import.meta.url), picksStr);
+writeFileSync(new URL(`../picks-r${ROUND}.json`, import.meta.url), picksStr);
 
 /* ---------- archief (momentopname vóór aftrap, voor zuivere backtest later) ---------- */
 mkdirSync(new URL("./archive/", import.meta.url), { recursive: true });
@@ -159,6 +161,7 @@ ${rows.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${r.e
 *${boosterNote}*${boosterLocked && openBest ? `\n\n> Mocht je tóch nog een ongebruikte ronde-${ROUND}-booster hebben: het hoogste open duel is **${openBest.espnHome}–${openBest.espnAway} ${openBest.pick[0]}-${openBest.pick[1]}${openBest.ster ? "★" : ""}** (evz ${openBest.evz} → ×2 ≈ ${(openBest.evz * 2).toFixed(1)}).` : ""}
 `;
 writeFileSync(new URL("../VOORSPELLINGEN.md", import.meta.url), md);
+writeFileSync(new URL(`../VOORSPELLINGEN-r${ROUND}.md`, import.meta.url), md);
 console.log(`VOORSPELLINGEN.md + picks.json geschreven: ${rows.length} duels, ${changes.length} wijzigingen, booster ${bm.home}-${bm.away}.`);
 for (const r of changes) console.log(`  ${r.espnHome}-${r.espnAway}: ${r.huidig[0]}-${r.huidig[1]} → ${r.pick[0]}-${r.pick[1]}${r.ster ? "★" : ""} (${r.reden})`);
 if (marketUsed.length) console.log(`Markt-exacte-score meegewogen (#4): ${marketUsed.join(", ")}`);

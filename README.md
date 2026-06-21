@@ -7,11 +7,14 @@ poule-populariteit (voor de meesterzet) en je positie in het klassement.
 
 ## 📋 Wat moet ik voorspellen?
 
-### 👉 **[Klik hier — de score per wedstrijd (VOORSPELLINGEN.md)](./VOORSPELLINGEN.md)**
+- ### 👉 **[Nu invullen — ronde 2 (VOORSPELLINGEN.md)](./VOORSPELLINGEN.md)**
+- ### 🔮 **[Alvast — ronde 3, voorlopig (VOORSPELLINGEN-r3.md)](./VOORSPELLINGEN-r3.md)**
 
-De in te vullen score per wedstrijd van de huidige ronde, op deadline-volgorde
-(★ = meesterzet). Machine-leesbaar: [`picks.json`](./picks.json) · interactief
-model: [`index.html`](./index.html).
+De in te vullen score per wedstrijd, op deadline-volgorde (★ = meesterzet).
+**Ronde 3 is voorlopig** (nog model-only, dunne markt): wordt op 24 juni
+definitief met verse markt + dode-wedstrijd-check zodra ronde 2 klaar is.
+Machine-leesbaar: [`picks.json`](./picks.json) · interactief model:
+[`index.html`](./index.html).
 
 ## Doel
 

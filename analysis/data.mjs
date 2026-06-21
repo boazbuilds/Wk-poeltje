@@ -91,7 +91,7 @@ export const MATCHES = RAW.map((m, i) => ({
 export const MY_BOOSTERS = {
   1: "1|Duitsland|Curaçao",
   2: "2|Brazilië|Haïti",
-  3: "3|Curaçao|Ivoorkust",
+  3: "3|Marokko|Haïti",
 };
 
 // Engelse zoeknamen voor Polymarket (zoekterm + herken-regex voor de titel).
