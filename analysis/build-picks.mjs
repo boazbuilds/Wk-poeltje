@@ -19,7 +19,13 @@ const bv = JSON.parse(readFileSync(new URL("./bovada.json", import.meta.url)));
 const resFile = new URL("./results.json", import.meta.url);
 const RESULTS = existsSync(resFile) ? JSON.parse(readFileSync(resFile)).results : {};
 const SIGMA = 0.10, THRESH = 0.05;
-const ROUND = process.argv[2] ? parseInt(process.argv[2]) : 1;
+// Ronde is verplicht: dit script overschrijft VOORSPELLINGEN.md + picks.json,
+// dus geen default (een bare run zou anders ronde 1 over een latere ronde schrijven).
+const ROUND = parseInt(process.argv[2], 10);
+if (![1, 2, 3].includes(ROUND)) {
+  console.error("Gebruik: node analysis/build-picks.mjs <ronde 1|2|3>  (geef de ronde expliciet op — geen default, anders zou de verkeerde ronde overschreven worden)");
+  process.exit(1);
+}
 
 // P(#1)-optimizer-voorkeuren waar de EV binnen de ruis gelijk is (±0.01).
 const OVERRIDES = {

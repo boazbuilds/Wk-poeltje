@@ -95,12 +95,12 @@ node analysis/calibrate.mjs            # joint-fit 3 bronnen + overrides → cal
 node analysis/round-advice.mjs 1       # adviestabel per ronde (robuuste EV)
 node analysis/field-check.mjs          # veld-scherpte: naief vs kunde → kies --sharps
 node analysis/optimize.mjs 30000       # hill-climb op P(#1)
-node analysis/build-picks.mjs          # VOORSPELLINGEN.md + picks.json
+node analysis/build-picks.mjs 2        # VOORSPELLINGEN.md + picks.json (ronde verplicht: 1|2|3)
 node analysis/build-html.mjs           # index.html
 ```
 
-Eén regel om alles te verversen voor een ronde:
-`node analysis/fetch-pinnacle.mjs && node analysis/fetch-bovada.mjs && node analysis/fetch-polymarket.mjs && node analysis/calibrate.mjs && node analysis/build-picks.mjs && node analysis/build-html.mjs`
+Eén regel om alles te verversen voor een ronde (geef de ronde mee aan build-picks):
+`node analysis/fetch-pinnacle.mjs && node analysis/fetch-bovada.mjs && node analysis/fetch-polymarket.mjs && node analysis/calibrate.mjs && node analysis/build-picks.mjs 2 && node analysis/build-html.mjs`
 
 - `engine.mjs` — zelfde wiskunde als de artifact + marktinversie (joint:
   1X2 + totals + spreads → λ), globale ρ-fit en `blendMatrix`: een
