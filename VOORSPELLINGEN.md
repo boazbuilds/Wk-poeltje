@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 2 (definitief)
 
-Gegenereerd: 21 jun 2026, 19:47 ·
+Gegenereerd: 21 jun 2026, 19:50 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
