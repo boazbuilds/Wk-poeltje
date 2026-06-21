@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-21T17:50:20.236Z",
+ "generatedAt": "2026-06-21T21:19:14.644Z",
  "ronde": 2,
  "booster": {
   "wedstrijd": "Brazilië vs Haïti",
@@ -156,7 +156,7 @@
    "wedstrijd": "Spanje vs Saoedi-Arabië",
    "deadline_nl": "zo 21 jun, 18:00",
    "vergrendeld": true,
-   "uitslag": null,
+   "uitslag": "4-0",
    "thuis": 2,
    "uit": 0,
    "wijzigen": false,
@@ -167,8 +167,8 @@
   {
    "wedstrijd": "België vs Iran",
    "deadline_nl": "zo 21 jun, 21:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "0-0",
    "thuis": 1,
    "uit": 0,
    "wijzigen": false,
