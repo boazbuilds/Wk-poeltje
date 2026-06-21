@@ -5,6 +5,14 @@ Model en strategie om de ESPN WK Pool 2026 te winnen, specifiek de subleague
 scorevoorspelling op basis van marktkansen, en houdt het rekening met de
 poule-populariteit (voor de meesterzet) en je positie in het klassement.
 
+## 📋 Wat moet ik voorspellen?
+
+### 👉 **[Klik hier — de score per wedstrijd (VOORSPELLINGEN.md)](./VOORSPELLINGEN.md)**
+
+De in te vullen score per wedstrijd van de huidige ronde, op deadline-volgorde
+(★ = meesterzet). Machine-leesbaar: [`picks.json`](./picks.json) · interactief
+model: [`index.html`](./index.html).
+
 ## Doel
 
 Niet de meeste *verwachte* punten halen, maar **eindigen als nummer 1 van 18**.
