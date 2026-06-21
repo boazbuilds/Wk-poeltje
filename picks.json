@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-21T17:20:35.528Z",
+ "generatedAt": "2026-06-21T17:30:16.575Z",
  "ronde": 2,
  "booster": {
   "wedstrijd": "Brazilië vs Haïti",
@@ -54,7 +54,7 @@
    "wijzigen": false,
    "huidige_invulling": "1-0",
    "meesterzet": true,
-   "fallback_bij_10pct": null
+   "fallback_bij_10pct": "2-0"
   },
   {
    "wedstrijd": "Veren. Staten vs Australië",
@@ -138,7 +138,7 @@
    "wijzigen": false,
    "huidige_invulling": "1-0",
    "meesterzet": true,
-   "fallback_bij_10pct": "4-0"
+   "fallback_bij_10pct": "2-0"
   },
   {
    "wedstrijd": "Tunesië vs Japan",
@@ -157,12 +157,12 @@
    "deadline_nl": "zo 21 jun, 18:00",
    "vergrendeld": true,
    "uitslag": null,
-   "thuis": 1,
+   "thuis": 2,
    "uit": 0,
    "wijzigen": false,
    "huidige_invulling": "2-0",
-   "meesterzet": true,
-   "fallback_bij_10pct": "2-0"
+   "meesterzet": false,
+   "fallback_bij_10pct": null
   },
   {
    "wedstrijd": "België vs Iran",
@@ -174,7 +174,7 @@
    "wijzigen": false,
    "huidige_invulling": "1-0",
    "meesterzet": true,
-   "fallback_bij_10pct": null
+   "fallback_bij_10pct": "2-0"
   },
   {
    "wedstrijd": "Uruguay vs Kaapverdië",
@@ -207,8 +207,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
+   "wijzigen": true,
+   "huidige_invulling": "2-1",
    "meesterzet": true,
    "fallback_bij_10pct": null
   },
@@ -217,12 +217,12 @@
    "deadline_nl": "ma 22 jun, 23:00",
    "vergrendeld": false,
    "uitslag": null,
-   "thuis": 1,
+   "thuis": 2,
    "uit": 0,
    "wijzigen": false,
-   "huidige_invulling": "1-0",
+   "huidige_invulling": "2-0",
    "meesterzet": true,
-   "fallback_bij_10pct": "3-0"
+   "fallback_bij_10pct": "1-0"
   },
   {
    "wedstrijd": "Noorwegen vs Senegal",
@@ -231,10 +231,10 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
+   "wijzigen": true,
+   "huidige_invulling": "2-1",
    "meesterzet": true,
-   "fallback_bij_10pct": null
+   "fallback_bij_10pct": "2-1"
   },
   {
    "wedstrijd": "Jordanië vs Algerije",
@@ -255,8 +255,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
+   "wijzigen": true,
+   "huidige_invulling": "2-0",
    "meesterzet": true,
    "fallback_bij_10pct": "2-0"
   },
@@ -267,8 +267,8 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
+   "wijzigen": true,
+   "huidige_invulling": "2-0",
    "meesterzet": true,
    "fallback_bij_10pct": "2-0"
   },

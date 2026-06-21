@@ -77,13 +77,22 @@ export function analyseM(M, crowd) {
   let mode = { h: 0, a: 0, p: 0 };
   for (let h = 0; h <= 5; h++) for (let a = 0; a <= 5; a++) if (M[h][a] > mode.p) mode = { h, a, p: M[h][a] };
 
+  // meesterzet als KANS i.p.v. harde 10%-klif: een score net onder 10% is geen
+  // zekere meesterzet (populariteit drijft en is een steekproef), dus we wegen
+  // de +2 met P(eindpopulariteit < 10%). Smooth rond de drempel; niet-gelijste
+  // scores zitten ruim onder de laagst getoonde → hoge maar geen zekere kans.
+  const MZ_THRESH = 10, MZ_HALF = 2.5;
+  const mzProb = (pop) => pop === null ? 0.85
+    : Math.min(1, Math.max(0, (MZ_THRESH + MZ_HALF - pop) / (2 * MZ_HALF)));
+
   const stat = (h, a) => {
     const mp = h <= 5 && a <= 5 ? M[h][a] : 0;
     const pop = popOf(h, a, crowd);
-    const mz = pop === null || pop < 10;
+    const mzp = mzProb(pop);
+    const mz = mzp >= 0.5; // ster bij ≥50% meesterzet-kans (≈ populariteit ≤ 10%)
     let ev = 0;
     for (let x = 0; x <= K; x++) for (let y = 0; y <= K; y++) ev += M[x][y] * pts(h, a, x, y);
-    return { h, a, mp, pop, mz, ev, evz: ev + (mz ? 2 * mp : 0) };
+    return { h, a, mp, pop, mz, mzp, ev, evz: ev + mzp * 2 * mp };
   };
 
   let evpick = null, chase = null;
