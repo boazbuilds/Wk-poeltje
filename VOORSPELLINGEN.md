@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 2 (definitief)
 
-Gegenereerd: 21 jun 2026, 13:19 ·
+Gegenereerd: 21 jun 2026, 18:38 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -15,11 +15,11 @@ Machine-leesbaar: [`picks.json`](./picks.json)
    op **10% of meer**, gebruik dan de fallback-kolom.
 6. Na het invullen verifiëren dat alle 24 wedstrijden de juiste waarde tonen.
 
-## Te wijzigen (1 wedstrijden)
+## Te wijzigen (0 wedstrijden)
 
 | Deadline (NL) | Wedstrijd | Van | **Naar** | ★ | Fallback bij ≥10% |
 |---|---|---|---|---|---|
-| zo 21 jun, 18:00 | Spanje – Saoedi-Arabië | 2-0 | **1-0** | ★ | 2-0 |
+
 
 ## Volledige lijst (controle, op deadline-volgorde)
 
@@ -33,11 +33,11 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | za 20 jun, 00:00 | Schotland – Marokko | **0-1** | ★ | VERGRENDELD (uitslag 0-1) |
 | za 20 jun, 02:30 | Brazilië – Haïti | **2-0** | ★ | VERGRENDELD (uitslag 3-0) |
 | za 20 jun, 05:00 | Turkije – Paraguay | **1-0** | ★ | VERGRENDELD (uitslag 0-1) |
-| za 20 jun, 19:00 | Nederland – Zweden | **1-0** | ★ | VERGRENDELD |
-| za 20 jun, 22:00 | Duitsland – Ivoorkust | **1-0** | ★ | VERGRENDELD |
-| zo 21 jun, 02:00 | Ecuador – Curaçao | **1-0** | ★ | VERGRENDELD |
-| zo 21 jun, 06:00 | Tunesië – Japan | **0-1** |  | VERGRENDELD |
-| zo 21 jun, 18:00 | Spanje – Saoedi-Arabië | **1-0** | ★ | WIJZIGEN (staat nu 2-0) |
+| za 20 jun, 19:00 | Nederland – Zweden | **1-0** | ★ | VERGRENDELD (uitslag 5-1) |
+| za 20 jun, 22:00 | Duitsland – Ivoorkust | **1-0** | ★ | VERGRENDELD (uitslag 2-1) |
+| zo 21 jun, 02:00 | Ecuador – Curaçao | **1-0** | ★ | VERGRENDELD (uitslag 0-0) |
+| zo 21 jun, 06:00 | Tunesië – Japan | **0-1** |  | VERGRENDELD (uitslag 0-4) |
+| zo 21 jun, 18:00 | Spanje – Saoedi-Arabië | **1-0** | ★ | VERGRENDELD |
 | zo 21 jun, 21:00 | België – Iran | **1-0** | ★ | laten staan |
 | ma 22 jun, 00:00 | Uruguay – Kaapverdië | **1-0** |  | laten staan |
 | ma 22 jun, 03:00 | Nieuw-Zeeland – Egypte | **0-1** |  | laten staan |
@@ -52,4 +52,4 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 
 *Booster ronde 2 stond op **Brazilië–Haïti** — die is al gespeeld (uitslag 3-0), dus vergrendeld; niets meer te doen.*
 
-> Mocht je tóch nog een ongebruikte ronde-2-booster hebben: het hoogste open duel is **Spanje–Saoedi-Arabië 1-0★** (evz 3.81 → ×2 ≈ 7.6).
+> Mocht je tóch nog een ongebruikte ronde-2-booster hebben: het hoogste open duel is **Frankrijk–Irak 1-0★** (evz 3.77 → ×2 ≈ 7.5).
