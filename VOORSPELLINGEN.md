@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 2 (definitief)
 
-Gegenereerd: 21 jun 2026, 19:39 ·
+Gegenereerd: 21 jun 2026, 19:47 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -52,4 +52,4 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 
 *Booster ronde 2 stond op **Brazilië–Haïti** — die is al gespeeld (uitslag 3-0), dus vergrendeld; niets meer te doen.*
 
-> Mocht je tóch nog een ongebruikte ronde-2-booster hebben: het hoogste open duel is **Frankrijk–Irak 2-0★** (evz 3.85 → ×2 ≈ 7.7).
+> Mocht je tóch nog een ongebruikte ronde-2-booster hebben: het hoogste open duel is **Frankrijk–Irak 2-0★** (evz 3.82 → ×2 ≈ 7.6).

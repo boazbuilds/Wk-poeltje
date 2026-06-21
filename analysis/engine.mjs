@@ -72,9 +72,11 @@ export function blendMatrix(lh, la, rho, sigma, k = 8) {
    Poisson-aanname). Waar dat genoeg volume heeft mengen we die direct in de
    scorematrix; bij te dun volume → puur het (Pinnacle-gekalibreerde) model. */
 
-// Vertrouwensgewicht naar marktvolume: 0 onder $8k, lineair op naar max 0.5.
+// Vertrouwensgewicht naar marktvolume: leun zwaar op de exacte-score-markt
+// waar genoeg geld staat. 0 onder $8k (puur model als terugval), lineair op
+// naar max 0.85, verzadigd vanaf ~$40k volume.
 export const marketWeight = (vol) =>
-  !vol || vol < 8000 ? 0 : Math.min(0.5, 0.5 * (vol - 8000) / 52000);
+  !vol || vol < 8000 ? 0 : Math.min(0.85, 0.85 * (vol - 8000) / 32000);
 
 // Scorematrix uit een de-vigde markt-grid [[h,a,p],...]; de ontbrekende massa
 // ("Any Other Score") wordt over de niet-gelijste cellen verdeeld naar rato
