@@ -102,6 +102,25 @@ node analysis/build-html.mjs           # index.html
 Eén regel om alles te verversen voor een ronde (geef de ronde mee aan build-picks):
 `node analysis/fetch-pinnacle.mjs && node analysis/fetch-bovada.mjs && node analysis/fetch-polymarket.mjs && node analysis/calibrate.mjs && node analysis/build-picks.mjs 2 && node analysis/build-html.mjs`
 
+### Ronde 3 herijken (na de laatste ronde-2-wedstrijd)
+
+Dode duels (een geplaatste ploeg roteert, of beide ploegen zijn gebaat bij een
+gelijkspel) verhogen de gelijkspelkans, en de markt is daar traag. Gelijkspel is
+bovendien zwaar onderkozen door de poule → een juist gelijkspel is vaak én de
+toto (+3) die het veld misloopt én een meesterzet (+2). Stappenplan zodra ronde 2
+compleet is:
+
+1. Vul `analysis/results.json` volledig (álle ronde 1 + ronde 2-uitslagen) — de
+   dode-wedstrijd-check leidt de groepsstanden hieruit af.
+2. Verse markt + kalibratie:
+   `node analysis/fetch-pinnacle.mjs && node analysis/fetch-bovada.mjs && node analysis/fetch-polymarket.mjs && node analysis/calibrate.mjs`
+3. `node analysis/dead-rubber-check.mjs` — groepsstanden + flags per ronde-3-duel
+   (GEKWALIFICEERD = rotatie/gelijkspel-risico, TOP2-UIT = top-2 uitgesloten).
+   Print kant-en-klare `overrides.json`-regels.
+4. Check opstellingen (~1u vóór aftrap) + kwalificatiescenario, zet de multipliers
+   in `analysis/overrides.json` en draai `calibrate` opnieuw.
+5. `node analysis/build-picks.mjs 3 && node analysis/build-html.mjs`.
+
 - `engine.mjs` — zelfde wiskunde als de artifact + marktinversie (joint:
   1X2 + totals + spreads → λ), globale ρ-fit en `blendMatrix`: een
   Gauss-Hermite-mengsel van scorematrices over de λ-onzekerheid (σ=0.10).
