@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 2 (definitief)
 
-Gegenereerd: 21 jun 2026, 23:38 ·
+Gegenereerd: 22 jun 2026, 10:38 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -39,8 +39,8 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | zo 21 jun, 06:00 | Tunesië – Japan | **0-1** |  | VERGRENDELD (uitslag 0-4) |
 | zo 21 jun, 18:00 | Spanje – Saoedi-Arabië | **2-0** |  | VERGRENDELD (uitslag 4-0) |
 | zo 21 jun, 21:00 | België – Iran | **1-0** | ★ | VERGRENDELD (uitslag 0-0) |
-| ma 22 jun, 00:00 | Uruguay – Kaapverdië | **1-0** |  | laten staan |
-| ma 22 jun, 03:00 | Nieuw-Zeeland – Egypte | **0-1** |  | laten staan |
+| ma 22 jun, 00:00 | Uruguay – Kaapverdië | **1-0** |  | VERGRENDELD (uitslag 2-2) |
+| ma 22 jun, 03:00 | Nieuw-Zeeland – Egypte | **0-1** |  | VERGRENDELD (uitslag 1-3) |
 | ma 22 jun, 19:00 | Argentinië – Oostenrijk | **1-0** | ★ | laten staan |
 | ma 22 jun, 23:00 | Frankrijk – Irak | **2-0** | ★ | laten staan |
 | di 23 jun, 02:00 | Noorwegen – Senegal | **1-0** | ★ | laten staan |
@@ -52,4 +52,4 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 
 *Booster ronde 2 stond op **Brazilië–Haïti** — die is al gespeeld (uitslag 3-0), dus vergrendeld; niets meer te doen.*
 
-> Mocht je tóch nog een ongebruikte ronde-2-booster hebben: het hoogste open duel is **Frankrijk–Irak 2-0★** (evz 3.82 → ×2 ≈ 7.6).
+> Mocht je tóch nog een ongebruikte ronde-2-booster hebben: het hoogste open duel is **Frankrijk–Irak 2-0★** (evz 3.83 → ×2 ≈ 7.7).

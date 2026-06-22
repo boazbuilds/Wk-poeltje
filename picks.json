@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-21T21:38:17.836Z",
+ "generatedAt": "2026-06-22T08:38:01.328Z",
  "ronde": 2,
  "booster": {
   "wedstrijd": "Brazilië vs Haïti",
@@ -179,8 +179,8 @@
   {
    "wedstrijd": "Uruguay vs Kaapverdië",
    "deadline_nl": "ma 22 jun, 00:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "2-2",
    "thuis": 1,
    "uit": 0,
    "wijzigen": false,
@@ -191,8 +191,8 @@
   {
    "wedstrijd": "Nieuw-Zeeland vs Egypte",
    "deadline_nl": "ma 22 jun, 03:00",
-   "vergrendeld": false,
-   "uitslag": null,
+   "vergrendeld": true,
+   "uitslag": "1-3",
    "thuis": 0,
    "uit": 1,
    "wijzigen": false,
