@@ -66,18 +66,17 @@ const rows = MATCHES.filter((m) => m.round === ROUND).map((m) => {
   }
   const st = a.stat(pick[0], pick[1]);
 
-  // fallback als de meesterzet vervalt (score drijft naar ≥10% populariteit):
-  // beste alternatief wanneer de gekozen score géén ster meer oplevert.
-  let fallback = null;
-  if (st.mz) {
-    let alt = null;
-    for (let h = 0; h <= 6; h++) for (let a2 = 0; a2 <= 6; a2++) {
-      if (h === pick[0] && a2 === pick[1]) continue;
-      const s = a.stat(h, a2);
-      if (!alt || s.evz > alt.evz) alt = s;
-    }
-    if (alt && alt.evz > st.evz - 2 * st.mp) fallback = [alt.h, alt.a, alt.mz];
+  // op één na beste keuze: hoogste evz behalve de pick zelf
+  let runnerUp = null;
+  for (let h = 0; h <= 6; h++) for (let a2 = 0; a2 <= 6; a2++) {
+    if (h === pick[0] && a2 === pick[1]) continue;
+    const s = a.stat(h, a2);
+    if (!runnerUp || s.evz > runnerUp.evz) runnerUp = s;
   }
+  // fallback als de meesterzet vervalt (score drijft naar ≥10% populariteit):
+  // de runner-up telt alleen als die zónder de meesterzet alsnog beter zou zijn.
+  const fallback = st.mz && runnerUp && runnerUp.evz > st.evz - 2 * st.mp
+    ? [runnerUp.h, runnerUp.a, runnerUp.mz] : null;
 
   return {
     key: m.key, group: m.group, start, locked, uitslag: RESULTS[m.key] ?? null,
@@ -85,6 +84,7 @@ const rows = MATCHES.filter((m) => m.round === ROUND).map((m) => {
     huidig: m.mine, pick, ster: st.mz, reden,
     wijzigen: !locked && (pick[0] !== m.mine[0] || pick[1] !== m.mine[1]),
     fallback, evz: +st.evz.toFixed(2), modelPct: +(st.mp * 100).toFixed(0),
+    alt: [runnerUp.h, runnerUp.a], altEvz: +runnerUp.evz.toFixed(2), altSter: runnerUp.mz,
   };
 }).sort((x, y) => (x.start ?? 0) - (y.start ?? 0));
 
@@ -112,6 +112,7 @@ const picksStr = JSON.stringify({
     vergrendeld: r.locked,
     uitslag: r.uitslag ? `${r.uitslag[0]}-${r.uitslag[1]}` : null,
     thuis: r.pick[0], uit: r.pick[1],
+    ev: r.evz, tweede_keuze: `${r.alt[0]}-${r.alt[1]}`, tweede_keuze_ev: r.altEvz, tweede_keuze_meesterzet: r.altSter,
     wijzigen: r.wijzigen, huidige_invulling: `${r.huidig[0]}-${r.huidig[1]}`,
     meesterzet: r.ster,
     fallback_bij_10pct: r.fallback ? `${r.fallback[0]}-${r.fallback[1]}` : null,
@@ -154,9 +155,9 @@ ${changes.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${
 
 ## Volledige lijst (controle, op deadline-volgorde)
 
-| Deadline (NL) | Wedstrijd | Voorspelling | ★ | Actie |
-|---|---|---|---|---|
-${rows.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${r.espnAway} | **${r.pick[0]}-${r.pick[1]}** | ${r.ster ? "★" : ""} | ${r.locked ? "VERGRENDELD" + (r.uitslag ? ` (uitslag ${r.uitslag[0]}-${r.uitslag[1]})` : "") : r.wijzigen ? "WIJZIGEN (staat nu " + r.huidig[0] + "-" + r.huidig[1] + ")" : "laten staan"} |`).join("\n")}
+| Deadline (NL) | Wedstrijd | Voorspelling | ★ | EV | 2e keuze (EV) | Actie |
+|---|---|---|---|---|---|---|
+${rows.map((r) => `| ${r.start ? fmtDl(r.start) : "?"} | ${r.espnHome} – ${r.espnAway} | **${r.pick[0]}-${r.pick[1]}** | ${r.ster ? "★" : ""} | ${r.evz.toFixed(2)} | ${r.alt[0]}-${r.alt[1]}${r.altSter ? "★" : ""} (${r.altEvz.toFixed(2)}) | ${r.locked ? "VERGRENDELD" + (r.uitslag ? ` (uitslag ${r.uitslag[0]}-${r.uitslag[1]})` : "") : r.wijzigen ? "WIJZIGEN (staat nu " + r.huidig[0] + "-" + r.huidig[1] + ")" : "laten staan"} |`).join("\n")}
 
 *${boosterNote}*${boosterLocked && openBest ? `\n\n> Mocht je tóch nog een ongebruikte ronde-${ROUND}-booster hebben: het hoogste open duel is **${openBest.espnHome}–${openBest.espnAway} ${openBest.pick[0]}-${openBest.pick[1]}${openBest.ster ? "★" : ""}** (evz ${openBest.evz} → ×2 ≈ ${(openBest.evz * 2).toFixed(1)}).` : ""}
 `;
