@@ -1,0 +1,391 @@
+{
+ "generatedAt": "2026-06-25T12:38:31.360Z",
+ "ronde": 3,
+ "rho": -0.06,
+ "picks": [
+  {
+   "key": "3|Zwitserland|Canada",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": true,
+   "evz": 2.27,
+   "locked": true,
+   "lambda": {
+    "lh": 1.29,
+    "la": 1.12,
+    "src": "joint·3br",
+    "totalLine": 1.25
+   }
+  },
+  {
+   "key": "3|Bosnië-Herz.|Qatar",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": false,
+   "evz": 2.88,
+   "locked": true,
+   "lambda": {
+    "lh": 2.165,
+    "la": 0.875,
+    "src": "joint·3br",
+    "totalLine": 2
+   }
+  },
+  {
+   "key": "3|Marokko|Haïti",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": true,
+   "evz": 3.6,
+   "locked": true,
+   "lambda": {
+    "lh": 2.66,
+    "la": 0.54,
+    "src": "joint·3br",
+    "totalLine": 2
+   }
+  },
+  {
+   "key": "3|Schotland|Brazilië",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 3.28,
+   "locked": true,
+   "lambda": {
+    "lh": 0.695,
+    "la": 2.085,
+    "src": "joint·3br",
+    "totalLine": 1.5
+   }
+  },
+  {
+   "key": "3|Tsjechië|Mexico",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 2.59,
+   "locked": true,
+   "lambda": {
+    "lh": 0.99,
+    "la": 1.515,
+    "src": "joint·3br",
+    "totalLine": 1.25
+   }
+  },
+  {
+   "key": "3|Zuid-Afrika|Zuid-Korea",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": false,
+   "evz": 2.71,
+   "locked": true,
+   "lambda": {
+    "lh": 0.825,
+    "la": 1.69,
+    "src": "joint·3br",
+    "totalLine": 1.25
+   }
+  },
+  {
+   "key": "3|Ecuador|Duitsland",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 3.01,
+   "locked": false,
+   "lambda": {
+    "lh": 0.965,
+    "la": 2.04,
+    "src": "joint·3br",
+    "totalLine": 1.75
+   }
+  },
+  {
+   "key": "3|Curaçao|Ivoorkust",
+   "pick": [
+    0,
+    3
+   ],
+   "ster": true,
+   "evz": 3.62,
+   "locked": false,
+   "lambda": {
+    "lh": 0.58,
+    "la": 2.81,
+    "src": "joint·3br",
+    "totalLine": 2.25
+   }
+  },
+  {
+   "key": "3|Tunesië|Nederland",
+   "pick": [
+    0,
+    4
+   ],
+   "ster": true,
+   "evz": 3.84,
+   "locked": false,
+   "lambda": {
+    "lh": 0.45,
+    "la": 3.12,
+    "src": "joint·3br",
+    "totalLine": 2.5
+   }
+  },
+  {
+   "key": "3|Japan|Zweden",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": true,
+   "evz": 2.65,
+   "locked": false,
+   "lambda": {
+    "lh": 1.645,
+    "la": 1.04,
+    "src": "joint·3br",
+    "totalLine": 1.5
+   }
+  },
+  {
+   "key": "3|Turkije|VS",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 2.55,
+   "locked": false,
+   "lambda": {
+    "lh": 1.18,
+    "la": 1.775,
+    "src": "joint·3br",
+    "totalLine": 1.75
+   }
+  },
+  {
+   "key": "3|Paraguay|Australië",
+   "pick": [
+    1,
+    1
+   ],
+   "ster": false,
+   "evz": 2.37,
+   "locked": false,
+   "lambda": {
+    "lh": 1.015,
+    "la": 0.825,
+    "src": "joint·3br",
+    "totalLine": 1.25
+   }
+  },
+  {
+   "key": "3|Noorwegen|Frankrijk",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 2.83,
+   "locked": false,
+   "lambda": {
+    "lh": 1.02,
+    "la": 1.945,
+    "src": "joint·3br",
+    "totalLine": 1.75
+   }
+  },
+  {
+   "key": "3|Senegal|Irak",
+   "pick": [
+    3,
+    0
+   ],
+   "ster": true,
+   "evz": 3.46,
+   "locked": false,
+   "lambda": {
+    "lh": 2.535,
+    "la": 0.685,
+    "src": "joint·3br",
+    "totalLine": 2
+   }
+  },
+  {
+   "key": "3|Uruguay|Spanje",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 3.1,
+   "locked": false,
+   "lambda": {
+    "lh": 0.79,
+    "la": 1.955,
+    "src": "joint·3br",
+    "totalLine": 1.5
+   }
+  },
+  {
+   "key": "3|Kaapverdië|Saoedi-Arabië",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": true,
+   "evz": 2.17,
+   "locked": false,
+   "lambda": {
+    "lh": 1.27,
+    "la": 1.185,
+    "src": "joint·3br",
+    "totalLine": 1.25
+   }
+  },
+  {
+   "key": "3|Egypte|Iran",
+   "pick": [
+    0,
+    0
+   ],
+   "ster": true,
+   "evz": 2.28,
+   "locked": false,
+   "lambda": {
+    "lh": 1.115,
+    "la": 0.895,
+    "src": "joint·3br",
+    "totalLine": 1
+   }
+  },
+  {
+   "key": "3|Nieuw-Zeeland|België",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 3.51,
+   "locked": false,
+   "lambda": {
+    "lh": 0.61,
+    "la": 2.91,
+    "src": "joint·3br",
+    "totalLine": 2.5
+   }
+  },
+  {
+   "key": "3|Panama|Engeland",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 3.53,
+   "locked": false,
+   "lambda": {
+    "lh": 0.6,
+    "la": 2.825,
+    "src": "joint·3br",
+    "totalLine": 2.25
+   }
+  },
+  {
+   "key": "3|Kroatië|Ghana",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": true,
+   "evz": 2.86,
+   "locked": false,
+   "lambda": {
+    "lh": 1.51,
+    "la": 0.8,
+    "src": "joint·3br",
+    "totalLine": 1.25
+   }
+  },
+  {
+   "key": "3|Colombia|Portugal",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 2.71,
+   "locked": false,
+   "lambda": {
+    "lh": 0.955,
+    "la": 1.62,
+    "src": "joint·3br",
+    "totalLine": 1.5
+   }
+  },
+  {
+   "key": "3|DR Congo|Oezbekistan",
+   "pick": [
+    2,
+    1
+   ],
+   "ster": true,
+   "evz": 2.61,
+   "locked": false,
+   "lambda": {
+    "lh": 1.7,
+    "la": 1.005,
+    "src": "joint·3br",
+    "totalLine": 1.5
+   }
+  },
+  {
+   "key": "3|Algerije|Oostenrijk",
+   "pick": [
+    0,
+    0
+   ],
+   "ster": true,
+   "evz": 2.52,
+   "locked": false,
+   "lambda": {
+    "lh": 0.915,
+    "la": 1.025,
+    "src": "joint·3br",
+    "totalLine": 1
+   }
+  },
+  {
+   "key": "3|Jordanië|Argentinië",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 3.7,
+   "locked": false,
+   "lambda": {
+    "lh": 0.53,
+    "la": 2.595,
+    "src": "joint·3br",
+    "totalLine": 2
+   }
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 2 (definitief)
 
-Gegenereerd: 25 jun 2026, 14:31 ·
+Gegenereerd: 25 jun 2026, 14:38 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -41,13 +41,13 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | zo 21 jun, 21:00 | België – Iran | **1-0** | ★ | 3.23 | 2-0 (3.00) | VERGRENDELD (uitslag 0-0) |
 | ma 22 jun, 00:00 | Uruguay – Kaapverdië | **1-0** |  | 3.28 | 2-0 (3.11) | VERGRENDELD (uitslag 2-2) |
 | ma 22 jun, 03:00 | Nieuw-Zeeland – Egypte | **0-1** |  | 2.81 | 0-2 (2.71) | VERGRENDELD (uitslag 1-3) |
-| ma 22 jun, 19:00 | Argentinië – Oostenrijk | **1-0** | ★ | 3.17 | 2-0 (2.90) | VERGRENDELD |
-| ma 22 jun, 23:00 | Frankrijk – Irak | **2-0** | ★ | 3.86 | 3-0 (3.74) | VERGRENDELD |
-| di 23 jun, 02:00 | Noorwegen – Senegal | **1-0** | ★ | 2.33 | 2-1 (2.15) | VERGRENDELD |
-| di 23 jun, 05:00 | Jordanië – Algerije | **0-1** |  | 2.84 | 0-2 (2.77) | VERGRENDELD |
-| di 23 jun, 19:00 | Portugal – Oezbekistan | **1-0** | ★ | 3.59 | 2-0 (3.47) | VERGRENDELD |
-| di 23 jun, 22:00 | Engeland – Ghana | **1-0** | ★ | 3.53 | 2-0 (3.37) | VERGRENDELD |
-| wo 24 jun, 01:00 | Panama – Kroatië | **0-1** | ★ | 3.06 | 0-2 (2.79) | VERGRENDELD |
-| wo 24 jun, 04:00 | Colombia – DR Congo | **1-0** |  | 3.00 | 2-0 (2.90) | VERGRENDELD |
+| ma 22 jun, 19:00 | Argentinië – Oostenrijk | **1-0** | ★ | 3.17 | 2-0 (2.90) | VERGRENDELD (uitslag 2-0) |
+| ma 22 jun, 23:00 | Frankrijk – Irak | **2-0** | ★ | 3.86 | 3-0 (3.74) | VERGRENDELD (uitslag 3-0) |
+| di 23 jun, 02:00 | Noorwegen – Senegal | **1-0** | ★ | 2.33 | 2-1 (2.15) | VERGRENDELD (uitslag 3-2) |
+| di 23 jun, 05:00 | Jordanië – Algerije | **0-1** |  | 2.84 | 0-2 (2.77) | VERGRENDELD (uitslag 1-2) |
+| di 23 jun, 19:00 | Portugal – Oezbekistan | **1-0** | ★ | 3.59 | 2-0 (3.47) | VERGRENDELD (uitslag 5-0) |
+| di 23 jun, 22:00 | Engeland – Ghana | **1-0** | ★ | 3.53 | 2-0 (3.37) | VERGRENDELD (uitslag 0-0) |
+| wo 24 jun, 01:00 | Panama – Kroatië | **0-1** | ★ | 3.06 | 0-2 (2.79) | VERGRENDELD (uitslag 0-1) |
+| wo 24 jun, 04:00 | Colombia – DR Congo | **1-0** |  | 3.00 | 2-0 (2.90) | VERGRENDELD (uitslag 1-0) |
 
 *Booster ronde 2 stond op **Brazilië–Haïti** — die is al gespeeld (uitslag 3-0), dus vergrendeld; niets meer te doen.*
