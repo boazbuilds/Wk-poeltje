@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-06-25T12:27:35.354Z",
+ "fetchedAt": "2026-06-25T13:02:42.509Z",
  "source": "polymarket gamma-api",
  "markets": {
   "2|Mexico|Zuid-Korea": {
@@ -375,7 +375,7 @@
     "pd": 0.225,
     "pa": 0.525
    },
-   "volume": 6251220,
+   "volume": 6304297,
    "title": "Türkiye vs. United States",
    "endDate": "2026-06-26T02:00:00Z"
   },
@@ -388,33 +388,33 @@
     "pd": 0.425,
     "pa": 0.225
    },
-   "volume": 1140913,
+   "volume": 1217055,
    "title": "Paraguay vs. Australia",
    "endDate": "2026-06-26T02:00:00Z"
   },
   "3|Ecuador|Duitsland": {
-   "hw": 0.17976965448172258,
-   "d": 0.18878317476214324,
-   "aw": 0.6314471707561342,
+   "hw": 0.17958979489744872,
+   "d": 0.18959479739869936,
+   "aw": 0.6308154077038519,
    "raw": {
     "ph": 0.1795,
-    "pd": 0.1885,
+    "pd": 0.1895,
     "pa": 0.6305
    },
-   "volume": 10005126,
+   "volume": 10190691,
    "title": "Ecuador vs. Germany",
    "endDate": "2026-06-25T20:00:00Z"
   },
   "3|Curaçao|Ivoorkust": {
-   "hw": 0.051577366049073606,
-   "d": 0.11667501251877817,
-   "aw": 0.8317476214321482,
+   "hw": 0.05142286570144782,
+   "d": 0.1163255117324014,
+   "aw": 0.8322516225661507,
    "raw": {
     "ph": 0.0515,
     "pd": 0.1165,
-    "pa": 0.8305
+    "pa": 0.8335
    },
-   "volume": 1791174,
+   "volume": 1840320,
    "title": "Curaçao vs. Côte d'Ivoire",
    "endDate": "2026-06-25T20:00:00Z"
   },
@@ -427,20 +427,20 @@
     "pd": 0.085,
     "pa": 0.895
    },
-   "volume": 2142864,
+   "volume": 2222070,
    "title": "Tunisia vs. Netherlands",
    "endDate": "2026-06-25T23:00:00Z"
   },
   "3|Japan|Zweden": {
-   "hw": 0.5092269326683292,
-   "d": 0.2788029925187033,
-   "aw": 0.2119700748129676,
+   "hw": 0.509735396904643,
+   "d": 0.27908137793310034,
+   "aw": 0.2111832251622566,
    "raw": {
     "ph": 0.5105,
     "pd": 0.2795,
-    "pa": 0.2125
+    "pa": 0.2115
    },
-   "volume": 4542774,
+   "volume": 4636785,
    "title": "Japan vs. Sweden",
    "endDate": "2026-06-25T23:00:00Z"
   },
@@ -453,20 +453,20 @@
     "pd": 0.365,
     "pa": 0.245
    },
-   "volume": 388050,
+   "volume": 390939,
    "title": "Egypt vs. IR Iran",
    "endDate": "2026-06-27T03:00:00Z"
   },
   "3|Nieuw-Zeeland|België": {
-   "hw": 0.05527638190954774,
-   "d": 0.11557788944723618,
-   "aw": 0.829145728643216,
+   "hw": 0.05472636815920399,
+   "d": 0.11442786069651743,
+   "aw": 0.8308457711442787,
    "raw": {
     "ph": 0.055,
     "pd": 0.115,
-    "pa": 0.825
+    "pa": 0.835
    },
-   "volume": 292656,
+   "volume": 295497,
    "title": "New Zealand vs. Belgium",
    "endDate": "2026-06-27T03:00:00Z"
   },
@@ -479,7 +479,7 @@
     "pd": 0.225,
     "pa": 0.655
    },
-   "volume": 487410,
+   "volume": 489411,
    "title": "Uruguay vs. Spain",
    "endDate": "2026-06-27T00:00:00Z"
   },
@@ -492,7 +492,7 @@
     "pd": 0.275,
     "pa": 0.335
    },
-   "volume": 829197,
+   "volume": 829758,
    "title": "Cabo Verde vs. Saudi Arabia",
    "endDate": "2026-06-27T00:00:00Z"
   },
@@ -505,7 +505,7 @@
     "pd": 0.205,
     "pa": 0.605
    },
-   "volume": 1595326,
+   "volume": 1712604,
    "title": "Norway vs. France",
    "endDate": "2026-06-26T19:00:00Z"
   },
@@ -518,7 +518,7 @@
     "pd": 0.145,
     "pa": 0.075
    },
-   "volume": 195602,
+   "volume": 195854,
    "title": "Senegal vs. Iraq",
    "endDate": "2026-06-26T19:00:00Z"
   },
@@ -531,7 +531,7 @@
     "pd": 0.425,
     "pa": 0.335
    },
-   "volume": 428327,
+   "volume": 430261,
    "title": "Algeria vs. Austria",
    "endDate": "2026-06-28T02:00:00Z"
   },
@@ -544,7 +544,7 @@
     "pd": 0.115,
     "pa": 0.825
    },
-   "volume": 351914,
+   "volume": 353945,
    "title": "Jordan vs. Argentina",
    "endDate": "2026-06-28T02:00:00Z"
   },
@@ -557,7 +557,7 @@
     "pd": 0.245,
     "pa": 0.515
    },
-   "volume": 459095,
+   "volume": 460502,
    "title": "Colombia vs. Portugal",
    "endDate": "2026-06-27T23:30:00Z"
   },
@@ -570,7 +570,7 @@
     "pd": 0.235,
     "pa": 0.215
    },
-   "volume": 191275,
+   "volume": 192924,
    "title": "DR Congo vs. Uzbekistan",
    "endDate": "2026-06-27T23:30:00Z"
   },
@@ -583,7 +583,7 @@
     "pd": 0.115,
     "pa": 0.835
    },
-   "volume": 275662,
+   "volume": 275785,
    "title": "Panama vs. England",
    "endDate": "2026-06-27T21:00:00Z"
   },
@@ -596,7 +596,7 @@
     "pd": 0.295,
     "pa": 0.165
    },
-   "volume": 508160,
+   "volume": 508462,
    "title": "Croatia vs. Ghana",
    "endDate": "2026-06-27T21:00:00Z"
   },
