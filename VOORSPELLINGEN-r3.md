@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 3 (definitief)
 
-Gegenereerd: 27 jun 2026, 17:04 ·
+Gegenereerd: 27 jun 2026, 22:49 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -43,13 +43,13 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | za 27 jun, 02:00 | Kaapverdië – Saoedi-Arabië | **2-1** | ★ | 2.06 | 1-0 (1.99) | VERGRENDELD (uitslag 0-0) |
 | za 27 jun, 05:00 | Egypte – Iran | **0-0** | ★ | 2.26 | 1-0 (2.19) | VERGRENDELD (uitslag 1-1) |
 | za 27 jun, 05:00 | Nieuw-Zeeland – België | **0-1** | ★ | 3.46 | 0-2 (3.48) | VERGRENDELD (uitslag 1-5) |
-| za 27 jun, 23:00 | Panama – Engeland | **0-1** | ★ | 3.59 | 0-2 (3.58) | laten staan |
-| za 27 jun, 23:00 | Kroatië – Ghana | **1-0** | ★ | 2.85 | 2-1 (2.41) | laten staan |
-| zo 28 jun, 01:30 | Colombia – Portugal | **0-1** | ★ | 2.54 | 1-2 (2.38) | laten staan |
-| zo 28 jun, 01:30 | DR Congo – Oezbekistan | **2-1** | ★ | 2.88 | 2-0★ (2.87) | laten staan |
-| zo 28 jun, 04:00 | Algerije – Oostenrijk | **0-0** | ★ | 3.01 | 1-1 (2.61) | laten staan |
-| zo 28 jun, 04:00 | Jordanië – Argentinië | **0-1** | ★ | 3.69 | 0-2 (3.63) | laten staan |
+| za 27 jun, 23:00 | Panama – Engeland | **0-1** | ★ | 3.57 | 0-2 (3.56) | laten staan |
+| za 27 jun, 23:00 | Kroatië – Ghana | **1-0** | ★ | 2.94 | 2-1 (2.52) | laten staan |
+| zo 28 jun, 01:30 | Colombia – Portugal | **0-1** | ★ | 2.44 | 1-2 (2.33) | laten staan |
+| zo 28 jun, 01:30 | DR Congo – Oezbekistan | **2-1** | ★ | 2.83 | 2-0★ (2.81) | laten staan |
+| zo 28 jun, 04:00 | Algerije – Oostenrijk | **0-0** | ★ | 3.07 | 1-1 (2.62) | laten staan |
+| zo 28 jun, 04:00 | Jordanië – Argentinië | **0-1** | ★ | 3.71 | 0-2 (3.67) | laten staan |
 
 *Booster ronde 3 stond op **Marokko–Haïti** — die is al gespeeld (uitslag 4-2), dus vergrendeld; niets meer te doen.*
 
-> Mocht je tóch nog een ongebruikte ronde-3-booster hebben: het hoogste open duel is **Jordanië–Argentinië 0-1★** (evz 3.69 → ×2 ≈ 7.4).
+> Mocht je tóch nog een ongebruikte ronde-3-booster hebben: het hoogste open duel is **Jordanië–Argentinië 0-1★** (evz 3.71 → ×2 ≈ 7.4).

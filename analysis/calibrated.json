@@ -1,5 +1,5 @@
 {
- "calibratedAt": "2026-06-27T15:04:52.678Z",
+ "calibratedAt": "2026-06-27T20:49:16.314Z",
  "rho": -0.06,
  "lambdas": {
   "1|Mexico|Zuid-Afrika": {
@@ -399,40 +399,40 @@
    "totalLine": 2
   },
   "3|Algerije|Oostenrijk": {
-   "lh": 0.845,
-   "la": 0.885,
+   "lh": 0.85,
+   "la": 0.82,
    "src": "joint·3br",
    "totalLine": 1.25
   },
   "3|Jordanië|Argentinië": {
-   "lh": 0.505,
-   "la": 2.78,
+   "lh": 0.485,
+   "la": 2.795,
    "src": "joint·3br",
    "totalLine": 2
   },
   "3|Colombia|Portugal": {
-   "lh": 1.16,
-   "la": 1.655,
+   "lh": 1.245,
+   "la": 1.67,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "3|DR Congo|Oezbekistan": {
-   "lh": 1.62,
-   "la": 0.83,
+   "lh": 1.575,
+   "la": 0.82,
    "src": "joint·3br",
    "totalLine": 1.25
   },
   "3|Panama|Engeland": {
-   "lh": 0.58,
-   "la": 2.87,
+   "lh": 0.625,
+   "la": 2.95,
    "src": "joint·3br",
-   "totalLine": 2.25
+   "totalLine": 2.5
   },
   "3|Kroatië|Ghana": {
-   "lh": 1.41,
+   "lh": 1.48,
    "la": 0.775,
    "src": "joint·3br",
-   "totalLine": 1
+   "totalLine": 1.25
   }
  }
 }
