@@ -1,6 +1,6 @@
 # Voorspellingen — Speelronde 3 (definitief)
 
-Gegenereerd: 25 jun 2026, 15:03 ·
+Gegenereerd: 27 jun 2026, 17:04 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -15,13 +15,11 @@ Machine-leesbaar: [`picks.json`](./picks.json)
    op **10% of meer**, gebruik dan de fallback-kolom.
 6. Na het invullen verifiëren dat alle 24 wedstrijden de juiste waarde tonen.
 
-## Te wijzigen (3 wedstrijden)
+## Te wijzigen (0 wedstrijden)
 
 | Deadline (NL) | Wedstrijd | Van | **Naar** | ★ | Fallback bij ≥10% |
 |---|---|---|---|---|---|
-| vr 26 jun, 04:00 | Paraguay – Australië | 1-1 | **0-0** | ★ | 1-1 |
-| za 27 jun, 02:00 | Kaapverdië – Saoedi-Arabië | 1-0 | **2-1** | ★ | 1-0 |
-| za 27 jun, 05:00 | Egypte – Iran | 1-0 | **0-0** | ★ | 1-0 |
+
 
 ## Volledige lijst (controle, op deadline-volgorde)
 
@@ -33,25 +31,25 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | do 25 jun, 00:00 | Schotland – Brazilië | **0-1** | ★ | 3.28 | 0-2 (3.05) | VERGRENDELD (uitslag 0-3) |
 | do 25 jun, 03:00 | Tsjechië – Mexico | **0-1** | ★ | 2.59 | 0-2★ (2.39) | VERGRENDELD (uitslag 0-3) |
 | do 25 jun, 03:00 | Zuid-Afrika – Zuid-Korea | **0-1** |  | 2.71 | 0-2 (2.59) | VERGRENDELD (uitslag 1-0) |
-| do 25 jun, 22:00 | Ecuador – Duitsland | **0-1** | ★ | 3.00 | 1-2 (2.78) | laten staan |
-| do 25 jun, 22:00 | Curaçao – Ivoorkust | **0-3** | ★ | 3.61 | 0-1★ (3.52) | laten staan |
-| vr 26 jun, 01:00 | Tunesië – Nederland | **0-1** | ★ | 3.75 | 0-3 (3.78) | laten staan |
-| vr 26 jun, 01:00 | Japan – Zweden | **1-0** | ★ | 2.64 | 2-0★ (2.51) | laten staan |
-| vr 26 jun, 04:00 | Turkije – Veren. Staten | **0-1** | ★ | 2.56 | 0-2★ (2.45) | laten staan |
-| vr 26 jun, 04:00 | Paraguay – Australië | **0-0** | ★ | 2.63 | 1-1 (2.39) | WIJZIGEN (staat nu 1-1) |
-| vr 26 jun, 21:00 | Noorwegen – Frankrijk | **0-1** | ★ | 2.84 | 0-2★ (2.79) | laten staan |
-| vr 26 jun, 21:00 | Senegal – Irak | **3-0** | ★ | 3.46 | 2-0 (3.35) | laten staan |
-| za 27 jun, 02:00 | Uruguay – Spanje | **0-1** | ★ | 3.10 | 0-2 (2.84) | laten staan |
-| za 27 jun, 02:00 | Kaapverdië – Saoedi-Arabië | **2-1** | ★ | 2.06 | 1-0 (1.99) | WIJZIGEN (staat nu 1-0) |
-| za 27 jun, 05:00 | Egypte – Iran | **0-0** | ★ | 2.28 | 1-0 (2.18) | WIJZIGEN (staat nu 1-0) |
-| za 27 jun, 05:00 | Nieuw-Zeeland – België | **0-1** | ★ | 3.45 | 0-2 (3.47) | laten staan |
-| za 27 jun, 23:00 | Panama – Engeland | **0-1** | ★ | 3.53 | 0-2 (3.47) | laten staan |
-| za 27 jun, 23:00 | Kroatië – Ghana | **1-0** | ★ | 2.88 | 2-1 (2.51) | laten staan |
-| zo 28 jun, 01:30 | Colombia – Portugal | **0-1** | ★ | 2.71 | 1-2 (2.44) | laten staan |
-| zo 28 jun, 01:30 | DR Congo – Oezbekistan | **2-1** | ★ | 2.61 | 2-0★ (2.54) | laten staan |
-| zo 28 jun, 04:00 | Algerije – Oostenrijk | **0-0** | ★ | 2.55 | 1-1 (2.32) | laten staan |
-| zo 28 jun, 04:00 | Jordanië – Argentinië | **0-1** | ★ | 3.70 | 0-2 (3.54) | laten staan |
+| do 25 jun, 22:00 | Ecuador – Duitsland | **0-1** | ★ | 2.87 | 1-2 (2.70) | VERGRENDELD (uitslag 2-1) |
+| do 25 jun, 22:00 | Curaçao – Ivoorkust | **0-3** | ★ | 3.62 | 0-1★ (3.53) | VERGRENDELD (uitslag 0-2) |
+| vr 26 jun, 01:00 | Tunesië – Nederland | **0-1** | ★ | 3.78 | 0-2 (3.75) | VERGRENDELD (uitslag 1-3) |
+| vr 26 jun, 01:00 | Japan – Zweden | **1-0** | ★ | 2.58 | 2-0★ (2.44) | VERGRENDELD (uitslag 1-1) |
+| vr 26 jun, 04:00 | Turkije – Veren. Staten | **0-1** | ★ | 2.49 | 0-2★ (2.39) | VERGRENDELD (uitslag 3-2) |
+| vr 26 jun, 04:00 | Paraguay – Australië | **0-0** | ★ | 2.35 | 1-0 (2.22) | VERGRENDELD (uitslag 0-0) |
+| vr 26 jun, 21:00 | Noorwegen – Frankrijk | **0-1** | ★ | 2.77 | 0-2★ (2.72) | VERGRENDELD (uitslag 4-1) |
+| vr 26 jun, 21:00 | Senegal – Irak | **3-0** | ★ | 3.38 | 2-0 (3.29) | VERGRENDELD (uitslag 5-0) |
+| za 27 jun, 02:00 | Uruguay – Spanje | **0-1** | ★ | 3.10 | 0-2 (2.84) | VERGRENDELD (uitslag 0-1) |
+| za 27 jun, 02:00 | Kaapverdië – Saoedi-Arabië | **2-1** | ★ | 2.06 | 1-0 (1.99) | VERGRENDELD (uitslag 0-0) |
+| za 27 jun, 05:00 | Egypte – Iran | **0-0** | ★ | 2.26 | 1-0 (2.19) | VERGRENDELD (uitslag 1-1) |
+| za 27 jun, 05:00 | Nieuw-Zeeland – België | **0-1** | ★ | 3.46 | 0-2 (3.48) | VERGRENDELD (uitslag 1-5) |
+| za 27 jun, 23:00 | Panama – Engeland | **0-1** | ★ | 3.59 | 0-2 (3.58) | laten staan |
+| za 27 jun, 23:00 | Kroatië – Ghana | **1-0** | ★ | 2.85 | 2-1 (2.41) | laten staan |
+| zo 28 jun, 01:30 | Colombia – Portugal | **0-1** | ★ | 2.54 | 1-2 (2.38) | laten staan |
+| zo 28 jun, 01:30 | DR Congo – Oezbekistan | **2-1** | ★ | 2.88 | 2-0★ (2.87) | laten staan |
+| zo 28 jun, 04:00 | Algerije – Oostenrijk | **0-0** | ★ | 3.01 | 1-1 (2.61) | laten staan |
+| zo 28 jun, 04:00 | Jordanië – Argentinië | **0-1** | ★ | 3.69 | 0-2 (3.63) | laten staan |
 
 *Booster ronde 3 stond op **Marokko–Haïti** — die is al gespeeld (uitslag 4-2), dus vergrendeld; niets meer te doen.*
 
-> Mocht je tóch nog een ongebruikte ronde-3-booster hebben: het hoogste open duel is **Tunesië–Nederland 0-1★** (evz 3.75 → ×2 ≈ 7.5).
+> Mocht je tóch nog een ongebruikte ronde-3-booster hebben: het hoogste open duel is **Jordanië–Argentinië 0-1★** (evz 3.69 → ×2 ≈ 7.4).
