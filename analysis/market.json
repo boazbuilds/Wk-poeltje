@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-06-27T20:47:58.072Z",
+ "fetchedAt": "2026-06-28T06:24:03.805Z",
  "source": "polymarket gamma-api",
  "markets": {
   "2|Mexico|Zuid-Korea": {
@@ -937,6 +937,123 @@
    "volume": 654600,
    "title": "Czechia vs. Mexico",
    "endDate": "2026-06-25T01:00:00Z"
+  },
+  "4|Zuid-Afrika|Canada": {
+   "hw": 0.16417910447761197,
+   "d": 0.263681592039801,
+   "aw": 0.5721393034825871,
+   "raw": {
+    "ph": 0.165,
+    "pd": 0.265,
+    "pa": 0.575
+   },
+   "volume": 2143457,
+   "title": "South Africa vs. Canada",
+   "endDate": "2026-06-28T19:00:00Z"
+  },
+  "4|Brazilië|Japan": {
+   "hw": 0.5665024630541872,
+   "d": 0.2512315270935961,
+   "aw": 0.18226600985221678,
+   "raw": {
+    "ph": 0.575,
+    "pd": 0.255,
+    "pa": 0.185
+   },
+   "volume": 1855066,
+   "title": "Brazil vs. Japan",
+   "endDate": "2026-06-29T17:00:00Z"
+  },
+  "4|Duitsland|Paraguay": {
+   "hw": 0.7213930348258707,
+   "d": 0.18407960199004977,
+   "aw": 0.09452736318407962,
+   "raw": {
+    "ph": 0.725,
+    "pd": 0.185,
+    "pa": 0.095
+   },
+   "volume": 300125,
+   "title": "Germany vs. Paraguay",
+   "endDate": "2026-06-29T20:30:00Z"
+  },
+  "4|Nederland|Marokko": {
+   "hw": 0.45273631840796025,
+   "d": 0.3034825870646766,
+   "aw": 0.2437810945273632,
+   "raw": {
+    "ph": 0.455,
+    "pd": 0.305,
+    "pa": 0.245
+   },
+   "volume": 547643,
+   "title": "Netherlands vs. Morocco",
+   "endDate": "2026-06-30T01:00:00Z"
+  },
+  "4|Ivoorkust|Noorwegen": {
+   "hw": 0.2562814070351759,
+   "d": 0.2663316582914573,
+   "aw": 0.4773869346733668,
+   "raw": {
+    "ph": 0.255,
+    "pd": 0.265,
+    "pa": 0.475
+   },
+   "volume": 419588,
+   "title": "Côte d'Ivoire vs. Norway",
+   "endDate": "2026-06-30T17:00:00Z"
+  },
+  "4|Frankrijk|Zweden": {
+   "hw": 0.7536945812807881,
+   "d": 0.1625615763546798,
+   "aw": 0.08374384236453201,
+   "raw": {
+    "ph": 0.765,
+    "pd": 0.165,
+    "pa": 0.085
+   },
+   "volume": 485631,
+   "title": "France vs. Sweden",
+   "endDate": "2026-06-30T21:00:00Z"
+  },
+  "4|VS|Bosnië-Herz.": {
+   "hw": 0.7185929648241206,
+   "d": 0.18592964824120606,
+   "aw": 0.09547738693467338,
+   "raw": {
+    "ph": 0.715,
+    "pd": 0.185,
+    "pa": 0.095
+   },
+   "volume": 273620,
+   "title": "United States vs. Bosnia and Herzegovina",
+   "endDate": "2026-07-02T00:00:00Z"
+  },
+  "4|Australië|Egypte": {
+   "hw": 0.2835820895522388,
+   "d": 0.33333333333333337,
+   "aw": 0.3830845771144279,
+   "raw": {
+    "ph": 0.285,
+    "pd": 0.335,
+    "pa": 0.385
+   },
+   "volume": 42966,
+   "title": "Australia vs. Egypt",
+   "endDate": "2026-07-03T18:00:00Z"
+  },
+  "4|Argentinië|Kaapverdië": {
+   "hw": 0.8602685231228244,
+   "d": 0.104425658876181,
+   "aw": 0.03530581800099453,
+   "raw": {
+    "ph": 0.865,
+    "pd": 0.105,
+    "pa": 0.0355
+   },
+   "volume": 162842,
+   "title": "Argentina vs. Cabo Verde",
+   "endDate": "2026-07-03T22:00:00Z"
   }
  }
 }

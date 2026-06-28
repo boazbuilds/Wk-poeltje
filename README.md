@@ -7,13 +7,14 @@ poule-populariteit (voor de meesterzet) en je positie in het klassement.
 
 ## 📋 Wat moet ik voorspellen?
 
-- ### 👉 **[Nu invullen — ronde 3 (VOORSPELLINGEN.md)](./VOORSPELLINGEN.md)**
+- ### 👉 **[Nu invullen — 16e finales (VOORSPELLINGEN.md)](./VOORSPELLINGEN.md)**
 
 De in te vullen score per wedstrijd, op deadline-volgorde (★ = meesterzet, met
-EV en 2e keuze per duel). Ronde 2 is afgelopen — [uitslagen + hoe het liep](./VOORSPELLINGEN-r2.md).
-Ronde 3 staat op verse, liquide marktdata; dode-wedstrijd-overrides voor de
-dunne duels volgen. Machine-leesbaar: [`picks.json`](./picks.json) ·
-interactief model: [`index.html`](./index.html).
+EV en 2e keuze per duel). De groepsfase is afgelopen ([ronde 3](./VOORSPELLINGEN-r3.md)).
+De knock-out staat op live marktdata; **stuur de poule-populariteit per duel**
+voor de meesterzet — zonder die data staat een pick op de **markt-EV** (geen ★).
+Bonusvragen (eerste helft, beide scoren, O/U): `node analysis/ko-bonus.mjs 4`.
+Machine-leesbaar: [`picks.json`](./picks.json) · interactief model: [`index.html`](./index.html).
 
 ## Doel
 

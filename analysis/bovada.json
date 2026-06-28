@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-06-27T20:47:57.908Z",
+ "fetchedAt": "2026-06-28T06:24:03.647Z",
  "source": "bovada coupon",
  "markets": {
   "1|Mexico|Zuid-Afrika": {
@@ -1296,6 +1296,186 @@
    "spread": {
     "hcpHome": -0.5,
     "pHomeCover": 0.4739133967693073
+   }
+  },
+  "4|Zuid-Afrika|Canada": {
+   "title": "South Africa vs Canada",
+   "start": 1782673200000,
+   "ml": {
+    "hw": 0.17739187791244607,
+    "d": 0.2588962542505969,
+    "aw": 0.563711867836957,
+    "overround": 0.0439
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4436229616544945
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.48263493577870437
+   }
+  },
+  "4|Brazilië|Japan": {
+   "title": "Brazil vs Japan",
+   "start": 1782752400000,
+   "ml": {
+    "hw": 0.5585068184137139,
+    "d": 0.24943117603744974,
+    "aw": 0.19206200554883632,
+    "overround": 0.0413
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.46131434121074777
+   },
+   "spread": {
+    "hcpHome": -0.5,
+    "pHomeCover": 0.5107761366540907
+   }
+  },
+  "4|Duitsland|Paraguay": {
+   "title": "Germany vs Paraguay",
+   "start": 1782765000000,
+   "ml": {
+    "hw": 0.6954023553353635,
+    "d": 0.1896551372440188,
+    "aw": 0.11494250742061744,
+    "overround": 0.0545
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5483322552052121
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "4|Nederland|Marokko": {
+   "title": "Netherlands vs Morocco",
+   "start": 1782781200000,
+   "ml": {
+    "hw": 0.44386129334582947,
+    "d": 0.2982193064667292,
+    "aw": 0.2579194001874414,
+    "overround": 0.0479
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5698625861082903
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "4|Ivoorkust|Noorwegen": {
+   "title": "Ivory Coast vs Norway",
+   "start": 1782838800000,
+   "ml": {
+    "hw": 0.2642238998342847,
+    "d": 0.2717731541152642,
+    "aw": 0.46400294605045117,
+    "overround": 0.0513
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "4|Frankrijk|Zweden": {
+   "title": "France vs Sweden",
+   "start": 1782853200000,
+   "ml": {
+    "hw": 0.7371067942017552,
+    "d": 0.16536830687308943,
+    "aw": 0.09752489892515531,
+    "overround": 0.0517
+   },
+   "total": {
+    "line": 3,
+    "pOver": 0.5043264077813802
+   },
+   "spread": {
+    "hcpHome": -1.5,
+    "pHomeCover": 0.4739133967693073
+   }
+  },
+  "4|Mexico|Ecuador": {
+   "title": "Mexico vs Ecuador",
+   "start": 1782867600000,
+   "ml": {
+    "hw": 0.4426075521322562,
+    "d": 0.3069697538981777,
+    "aw": 0.250422693969566,
+    "overround": 0.0509
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.4675324675324676
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5260866032306926
+   }
+  },
+  "4|VS|Bosnië-Herz.": {
+   "title": "USA vs Bosnia & Herzegovina",
+   "start": 1782950400000,
+   "ml": {
+    "hw": 0.6929355834503971,
+    "d": 0.1947796672143004,
+    "aw": 0.1122847493353026,
+    "overround": 0.0478
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5217391758034066
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.5217391758034066
+   }
+  },
+  "4|Australië|Egypte": {
+   "title": "Australia vs Egypt",
+   "start": 1783101600000,
+   "ml": {
+    "hw": 0.28855175167182356,
+    "d": 0.32278670526000597,
+    "aw": 0.38866154306817047,
+    "overround": 0.0502
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.457256353331283
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5386856587892521
+   }
+  },
+  "4|Argentinië|Kaapverdië": {
+   "title": "Argentina vs Cape Verde",
+   "start": 1783116000000,
+   "ml": {
+    "hw": 0.8306011110513903,
+    "d": 0.11920662555642897,
+    "aw": 0.050192263392180615,
+    "overround": 0.0486
+   },
+   "total": {
+    "line": 3,
+    "pOver": 0.4739133967693073
+   },
+   "spread": {
+    "hcpHome": -2,
+    "pHomeCover": 0.5260866032306926
    }
   }
  }

@@ -79,6 +79,24 @@ export const RAW = [
   [3,"K","DR Congo","Oezbekistan",1.35,1.21,[2,1],[[1,1,39],[0,0,19],[1,0,18]]],
   [3,"L","Panama","Engeland",1.13,2.67,[0,1],[[0,3,44],[0,2,26],[0,4,14]]],
   [3,"L","Kroatië","Ghana",1.83,0.99,[1,0],[[2,1,45],[2,0,18],[1,1,13]]],
+  // Ronde 4 — 16e finales (laatste 32). λ = placeholder, live geijkt via calibrate;
+  // crowd (poule-populariteit) per duel invullen zodra bekend voor de meesterzet.
+  [4,"KO","Zuid-Afrika","Canada",0.82,1.62,[0,1],[[1,2,49],[0,2,20],[1,3,11]]],
+  [4,"KO","Brazilië","Japan",1.70,0.90,[1,0],[]],
+  [4,"KO","Duitsland","Paraguay",1.90,0.80,[1,0],[]],
+  [4,"KO","Nederland","Marokko",1.40,1.10,[1,0],[]],
+  [4,"KO","Ivoorkust","Noorwegen",1.00,1.50,[0,1],[]],
+  [4,"KO","Frankrijk","Zweden",1.90,0.90,[1,0],[]],
+  [4,"KO","Mexico","Ecuador",1.30,1.10,[1,0],[]],
+  [4,"KO","Engeland","DR Congo",1.90,0.70,[1,0],[]],
+  [4,"KO","België","Senegal",1.40,1.20,[1,0],[]],
+  [4,"KO","VS","Bosnië-Herz.",1.50,1.00,[1,0],[]],
+  [4,"KO","Spanje","Oostenrijk",2.00,0.80,[1,0],[]],
+  [4,"KO","Portugal","Kroatië",1.40,1.20,[1,0],[]],
+  [4,"KO","Zwitserland","Algerije",1.50,1.00,[1,0],[]],
+  [4,"KO","Australië","Egypte",1.20,1.20,[1,0],[]],
+  [4,"KO","Argentinië","Kaapverdië",2.00,0.70,[1,0],[]],
+  [4,"KO","Colombia","Ghana",1.50,1.00,[1,0],[]],
 ];
 
 export const MATCHES = RAW.map((m, i) => ({
