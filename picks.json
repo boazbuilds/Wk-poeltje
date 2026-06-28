@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-28T06:28:40.884Z",
+ "generatedAt": "2026-06-28T06:57:51.615Z",
  "ronde": 4,
  "booster": {
   "wedstrijd": null,
@@ -133,15 +133,15 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "ev": 2.68,
-   "tweede_keuze": "2-1",
-   "tweede_keuze_ev": 2.61,
-   "tweede_keuze_meesterzet": false,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
-   "meesterzet": false,
-   "populariteit_bekend": false,
-   "fallback_bij_10pct": null
+   "ev": 2.9,
+   "tweede_keuze": "2-0",
+   "tweede_keuze_ev": 2.72,
+   "tweede_keuze_meesterzet": true,
+   "wijzigen": true,
+   "huidige_invulling": "2-1",
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": "2-0"
   },
   {
    "wedstrijd": "Duitsland vs Paraguay",
@@ -150,15 +150,15 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "ev": 3.06,
-   "tweede_keuze": "2-0",
-   "tweede_keuze_ev": 3.05,
-   "tweede_keuze_meesterzet": false,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
-   "meesterzet": false,
-   "populariteit_bekend": false,
-   "fallback_bij_10pct": null
+   "ev": 3.25,
+   "tweede_keuze": "2-1",
+   "tweede_keuze_ev": 3.11,
+   "tweede_keuze_meesterzet": true,
+   "wijzigen": true,
+   "huidige_invulling": "1-1",
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": "2-1"
   },
   {
    "wedstrijd": "Nederland vs Marokko",
