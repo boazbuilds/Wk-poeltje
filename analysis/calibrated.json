@@ -1,5 +1,5 @@
 {
- "calibratedAt": "2026-06-28T06:25:08.403Z",
+ "calibratedAt": "2026-06-29T14:47:31.087Z",
  "rho": -0.06,
  "lambdas": {
   "1|Mexico|Zuid-Afrika": {
@@ -441,94 +441,94 @@
    "totalLine": 1.25
   },
   "4|Brazilië|Japan": {
-   "lh": 1.67,
-   "la": 0.875,
+   "lh": 1.6,
+   "la": 0.87,
    "src": "joint·3br",
-   "totalLine": 1.5
+   "totalLine": 1.25
   },
   "4|Duitsland|Paraguay": {
-   "lh": 2.17,
-   "la": 0.73,
+   "lh": 2.19,
+   "la": 0.735,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "4|Nederland|Marokko": {
-   "lh": 1.375,
-   "la": 1,
+   "lh": 1.33,
+   "la": 1.075,
    "src": "joint·3br",
    "totalLine": 1.25
   },
   "4|Ivoorkust|Noorwegen": {
    "lh": 1.115,
-   "la": 1.565,
+   "la": 1.56,
    "src": "joint·3br",
    "totalLine": 1.5
   },
   "4|Frankrijk|Zweden": {
-   "lh": 2.43,
-   "la": 0.74,
+   "lh": 2.54,
+   "la": 0.785,
    "src": "joint·3br",
-   "totalLine": 2
+   "totalLine": 2.25
   },
   "4|Mexico|Ecuador": {
-   "lh": 1.21,
-   "la": 0.85,
-   "src": "joint·2br",
-   "totalLine": 1
+   "lh": 1.15,
+   "la": 0.82,
+   "src": "joint·3br",
+   "totalLine": 0.75
   },
   "4|Engeland|DR Congo": {
-   "lh": 2.175,
-   "la": 0.54,
-   "src": "joint·1br",
+   "lh": 2.155,
+   "la": 0.5,
+   "src": "joint·3br",
    "totalLine": 1.5
   },
   "4|België|Senegal": {
-   "lh": 1.405,
-   "la": 0.94,
-   "src": "joint·1br",
+   "lh": 1.37,
+   "la": 1.06,
+   "src": "joint·3br",
    "totalLine": 1.25
   },
   "4|VS|Bosnië-Herz.": {
-   "lh": 2.11,
-   "la": 0.69,
+   "lh": 2.09,
+   "la": 0.695,
    "src": "joint·3br",
    "totalLine": 1.5
   },
   "4|Spanje|Oostenrijk": {
-   "lh": 2,
-   "la": 0.8,
-   "src": "stale",
-   "totalLine": null
+   "lh": 2.17,
+   "la": 0.575,
+   "src": "joint·3br",
+   "totalLine": 1.5
   },
   "4|Portugal|Kroatië": {
-   "lh": 1.4,
-   "la": 1.2,
-   "src": "stale",
-   "totalLine": null
+   "lh": 1.585,
+   "la": 0.91,
+   "src": "joint·3br",
+   "totalLine": 1.25
   },
   "4|Zwitserland|Algerije": {
-   "lh": 1.5,
-   "la": 1,
-   "src": "stale",
-   "totalLine": null
+   "lh": 1.475,
+   "la": 0.98,
+   "src": "joint·3br",
+   "totalLine": 1.25
   },
   "4|Australië|Egypte": {
-   "lh": 0.94,
+   "lh": 0.925,
    "la": 1.105,
    "src": "joint·3br",
    "totalLine": 1
   },
   "4|Argentinië|Kaapverdië": {
-   "lh": 2.655,
-   "la": 0.43,
+   "lh": 2.565,
+   "la": 0.435,
    "src": "joint·3br",
-   "totalLine": 2
+   "totalLine": 1.75
   },
   "4|Colombia|Ghana": {
-   "lh": 1.5,
-   "la": 1,
-   "src": "stale",
-   "totalLine": null
+   "lh": 1.73,
+   "la": 0.645,
+   "src": "joint·3br",
+   "totalLine": 1.25
   }
  }
 }
