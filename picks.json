@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-30T16:23:44.742Z",
+ "generatedAt": "2026-06-30T16:45:53.859Z",
  "ronde": 4,
  "booster": {
   "wedstrijd": null,
@@ -116,14 +116,14 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "ev": 2.35,
-   "tweede_keuze": "2-1",
-   "tweede_keuze_ev": 2.16,
-   "tweede_keuze_meesterzet": false,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
+   "ev": 2.44,
+   "tweede_keuze": "0-0",
+   "tweede_keuze_ev": 2.3,
+   "tweede_keuze_meesterzet": true,
+   "wijzigen": true,
+   "huidige_invulling": "2-1",
    "meesterzet": false,
-   "populariteit_bekend": false,
+   "populariteit_bekend": true,
    "fallback_bij_10pct": null
   },
   {
