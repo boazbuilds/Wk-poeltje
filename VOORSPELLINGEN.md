@@ -1,6 +1,6 @@
 # Voorspellingen — 16e finales (definitief)
 
-Gegenereerd: 30 jun 2026, 18:45 ·
+Gegenereerd: 30 jun 2026, 22:40 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -15,14 +15,12 @@ Machine-leesbaar: [`picks.json`](./picks.json)
    op **10% of meer**, gebruik dan de fallback-kolom.
 6. Na het invullen verifiëren dat alle 16 wedstrijden de juiste waarde tonen.
 
-> ⚠️ Voor **10 duels** is de poule-populariteit nog onbekend → die picks staan op de **markt-EV** (geen meesterzet/★ meegerekend). Stuur de "Populaire voorspellingen" per duel; dan reken ik de meesterzet + EV erbij.
+> ⚠️ Voor **9 duels** is de poule-populariteit nog onbekend → die picks staan op de **markt-EV** (geen meesterzet/★ meegerekend). Stuur de "Populaire voorspellingen" per duel; dan reken ik de meesterzet + EV erbij.
 
-## Te wijzigen (5 wedstrijden)
+## Te wijzigen (3 wedstrijden)
 
 | Deadline (NL) | Wedstrijd | Van | **Naar** | ★ | Fallback bij ≥10% |
 |---|---|---|---|---|---|
-| di 30 jun, 19:00 | Ivoorkust – Noorwegen | 1-2 | **0-1** | ★ | 1-2 |
-| di 30 jun, 23:00 | Frankrijk – Zweden | 4-1 | **2-0** |  | — |
 | wo 1 jul, 03:00 | Mexico – Ecuador | 2-1 | **1-0** |  | — |
 | vr 3 jul, 20:00 | Australië – Egypte | 1-0 | **0-1** |  | — |
 | za 4 jul, 00:00 | Argentinië – Kaapverdië | 1-0 | **2-0** |  | — |
@@ -35,8 +33,8 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | ma 29 jun, 19:00 | Brazilië – Japan | **1-0** | ★ | 2.82 | 2-0★ (2.64) | VERGRENDELD |
 | ma 29 jun, 22:30 | Duitsland – Paraguay | **1-0** | ★ | 3.25 | 2-1★ (3.11) | VERGRENDELD |
 | di 30 jun, 03:00 | Nederland – Marokko | **1-0** | ★ | 2.35 | 1-1★ (2.09) | VERGRENDELD |
-| di 30 jun, 19:00 | Ivoorkust – Noorwegen | **0-1** | ★ | 2.35 | 1-2 (2.20) | WIJZIGEN (staat nu 1-2) |
-| di 30 jun, 23:00 | Frankrijk – Zweden | **2-0** |  | 3.24 | 2-1 (3.19) | WIJZIGEN (staat nu 4-1) |
+| di 30 jun, 19:00 | Ivoorkust – Noorwegen | **0-1** | ★ | 2.37 | 1-2 (2.18) | VERGRENDELD |
+| di 30 jun, 23:00 | Frankrijk – Zweden | **2-0** | ★ | 3.43 | 2-1★ (3.36) | laten staan |
 | wo 1 jul, 03:00 | Mexico – Ecuador | **1-0** |  | 2.44 | 0-0★ (2.30) | WIJZIGEN (staat nu 2-1) |
 | wo 1 jul, 18:00 | Engeland – DR Congo | **1-0** |  | 3.40 | 2-0 (3.39) | laten staan |
 | wo 1 jul, 22:00 | België – Senegal | **1-0** |  | 2.22 | 2-1 (2.15) | laten staan |

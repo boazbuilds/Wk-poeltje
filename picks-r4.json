@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-30T16:45:53.859Z",
+ "generatedAt": "2026-06-30T20:40:17.467Z",
  "ronde": 4,
  "booster": {
   "wedstrijd": null,
@@ -78,19 +78,19 @@
   {
    "wedstrijd": "Ivoorkust vs Noorwegen",
    "deadline_nl": "di 30 jun, 19:00",
-   "vergrendeld": false,
+   "vergrendeld": true,
    "uitslag": null,
    "thuis": 0,
    "uit": 1,
-   "ev": 2.35,
+   "ev": 2.37,
    "tweede_keuze": "1-2",
-   "tweede_keuze_ev": 2.2,
+   "tweede_keuze_ev": 2.18,
    "tweede_keuze_meesterzet": false,
-   "wijzigen": true,
+   "wijzigen": false,
    "huidige_invulling": "1-2",
    "meesterzet": true,
    "populariteit_bekend": true,
-   "fallback_bij_10pct": "1-2"
+   "fallback_bij_10pct": null
   },
   {
    "wedstrijd": "Frankrijk vs Zweden",
@@ -99,15 +99,15 @@
    "uitslag": null,
    "thuis": 2,
    "uit": 0,
-   "ev": 3.24,
+   "ev": 3.43,
    "tweede_keuze": "2-1",
-   "tweede_keuze_ev": 3.19,
-   "tweede_keuze_meesterzet": false,
-   "wijzigen": true,
-   "huidige_invulling": "4-1",
-   "meesterzet": false,
-   "populariteit_bekend": false,
-   "fallback_bij_10pct": null
+   "tweede_keuze_ev": 3.36,
+   "tweede_keuze_meesterzet": true,
+   "wijzigen": false,
+   "huidige_invulling": "2-0",
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": "2-1"
   },
   {
    "wedstrijd": "Mexico vs Ecuador",
