@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-06-30T20:45:39.116Z",
+ "generatedAt": "2026-06-30T20:50:10.299Z",
  "ronde": 4,
  "booster": {
   "wedstrijd": null,
@@ -167,15 +167,15 @@
    "uitslag": null,
    "thuis": 1,
    "uit": 0,
-   "ev": 3.13,
+   "ev": 3.34,
    "tweede_keuze": "2-0",
    "tweede_keuze_ev": 3.11,
    "tweede_keuze_meesterzet": false,
-   "wijzigen": false,
-   "huidige_invulling": "1-0",
-   "meesterzet": false,
-   "populariteit_bekend": false,
-   "fallback_bij_10pct": null
+   "wijzigen": true,
+   "huidige_invulling": "3-1",
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": "2-0"
   },
   {
    "wedstrijd": "Spanje vs Oostenrijk",

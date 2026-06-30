@@ -1,6 +1,6 @@
 # Voorspellingen — 16e finales (definitief)
 
-Gegenereerd: 30 jun 2026, 22:45 ·
+Gegenereerd: 30 jun 2026, 22:50 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -15,15 +15,16 @@ Machine-leesbaar: [`picks.json`](./picks.json)
    op **10% of meer**, gebruik dan de fallback-kolom.
 6. Na het invullen verifiëren dat alle 16 wedstrijden de juiste waarde tonen.
 
-> ⚠️ Voor **7 duels** is de poule-populariteit nog onbekend → die picks staan op de **markt-EV** (geen meesterzet/★ meegerekend). Stuur de "Populaire voorspellingen" per duel; dan reken ik de meesterzet + EV erbij.
+> ⚠️ Voor **6 duels** is de poule-populariteit nog onbekend → die picks staan op de **markt-EV** (geen meesterzet/★ meegerekend). Stuur de "Populaire voorspellingen" per duel; dan reken ik de meesterzet + EV erbij.
 
-## Te wijzigen (5 wedstrijden)
+## Te wijzigen (6 wedstrijden)
 
 | Deadline (NL) | Wedstrijd | Van | **Naar** | ★ | Fallback bij ≥10% |
 |---|---|---|---|---|---|
 | wo 1 jul, 03:00 | Mexico – Ecuador | 2-1 | **1-0** |  | — |
 | wo 1 jul, 18:00 | Engeland – DR Congo | 2-0 | **1-0** | ★ | 2-0 |
 | wo 1 jul, 22:00 | België – Senegal | 1-2 | **1-0** | ★ | — |
+| do 2 jul, 02:00 | Veren. Staten – Bosnië-Herzeg. | 3-1 | **1-0** | ★ | 2-0 |
 | vr 3 jul, 20:00 | Australië – Egypte | 1-0 | **0-1** |  | — |
 | za 4 jul, 00:00 | Argentinië – Kaapverdië | 1-0 | **2-0** |  | — |
 
@@ -40,7 +41,7 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | wo 1 jul, 03:00 | Mexico – Ecuador | **1-0** |  | 2.42 | 0-0★ (2.37) | WIJZIGEN (staat nu 2-1) |
 | wo 1 jul, 18:00 | Engeland – DR Congo | **1-0** | ★ | 3.66 | 2-0 (3.39) | WIJZIGEN (staat nu 2-0) |
 | wo 1 jul, 22:00 | België – Senegal | **1-0** | ★ | 2.38 | 2-0★ (2.17) | WIJZIGEN (staat nu 1-2) |
-| do 2 jul, 02:00 | Veren. Staten – Bosnië-Herzeg. | **1-0** |  | 3.13 | 2-0 (3.11) | laten staan |
+| do 2 jul, 02:00 | Veren. Staten – Bosnië-Herzeg. | **1-0** | ★ | 3.34 | 2-0 (3.11) | WIJZIGEN (staat nu 3-1) |
 | do 2 jul, 21:00 | Spanje – Oostenrijk | **1-0** |  | 3.22 | 2-0 (3.21) | laten staan |
 | vr 3 jul, 01:00 | Portugal – Kroatië | **1-0** |  | 2.57 | 2-1 (2.48) | laten staan |
 | vr 3 jul, 05:00 | Zwitserland – Algerije | **1-0** |  | 2.35 | 2-1 (2.25) | laten staan |
