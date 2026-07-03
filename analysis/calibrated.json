@@ -1,5 +1,5 @@
 {
- "calibratedAt": "2026-07-02T13:56:00.394Z",
+ "calibratedAt": "2026-07-03T14:21:27.660Z",
  "rho": -0.06,
  "lambdas": {
   "1|Mexico|Zuid-Afrika": {
@@ -513,20 +513,20 @@
    "totalLine": 1.25
   },
   "4|Australië|Egypte": {
-   "lh": 0.925,
-   "la": 1.09,
+   "lh": 0.92,
+   "la": 1.18,
    "src": "joint·3br",
-   "totalLine": 0.75
+   "totalLine": 1
   },
   "4|Argentinië|Kaapverdië": {
-   "lh": 2.565,
-   "la": 0.425,
+   "lh": 2.66,
+   "la": 0.435,
    "src": "joint·3br",
-   "totalLine": 1.75
+   "totalLine": 2
   },
   "4|Colombia|Ghana": {
-   "lh": 1.755,
-   "la": 0.645,
+   "lh": 1.89,
+   "la": 0.63,
    "src": "joint·3br",
    "totalLine": 1.25
   }
