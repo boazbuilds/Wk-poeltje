@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-03T14:15:25.603Z",
+ "fetchedAt": "2026-07-04T07:09:21.946Z",
  "source": "polymarket gamma-api",
  "markets": {
   "2|Mexico|Zuid-Korea": {
@@ -1145,6 +1145,84 @@
    "volume": 1148226,
    "title": "Colombia vs. Ghana",
    "endDate": "2026-07-04T01:30:00Z"
+  },
+  "5|Canada|Marokko": {
+   "hw": 0.1758793969849246,
+   "d": 0.28643216080402006,
+   "aw": 0.5376884422110553,
+   "raw": {
+    "ph": 0.175,
+    "pd": 0.285,
+    "pa": 0.535
+   },
+   "volume": 5255927,
+   "title": "Canada vs. Morocco",
+   "endDate": "2026-07-04T17:00:00Z"
+  },
+  "5|Paraguay|Frankrijk": {
+   "hw": 0.04477611940298508,
+   "d": 0.12437810945273634,
+   "aw": 0.8308457711442787,
+   "raw": {
+    "ph": 0.045,
+    "pd": 0.125,
+    "pa": 0.835
+   },
+   "volume": 2321451,
+   "title": "Paraguay vs. France",
+   "endDate": "2026-07-04T21:00:00Z"
+  },
+  "5|Brazilië|Noorwegen": {
+   "hw": 0.5323383084577115,
+   "d": 0.26368159203980096,
+   "aw": 0.20398009950248752,
+   "raw": {
+    "ph": 0.535,
+    "pd": 0.265,
+    "pa": 0.205
+   },
+   "volume": 1302576,
+   "title": "Brazil vs. Norway",
+   "endDate": "2026-07-05T20:00:00Z"
+  },
+  "5|Mexico|Engeland": {
+   "hw": 0.3034825870646766,
+   "d": 0.3034825870646766,
+   "aw": 0.3930348258706468,
+   "raw": {
+    "ph": 0.305,
+    "pd": 0.305,
+    "pa": 0.395
+   },
+   "volume": 1872490,
+   "title": "Mexico vs. England",
+   "endDate": "2026-07-06T00:00:00Z"
+  },
+  "5|Portugal|Spanje": {
+   "hw": 0.2238805970149254,
+   "d": 0.263681592039801,
+   "aw": 0.5124378109452737,
+   "raw": {
+    "ph": 0.225,
+    "pd": 0.265,
+    "pa": 0.515
+   },
+   "volume": 306264,
+   "title": "Portugal vs. Spain",
+   "endDate": "2026-07-06T19:00:00Z"
+  },
+  "5|VS|België": {
+   "hw": 0.33333333333333337,
+   "d": 0.2935323383084577,
+   "aw": 0.373134328358209,
+   "raw": {
+    "ph": 0.335,
+    "pd": 0.295,
+    "pa": 0.375
+   },
+   "volume": 1184145,
+   "title": "United States vs. Belgium",
+   "endDate": "2026-07-07T00:00:00Z"
   }
  }
 }

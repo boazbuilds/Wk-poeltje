@@ -16,6 +16,8 @@ import { analyseM, blendMatrix, blendWithMarket, popOf } from "./engine.mjs";
 
 const cal = JSON.parse(readFileSync(new URL("./calibrated.json", import.meta.url)));
 const bv = JSON.parse(readFileSync(new URL("./bovada.json", import.meta.url)));
+const pinFile = new URL("./pinnacle.json", import.meta.url);
+const pin = existsSync(pinFile) ? JSON.parse(readFileSync(pinFile)) : { markets: {} };
 const resFile = new URL("./results.json", import.meta.url);
 const RESULTS = existsSync(resFile) ? JSON.parse(readFileSync(resFile)).results : {};
 const scoresFile = new URL("./polymarket-scores.json", import.meta.url);
@@ -47,7 +49,7 @@ const fmtDl = (ms) => new Date(ms).toLocaleString("nl-NL", {
 const marketUsed = [];
 const rows = MATCHES.filter((m) => m.round === ROUND).map((m) => {
   const L = cal.lambdas[m.key];
-  const startRaw = bv.markets[m.key]?.start ?? null;
+  const startRaw = bv.markets[m.key]?.start ?? pin.markets[m.key]?.start ?? null;
   const start = typeof startRaw === "string" ? Date.parse(startRaw) : startRaw;
   const locked = !!RESULTS[m.key] || (start && start < Date.now());
   // markt-exacte-score alleen voor nog-open duels meewegen (live/gesloten markten degenereren)

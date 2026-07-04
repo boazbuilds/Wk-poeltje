@@ -1,5 +1,5 @@
 {
- "calibratedAt": "2026-07-03T14:21:27.660Z",
+ "calibratedAt": "2026-07-04T07:10:49.713Z",
  "rho": -0.06,
  "lambdas": {
   "1|Mexico|Zuid-Afrika": {
@@ -477,57 +477,105 @@
    "totalLine": 0.75
   },
   "4|Engeland|DR Congo": {
-   "lh": 2.11,
-   "la": 0.475,
+   "lh": 2.1,
+   "la": 0.48,
    "src": "joint·3br",
    "totalLine": 1.5
   },
   "4|België|Senegal": {
-   "lh": 1.435,
-   "la": 1.105,
+   "lh": 1.45,
+   "la": 1.1,
    "src": "joint·3br",
    "totalLine": 1.5
   },
   "4|VS|Bosnië-Herz.": {
-   "lh": 2.12,
-   "la": 0.715,
+   "lh": 2.115,
+   "la": 0.72,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "4|Spanje|Oostenrijk": {
-   "lh": 2.33,
-   "la": 0.635,
+   "lh": 2.305,
+   "la": 0.645,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "4|Portugal|Kroatië": {
-   "lh": 1.82,
-   "la": 1.015,
+   "lh": 1.79,
+   "la": 1.02,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "4|Zwitserland|Algerije": {
    "lh": 1.465,
-   "la": 0.94,
+   "la": 0.95,
    "src": "joint·3br",
    "totalLine": 1.25
   },
   "4|Australië|Egypte": {
-   "lh": 0.92,
-   "la": 1.18,
+   "lh": 0.93,
+   "la": 1.165,
    "src": "joint·3br",
    "totalLine": 1
   },
   "4|Argentinië|Kaapverdië": {
-   "lh": 2.66,
+   "lh": 2.65,
    "la": 0.435,
    "src": "joint·3br",
    "totalLine": 2
   },
   "4|Colombia|Ghana": {
-   "lh": 1.89,
-   "la": 0.63,
+   "lh": 1.88,
+   "la": 0.625,
    "src": "joint·3br",
+   "totalLine": 1.25
+  },
+  "5|Canada|Marokko": {
+   "lh": 0.85,
+   "la": 1.555,
+   "src": "joint·3br",
+   "totalLine": 1.25
+  },
+  "5|Paraguay|Frankrijk": {
+   "lh": 0.51,
+   "la": 2.545,
+   "src": "joint·3br",
+   "totalLine": 2
+  },
+  "5|Brazilië|Noorwegen": {
+   "lh": 1.755,
+   "la": 1.095,
+   "src": "joint·3br",
+   "totalLine": 1.75
+  },
+  "5|Mexico|Engeland": {
+   "lh": 1.03,
+   "la": 1.265,
+   "src": "joint·2br",
+   "totalLine": 1.25
+  },
+  "5|Portugal|Spanje": {
+   "lh": 1.08,
+   "la": 1.67,
+   "src": "joint·2br",
+   "totalLine": 1.5
+  },
+  "5|VS|België": {
+   "lh": 1.39,
+   "la": 1.44,
+   "src": "joint·2br",
+   "totalLine": 1.75
+  },
+  "5|Argentinië|Egypte": {
+   "lh": 2.045,
+   "la": 0.575,
+   "src": "joint·1br",
+   "totalLine": 1.5
+  },
+  "5|Zwitserland|Colombia": {
+   "lh": 0.99,
+   "la": 1.365,
+   "src": "joint·1br",
    "totalLine": 1.25
   }
  }

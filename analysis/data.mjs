@@ -97,6 +97,17 @@ export const RAW = [
   [4,"KO","Australië","Egypte",1.20,1.20,[1,0],[]],
   [4,"KO","Argentinië","Kaapverdië",2.00,0.70,[1,0],[]],
   [4,"KO","Colombia","Ghana",1.50,1.00,[1,0],[]],
+  // Ronde 5 — Achtste finales (Round of 16). Bracket bevestigd via Pinnacle-livebord
+  // (4 jul, 07:00 UTC) na afronding 16e finales. λ = placeholder, live geijkt via
+  // calibrate; "mine" nog niet door gebruiker ingevuld — crowd nog onbekend.
+  [5,"AF","Canada","Marokko",1.10,1.30,[1,1],[]],
+  [5,"AF","Paraguay","Frankrijk",0.80,2.00,[0,2],[]],
+  [5,"AF","Brazilië","Noorwegen",1.90,0.90,[2,1],[]],
+  [5,"AF","Mexico","Engeland",1.10,1.40,[1,1],[]],
+  [5,"AF","Portugal","Spanje",1.10,1.60,[1,2],[]],
+  [5,"AF","VS","België",1.20,1.30,[1,1],[]],
+  [5,"AF","Argentinië","Egypte",2.00,0.70,[2,0],[]],
+  [5,"AF","Zwitserland","Colombia",1.00,1.50,[1,1],[]],
 ];
 
 export const MATCHES = RAW.map((m, i) => ({
@@ -110,6 +121,7 @@ export const MY_BOOSTERS = {
   1: "1|Duitsland|Curaçao",
   2: "2|Brazilië|Haïti",
   3: "3|Marokko|Haïti",
+  4: "4|Frankrijk|Zweden",
 };
 
 // Engelse zoeknamen voor Polymarket (zoekterm + herken-regex voor de titel).
