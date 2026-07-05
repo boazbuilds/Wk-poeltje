@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-04T07:08:55.291Z",
+ "fetchedAt": "2026-07-05T22:08:28.802Z",
  "source": "bovada coupon",
  "markets": {
   "1|Mexico|Zuid-Afrika": {
@@ -1638,6 +1638,96 @@
    "spread": {
     "hcpHome": -0.5,
     "pHomeCover": 0.5107761366540907
+   }
+  },
+  "5|Mexico|Engeland": {
+   "title": "Mexico vs England",
+   "start": 1783296000000,
+   "ml": {
+    "hw": 0.31212243254128075,
+    "d": 0.30708819975835683,
+    "aw": 0.3807893677003625,
+    "overround": 0.0504
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5260866032306926
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.4544386458081237
+   }
+  },
+  "5|Portugal|Spanje": {
+   "title": "Portugal vs Spain",
+   "start": 1783364400000,
+   "ml": {
+    "hw": 0.25078764207942095,
+    "d": 0.2610939835347396,
+    "aw": 0.4881183743858395,
+    "overround": 0.0493
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5483322552052121
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.49567359221861984
+   }
+  },
+  "5|VS|België": {
+   "title": "USA vs Belgium",
+   "start": 1783382400000,
+   "ml": {
+    "hw": 0.3554941803116985,
+    "d": 0.2823042020122312,
+    "aw": 0.36220161767607023,
+    "overround": 0.0418
+   },
+   "total": {
+    "line": 3,
+    "pOver": 0.457256353331283
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.4892238633459093
+   }
+  },
+  "5|Argentinië|Egypte": {
+   "title": "Argentina vs Egypt",
+   "start": 1783440000000,
+   "ml": {
+    "hw": 0.6807103064066853,
+    "d": 0.20717270194986073,
+    "aw": 0.11211699164345404,
+    "overround": 0.0493
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4675324675324676
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.5
+   }
+  },
+  "5|Zwitserland|Colombia": {
+   "title": "Switzerland vs Colombia",
+   "start": 1783454400000,
+   "ml": {
+    "hw": 0.2739147137917787,
+    "d": 0.3092585478294275,
+    "aw": 0.4168267383787937,
+    "overround": 0.0431
+   },
+   "total": {
+    "line": 2,
+    "pOver": 0.5386856587892521
+   },
+   "spread": {
+    "hcpHome": 0,
+    "pHomeCover": 0.5043264077813802
    }
   }
  }

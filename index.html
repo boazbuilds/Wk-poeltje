@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WK Poule Model · live geijkt 4 jul 2026, 09:10</title>
+<title>WK Poule Model · live geijkt 6 jul 2026, 00:10</title>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -209,11 +209,11 @@ const RAW = [
   [5,"AF","Canada","Marokko",0.85,1.55,[1,1],[]],
   [5,"AF","Paraguay","Frankrijk",0.51,2.54,[0,2],[]],
   [5,"AF","Brazilië","Noorwegen",1.75,1.09,[2,1],[]],
-  [5,"AF","Mexico","Engeland",1.03,1.26,[1,1],[]],
-  [5,"AF","Portugal","Spanje",1.08,1.67,[1,2],[]],
-  [5,"AF","VS","België",1.39,1.44,[1,1],[]],
-  [5,"AF","Argentinië","Egypte",2.04,0.57,[2,0],[]],
-  [5,"AF","Zwitserland","Colombia",0.99,1.36,[1,1],[]],
+  [5,"AF","Mexico","Engeland",1.03,1.19,[1,1],[]],
+  [5,"AF","Portugal","Spanje",1.15,1.72,[1,2],[]],
+  [5,"AF","VS","België",1.48,1.51,[1,1],[]],
+  [5,"AF","Argentinië","Egypte",1.95,0.60,[2,0],[]],
+  [5,"AF","Zwitserland","Colombia",1.00,1.26,[1,1],[]],
 ];
 const SEED = RAW.map((m, i) => ({ id: i, round: m[0], group: m[1], home: m[2], away: m[3], lh: m[4], la: m[5], mine: m[6], crowd: m[7] }));
 
@@ -371,7 +371,7 @@ function App() {
   return (
     <div style={{ background: C.paper, minHeight: "100vh", color: C.ink, fontFamily: "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" }}>
       <div style={{ maxWidth: 760, margin: "0 auto", padding: "26px 16px 60px" }}>
-        <div className="font-mono" style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: C.home }}>ESPN WK Pool · model v10 · 3 scherpe bronnen (Pinnacle+Polymarket+Bovada) · 4 jul 2026, 09:10 </div>
+        <div className="font-mono" style={{ fontSize: 11, letterSpacing: 2, textTransform: "uppercase", color: C.home }}>ESPN WK Pool · model v10 · 3 scherpe bronnen (Pinnacle+Polymarket+Bovada) · 6 jul 2026, 00:10 </div>
         <h1 style={{ fontSize: 28, fontWeight: 700, letterSpacing: -0.5, margin: "6px 0 12px" }}>Speelronde {round}</h1>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
@@ -402,7 +402,7 @@ function App() {
         </div>
 
         <div className="font-mono" style={{ fontSize: 10.5, color: C.muted, lineHeight: 1.6, borderTop: `1px solid ${C.line}`, paddingTop: 14 }}>
-          Alle 72 groepsduels staan op een joint-kalibratie van drie live marktbronnen (gekalibreerd 4 jul 2026, 09:10): Pinnacle (scherpste book, dubbel gewicht, volledige totals- en spread-ladders), Polymarket (echt ingelegd geld) en Bovada. Per duel worden de 1X2, de O/U-totaallijnen (verwacht aantal goals) en de goal spreads (supremacy) tegelijk gefit; ρ=-0.06 op dezelfde doelfunctie. Populariteit en je eigen voorspelling komen rechtstreeks uit de poule, dus meesterzet en massa-keuze zijn exact. Ronde 2 en 3 worden vlak voor hun deadlines opnieuw geijkt; ronde-3 'dode' duels kun je bijsturen via analysis/overrides.json. Iedereen staat op nul, dus speel ronde 1 op Neutraal.
+          Alle 72 groepsduels staan op een joint-kalibratie van drie live marktbronnen (gekalibreerd 6 jul 2026, 00:10): Pinnacle (scherpste book, dubbel gewicht, volledige totals- en spread-ladders), Polymarket (echt ingelegd geld) en Bovada. Per duel worden de 1X2, de O/U-totaallijnen (verwacht aantal goals) en de goal spreads (supremacy) tegelijk gefit; ρ=-0.06 op dezelfde doelfunctie. Populariteit en je eigen voorspelling komen rechtstreeks uit de poule, dus meesterzet en massa-keuze zijn exact. Ronde 2 en 3 worden vlak voor hun deadlines opnieuw geijkt; ronde-3 'dode' duels kun je bijsturen via analysis/overrides.json. Iedereen staat op nul, dus speel ronde 1 op Neutraal.
         </div>
       </div>
     </div>

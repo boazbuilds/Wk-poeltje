@@ -1,5 +1,5 @@
 {
- "calibratedAt": "2026-07-04T07:10:49.713Z",
+ "calibratedAt": "2026-07-05T22:10:07.971Z",
  "rho": -0.06,
  "lambdas": {
   "1|Mexico|Zuid-Afrika": {
@@ -549,34 +549,34 @@
    "totalLine": 1.75
   },
   "5|Mexico|Engeland": {
-   "lh": 1.03,
-   "la": 1.265,
-   "src": "joint·2br",
-   "totalLine": 1.25
+   "lh": 1.035,
+   "la": 1.19,
+   "src": "joint·3br",
+   "totalLine": 1
   },
   "5|Portugal|Spanje": {
-   "lh": 1.08,
-   "la": 1.67,
-   "src": "joint·2br",
-   "totalLine": 1.5
+   "lh": 1.15,
+   "la": 1.72,
+   "src": "joint·3br",
+   "totalLine": 1.75
   },
   "5|VS|België": {
-   "lh": 1.39,
-   "la": 1.44,
-   "src": "joint·2br",
+   "lh": 1.475,
+   "la": 1.51,
+   "src": "joint·3br",
    "totalLine": 1.75
   },
   "5|Argentinië|Egypte": {
-   "lh": 2.045,
-   "la": 0.575,
-   "src": "joint·1br",
-   "totalLine": 1.5
+   "lh": 1.945,
+   "la": 0.605,
+   "src": "joint·3br",
+   "totalLine": 1.25
   },
   "5|Zwitserland|Colombia": {
-   "lh": 0.99,
-   "la": 1.365,
-   "src": "joint·1br",
-   "totalLine": 1.25
+   "lh": 1,
+   "la": 1.26,
+   "src": "joint·3br",
+   "totalLine": 1
   }
  }
 }
