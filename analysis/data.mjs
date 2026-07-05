@@ -103,7 +103,7 @@ export const RAW = [
   [5,"AF","Canada","Marokko",1.10,1.30,[1,1],[]],
   [5,"AF","Paraguay","Frankrijk",0.80,2.00,[0,2],[]],
   [5,"AF","Brazilië","Noorwegen",1.90,0.90,[2,1],[]],
-  [5,"AF","Mexico","Engeland",1.10,1.40,[1,1],[]],
+  [5,"AF","Mexico","Engeland",1.10,1.40,[0,1],[[1,2,52],[2,1,14],[1,1,13]]],
   [5,"AF","Portugal","Spanje",1.10,1.60,[1,2],[]],
   [5,"AF","VS","België",1.20,1.30,[1,1],[]],
   [5,"AF","Argentinië","Egypte",2.00,0.70,[2,0],[]],

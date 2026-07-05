@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-05T22:10:27.721Z",
+ "generatedAt": "2026-07-05T22:13:13.127Z",
  "ronde": 5,
  "booster": {
   "wedstrijd": null,
@@ -65,15 +65,15 @@
    "uitslag": null,
    "thuis": 0,
    "uit": 1,
-   "ev": 2.07,
-   "tweede_keuze": "1-1",
-   "tweede_keuze_ev": 2,
-   "tweede_keuze_meesterzet": false,
-   "wijzigen": true,
-   "huidige_invulling": "1-1",
-   "meesterzet": false,
-   "populariteit_bekend": false,
-   "fallback_bij_10pct": null
+   "ev": 2.28,
+   "tweede_keuze": "0-0",
+   "tweede_keuze_ev": 2.03,
+   "tweede_keuze_meesterzet": true,
+   "wijzigen": false,
+   "huidige_invulling": "0-1",
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": "0-0"
   },
   {
    "wedstrijd": "Portugal vs Spanje",
