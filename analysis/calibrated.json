@@ -1,5 +1,5 @@
 {
- "calibratedAt": "2026-07-05T22:10:07.971Z",
+ "calibratedAt": "2026-07-06T23:10:58.788Z",
  "rho": -0.06,
  "lambdas": {
   "1|Mexico|Zuid-Afrika": {
@@ -561,22 +561,22 @@
    "totalLine": 1.75
   },
   "5|VS|België": {
-   "lh": 1.475,
-   "la": 1.51,
+   "lh": 1.46,
+   "la": 1.365,
    "src": "joint·3br",
    "totalLine": 1.75
   },
   "5|Argentinië|Egypte": {
-   "lh": 1.945,
-   "la": 0.605,
+   "lh": 1.975,
+   "la": 0.585,
    "src": "joint·3br",
-   "totalLine": 1.25
+   "totalLine": 1.5
   },
   "5|Zwitserland|Colombia": {
    "lh": 1,
-   "la": 1.26,
+   "la": 1.285,
    "src": "joint·3br",
-   "totalLine": 1
+   "totalLine": 1.25
   }
  }
 }

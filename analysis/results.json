@@ -336,6 +336,18 @@
     "5|Paraguay|Frankrijk": [
       0,
       1
+    ],
+    "5|Brazilië|Noorwegen": [
+      1,
+      2
+    ],
+    "5|Mexico|Engeland": [
+      2,
+      3
+    ],
+    "5|Portugal|Spanje": [
+      0,
+      1
     ]
   }
 }
