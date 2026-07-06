@@ -1,0 +1,39 @@
+{
+ "generatedAt": "2026-07-06T23:33:54.829Z",
+ "ronde": 6,
+ "rho": -0.06,
+ "picks": [
+  {
+   "key": "6|Frankrijk|Marokko",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": true,
+   "evz": 3.06,
+   "locked": false,
+   "lambda": {
+    "lh": 1.79,
+    "la": 0.785,
+    "src": "joint·3br",
+    "totalLine": 1.5
+   }
+  },
+  {
+   "key": "6|Noorwegen|Engeland",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 2.53,
+   "locked": false,
+   "lambda": {
+    "lh": 1.11,
+    "la": 1.735,
+    "src": "joint·3br",
+    "totalLine": 1.75
+   }
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-07-06T23:09:42.498Z",
+ "fetchedAt": "2026-07-06T23:32:10.196Z",
  "source": "bovada coupon",
  "markets": {
   "1|Mexico|Zuid-Afrika": {
@@ -1680,18 +1680,18 @@
    "title": "USA vs Belgium",
    "start": 1783382400000,
    "ml": {
-    "hw": 0.3811757660445154,
-    "d": 0.28445952689889203,
-    "aw": 0.33436470705659244,
-    "overround": 0.0494
+    "hw": 0.37583892617449666,
+    "d": 0.28187919463087246,
+    "aw": 0.3422818791946309,
+    "overround": 0.0434
    },
    "total": {
-    "line": 2.5,
-    "pOver": 0.5483322552052121
+    "line": 3,
+    "pOver": 0.4544386458081237
    },
    "spread": {
     "hcpHome": 0,
-    "pHomeCover": 0.5324675324675325
+    "pHomeCover": 0.5260866032306926
    }
   },
   "5|Argentinië|Egypte": {
@@ -1723,11 +1723,47 @@
    },
    "total": {
     "line": 2,
-    "pOver": 0.5483322552052121
+    "pOver": 0.542743646668717
    },
    "spread": {
     "hcpHome": 0,
     "pHomeCover": 0.49567359221861984
+   }
+  },
+  "6|Frankrijk|Marokko": {
+   "title": "France vs Morocco",
+   "start": 1783627200000,
+   "ml": {
+    "hw": 0.5970475813395809,
+    "d": 0.24421358706692062,
+    "aw": 0.15873883159349836,
+    "overround": 0.0499
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.4782608241965934
+   },
+   "spread": {
+    "hcpHome": -1,
+    "pHomeCover": 0.4739133967693073
+   }
+  },
+  "6|Noorwegen|Engeland": {
+   "title": "Norway vs England",
+   "start": 1783803600000,
+   "ml": {
+    "hw": 0.24174354604066975,
+    "d": 0.2580775694217961,
+    "aw": 0.5001788845375341,
+    "overround": 0.0472
+   },
+   "total": {
+    "line": 2.5,
+    "pOver": 0.5260866032306926
+   },
+   "spread": {
+    "hcpHome": 0.5,
+    "pHomeCover": 0.4892238633459093
    }
   }
  }

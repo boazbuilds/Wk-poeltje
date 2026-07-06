@@ -108,6 +108,11 @@ export const RAW = [
   [5,"AF","VS","België",1.20,1.30,[1,1],[[2,1,40],[1,2,23],[1,1,14]]],
   [5,"AF","Argentinië","Egypte",2.00,0.70,[2,1],[[2,0,38],[3,1,25],[2,1,17],[3,0,13]]],
   [5,"AF","Zwitserland","Colombia",1.00,1.50,[0,1],[]],
+  // Ronde 6 — Kwartfinales (9-11 jul). Twee duels bekend na Marokko/Frankrijk/
+  // Noorwegen/Engeland-winst; overige twee volgen na de laatste 8e finales.
+  // λ = placeholder, live geijkt via calibrate.
+  [6,"KF","Frankrijk","Marokko",1.70,0.80,[2,1],[[2,1,52],[3,1,18],[2,0,12]]],
+  [6,"KF","Noorwegen","Engeland",1.15,1.35,[1,1],[[2,1,39],[1,2,22],[2,2,14],[1,1,11]]],
 ];
 
 export const MATCHES = RAW.map((m, i) => ({
@@ -122,6 +127,8 @@ export const MY_BOOSTERS = {
   2: "2|Brazilië|Haïti",
   3: "3|Marokko|Haïti",
   4: "4|Frankrijk|Zweden",
+  // 5: vermoedelijk Paraguay-Frankrijk (12 pnt past bij (4+2)×2), onbevestigd
+  6: "6|Frankrijk|Marokko", // groen x2-badge zichtbaar in app (7 jul)
 };
 
 // Engelse zoeknamen voor Polymarket (zoekterm + herken-regex voor de titel).

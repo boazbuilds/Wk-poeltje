@@ -1,6 +1,6 @@
 # Voorspellingen — 8e finales (definitief)
 
-Gegenereerd: 7 jul 2026, 01:25 ·
+Gegenereerd: 7 jul 2026, 01:33 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 

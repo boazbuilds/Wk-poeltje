@@ -1,0 +1,46 @@
+{
+ "generatedAt": "2026-07-06T23:33:54.813Z",
+ "ronde": 6,
+ "booster": {
+  "wedstrijd": "Frankrijk vs Marokko",
+  "vergrendeld": false,
+  "actie": "laten staan (staat al goed)"
+ },
+ "instructie": "Vul per wedstrijd thuis- en uitscore in. Sla wedstrijden die al begonnen zijn over. Controleer bij sterren (meesterzet) de populariteit; bij ≥10% de fallback gebruiken.",
+ "wedstrijden": [
+  {
+   "wedstrijd": "Frankrijk vs Marokko",
+   "deadline_nl": "do 9 jul, 22:00",
+   "vergrendeld": false,
+   "uitslag": null,
+   "thuis": 1,
+   "uit": 0,
+   "ev": 3.06,
+   "tweede_keuze": "2-0",
+   "tweede_keuze_ev": 2.77,
+   "tweede_keuze_meesterzet": false,
+   "wijzigen": true,
+   "huidige_invulling": "2-1",
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": null
+  },
+  {
+   "wedstrijd": "Noorwegen vs Engeland",
+   "deadline_nl": "za 11 jul, 23:00",
+   "vergrendeld": false,
+   "uitslag": null,
+   "thuis": 0,
+   "uit": 1,
+   "ev": 2.53,
+   "tweede_keuze": "0-2",
+   "tweede_keuze_ev": 2.4,
+   "tweede_keuze_meesterzet": true,
+   "wijzigen": true,
+   "huidige_invulling": "1-1",
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": "0-2"
+  }
+ ]
+}
