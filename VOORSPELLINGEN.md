@@ -1,6 +1,6 @@
 # Voorspellingen — 8e finales (definitief)
 
-Gegenereerd: 7 jul 2026, 01:12 ·
+Gegenereerd: 7 jul 2026, 01:20 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -15,13 +15,13 @@ Machine-leesbaar: [`picks.json`](./picks.json)
    op **10% of meer**, gebruik dan de fallback-kolom.
 6. Na het invullen verifiëren dat alle 8 wedstrijden de juiste waarde tonen.
 
-> ⚠️ Voor **3 duels** is de poule-populariteit nog onbekend → die picks staan op de **markt-EV** (geen meesterzet/★ meegerekend). Stuur de "Populaire voorspellingen" per duel; dan reken ik de meesterzet + EV erbij.
+> ⚠️ Voor **2 duels** is de poule-populariteit nog onbekend → die picks staan op de **markt-EV** (geen meesterzet/★ meegerekend). Stuur de "Populaire voorspellingen" per duel; dan reken ik de meesterzet + EV erbij.
 
 ## Te wijzigen (2 wedstrijden)
 
 | Deadline (NL) | Wedstrijd | Van | **Naar** | ★ | Fallback bij ≥10% |
 |---|---|---|---|---|---|
-| di 7 jul, 02:00 | Veren. Staten – België | 1-1 | **2-1** |  | — |
+| di 7 jul, 02:00 | Veren. Staten – België | 1-1 | **1-0** | ★ | 2-1 |
 | di 7 jul, 22:00 | Zwitserland – Colombia | 1-1 | **0-1** |  | — |
 
 ## Volledige lijst (controle, op deadline-volgorde)
@@ -33,7 +33,7 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | zo 5 jul, 22:00 | Brazilië – Noorwegen | **2-1** |  | 2.42 | 1-0 (2.43) | VERGRENDELD (uitslag 1-2) |
 | ma 6 jul, 02:00 | Mexico – Engeland | **0-1** | ★ | 2.30 | 0-0★ (2.07) | VERGRENDELD (uitslag 2-3) |
 | ma 6 jul, 21:00 | Portugal – Spanje | **1-2** |  | 2.35 | 0-1 (2.35) | VERGRENDELD (uitslag 0-1) |
-| di 7 jul, 02:00 | Veren. Staten – België | **2-1** |  | 1.95 | 1-0 (1.91) | WIJZIGEN (staat nu 1-1) |
+| di 7 jul, 02:00 | Veren. Staten – België | **1-0** | ★ | 2.03 | 2-1 (1.95) | WIJZIGEN (staat nu 1-1) |
 | di 7 jul, 18:00 | Argentinië – Egypte | **2-0** |  | 3.17 | 1-0 (3.21) | laten staan |
 | di 7 jul, 22:00 | Zwitserland – Colombia | **0-1** |  | 2.22 | 1-2 (2.11) | WIJZIGEN (staat nu 1-1) |
 

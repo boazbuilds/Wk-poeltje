@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-06T23:12:05.818Z",
+ "generatedAt": "2026-07-06T23:20:44.266Z",
  "ronde": 5,
  "booster": {
   "wedstrijd": null,
@@ -97,17 +97,17 @@
    "deadline_nl": "di 7 jul, 02:00",
    "vergrendeld": false,
    "uitslag": null,
-   "thuis": 2,
-   "uit": 1,
-   "ev": 1.95,
-   "tweede_keuze": "1-0",
-   "tweede_keuze_ev": 1.91,
+   "thuis": 1,
+   "uit": 0,
+   "ev": 2.03,
+   "tweede_keuze": "2-1",
+   "tweede_keuze_ev": 1.95,
    "tweede_keuze_meesterzet": false,
    "wijzigen": true,
    "huidige_invulling": "1-1",
-   "meesterzet": false,
-   "populariteit_bekend": false,
-   "fallback_bij_10pct": null
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": "2-1"
   },
   {
    "wedstrijd": "Argentinië vs Egypte",
