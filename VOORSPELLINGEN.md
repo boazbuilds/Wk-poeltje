@@ -1,6 +1,6 @@
 # Voorspellingen — 8e finales (definitief)
 
-Gegenereerd: 7 jul 2026, 01:20 ·
+Gegenereerd: 7 jul 2026, 01:25 ·
 bron: joint-kalibratie op live Polymarket + Bovada (1X2, O/U-totals, goal spreads), robuuste EV (σ=0.10).
 Machine-leesbaar: [`picks.json`](./picks.json)
 
@@ -9,20 +9,20 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 1. Alleen **8e finales** invullen.
 2. Vul per wedstrijd exact de score uit de tabel in (thuis–uit).
 3. **Wedstrijden die al begonnen zijn, zijn vergrendeld — overslaan.**
-4. Booster 8e finales: nog niet ingesteld — hoogste EV-duel is **Argentinië–Egypte 2-0** (evz 3.17 → ×2 ≈ 6.3).
+4. Booster 8e finales: nog niet ingesteld — hoogste EV-duel is **Argentinië–Egypte 1-0★** (evz 3.47 → ×2 ≈ 6.9).
 5. ★ = meesterzet (score < 10% populariteit). Check vlak voor de deadline de
    "Populaire voorspellingen" op de ESPN-pagina: staat de aanbevolen score daar
    op **10% of meer**, gebruik dan de fallback-kolom.
 6. Na het invullen verifiëren dat alle 8 wedstrijden de juiste waarde tonen.
 
-> ⚠️ Voor **2 duels** is de poule-populariteit nog onbekend → die picks staan op de **markt-EV** (geen meesterzet/★ meegerekend). Stuur de "Populaire voorspellingen" per duel; dan reken ik de meesterzet + EV erbij.
+> ⚠️ Voor **1 duels** is de poule-populariteit nog onbekend → die picks staan op de **markt-EV** (geen meesterzet/★ meegerekend). Stuur de "Populaire voorspellingen" per duel; dan reken ik de meesterzet + EV erbij.
 
 ## Te wijzigen (2 wedstrijden)
 
 | Deadline (NL) | Wedstrijd | Van | **Naar** | ★ | Fallback bij ≥10% |
 |---|---|---|---|---|---|
 | di 7 jul, 02:00 | Veren. Staten – België | 1-1 | **1-0** | ★ | 2-1 |
-| di 7 jul, 22:00 | Zwitserland – Colombia | 1-1 | **0-1** |  | — |
+| di 7 jul, 18:00 | Argentinië – Egypte | 2-1 | **1-0** | ★ | 2-0 |
 
 ## Volledige lijst (controle, op deadline-volgorde)
 
@@ -34,7 +34,7 @@ Machine-leesbaar: [`picks.json`](./picks.json)
 | ma 6 jul, 02:00 | Mexico – Engeland | **0-1** | ★ | 2.30 | 0-0★ (2.07) | VERGRENDELD (uitslag 2-3) |
 | ma 6 jul, 21:00 | Portugal – Spanje | **1-2** |  | 2.35 | 0-1 (2.35) | VERGRENDELD (uitslag 0-1) |
 | di 7 jul, 02:00 | Veren. Staten – België | **1-0** | ★ | 2.03 | 2-1 (1.95) | WIJZIGEN (staat nu 1-1) |
-| di 7 jul, 18:00 | Argentinië – Egypte | **2-0** |  | 3.17 | 1-0 (3.21) | laten staan |
-| di 7 jul, 22:00 | Zwitserland – Colombia | **0-1** |  | 2.22 | 1-2 (2.11) | WIJZIGEN (staat nu 1-1) |
+| di 7 jul, 18:00 | Argentinië – Egypte | **1-0** | ★ | 3.47 | 2-0 (3.17) | WIJZIGEN (staat nu 2-1) |
+| di 7 jul, 22:00 | Zwitserland – Colombia | **0-1** |  | 2.22 | 1-2 (2.11) | laten staan |
 
-*Booster 8e finales: nog niet ingesteld — hoogste EV-duel is **Argentinië–Egypte 2-0** (evz 3.17 → ×2 ≈ 6.3).*
+*Booster 8e finales: nog niet ingesteld — hoogste EV-duel is **Argentinië–Egypte 1-0★** (evz 3.47 → ×2 ≈ 6.9).*

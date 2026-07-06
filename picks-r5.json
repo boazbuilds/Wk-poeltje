@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-06T23:20:44.266Z",
+ "generatedAt": "2026-07-06T23:25:41.947Z",
  "ronde": 5,
  "booster": {
   "wedstrijd": null,
@@ -114,17 +114,17 @@
    "deadline_nl": "di 7 jul, 18:00",
    "vergrendeld": false,
    "uitslag": null,
-   "thuis": 2,
+   "thuis": 1,
    "uit": 0,
-   "ev": 3.17,
-   "tweede_keuze": "1-0",
-   "tweede_keuze_ev": 3.21,
+   "ev": 3.47,
+   "tweede_keuze": "2-0",
+   "tweede_keuze_ev": 3.17,
    "tweede_keuze_meesterzet": false,
-   "wijzigen": false,
-   "huidige_invulling": "2-0",
-   "meesterzet": false,
-   "populariteit_bekend": false,
-   "fallback_bij_10pct": null
+   "wijzigen": true,
+   "huidige_invulling": "2-1",
+   "meesterzet": true,
+   "populariteit_bekend": true,
+   "fallback_bij_10pct": "2-0"
   },
   {
    "wedstrijd": "Zwitserland vs Colombia",
@@ -137,8 +137,8 @@
    "tweede_keuze": "1-2",
    "tweede_keuze_ev": 2.11,
    "tweede_keuze_meesterzet": false,
-   "wijzigen": true,
-   "huidige_invulling": "1-1",
+   "wijzigen": false,
+   "huidige_invulling": "0-1",
    "meesterzet": false,
    "populariteit_bekend": false,
    "fallback_bij_10pct": null

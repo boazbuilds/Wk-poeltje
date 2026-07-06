@@ -1,0 +1,135 @@
+{
+ "generatedAt": "2026-07-06T23:25:41.963Z",
+ "ronde": 5,
+ "rho": -0.06,
+ "picks": [
+  {
+   "key": "5|Canada|Marokko",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": false,
+   "evz": 2.6,
+   "locked": true,
+   "lambda": {
+    "lh": 0.85,
+    "la": 1.555,
+    "src": "joint·3br",
+    "totalLine": 1.25
+   }
+  },
+  {
+   "key": "5|Paraguay|Frankrijk",
+   "pick": [
+    0,
+    2
+   ],
+   "ster": false,
+   "evz": 3.51,
+   "locked": true,
+   "lambda": {
+    "lh": 0.51,
+    "la": 2.545,
+    "src": "joint·3br",
+    "totalLine": 2
+   }
+  },
+  {
+   "key": "5|Brazilië|Noorwegen",
+   "pick": [
+    2,
+    1
+   ],
+   "ster": false,
+   "evz": 2.42,
+   "locked": true,
+   "lambda": {
+    "lh": 1.755,
+    "la": 1.095,
+    "src": "joint·3br",
+    "totalLine": 1.75
+   }
+  },
+  {
+   "key": "5|Mexico|Engeland",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": true,
+   "evz": 2.3,
+   "locked": true,
+   "lambda": {
+    "lh": 1.035,
+    "la": 1.19,
+    "src": "joint·3br",
+    "totalLine": 1
+   }
+  },
+  {
+   "key": "5|Portugal|Spanje",
+   "pick": [
+    1,
+    2
+   ],
+   "ster": false,
+   "evz": 2.35,
+   "locked": true,
+   "lambda": {
+    "lh": 1.15,
+    "la": 1.72,
+    "src": "joint·3br",
+    "totalLine": 1.75
+   }
+  },
+  {
+   "key": "5|VS|België",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": true,
+   "evz": 2.03,
+   "locked": false,
+   "lambda": {
+    "lh": 1.46,
+    "la": 1.365,
+    "src": "joint·3br",
+    "totalLine": 1.75
+   }
+  },
+  {
+   "key": "5|Argentinië|Egypte",
+   "pick": [
+    1,
+    0
+   ],
+   "ster": true,
+   "evz": 3.47,
+   "locked": false,
+   "lambda": {
+    "lh": 1.975,
+    "la": 0.585,
+    "src": "joint·3br",
+    "totalLine": 1.5
+   }
+  },
+  {
+   "key": "5|Zwitserland|Colombia",
+   "pick": [
+    0,
+    1
+   ],
+   "ster": false,
+   "evz": 2.22,
+   "locked": false,
+   "lambda": {
+    "lh": 1,
+    "la": 1.285,
+    "src": "joint·3br",
+    "totalLine": 1.25
+   }
+  }
+ ]
+}

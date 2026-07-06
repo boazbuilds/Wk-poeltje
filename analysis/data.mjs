@@ -106,8 +106,8 @@ export const RAW = [
   [5,"AF","Mexico","Engeland",1.10,1.40,[0,1],[[1,2,52],[2,1,14],[1,1,13]]],
   [5,"AF","Portugal","Spanje",1.10,1.60,[1,2],[]],
   [5,"AF","VS","België",1.20,1.30,[1,1],[[2,1,40],[1,2,23],[1,1,14]]],
-  [5,"AF","Argentinië","Egypte",2.00,0.70,[2,0],[]],
-  [5,"AF","Zwitserland","Colombia",1.00,1.50,[1,1],[]],
+  [5,"AF","Argentinië","Egypte",2.00,0.70,[2,1],[[2,0,38],[3,1,25],[2,1,17],[3,0,13]]],
+  [5,"AF","Zwitserland","Colombia",1.00,1.50,[0,1],[]],
 ];
 
 export const MATCHES = RAW.map((m, i) => ({
